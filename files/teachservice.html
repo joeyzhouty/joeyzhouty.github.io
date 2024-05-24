@@ -42,7 +42,7 @@ tr:nth-child(even) {
     <div class="jumbotron">
       <div class="container"  style="font-size:16px">
 	
-        <h2>CEG5304/EE6934 Deep Learning (Part 1)</h2>
+        <h2><a target="_blank" href="https://nusmods.com/modules/CEG5304/deep-learning-for-digitalization-technologies">[ECG5304] - Deep Learning for Digitalization Technologies</a> / <a target="_blank" href="https://nusmods.com/modules/EE6934/deep-learning-advanced">[EE5934/6934] - Deep Learning</a> (Part 1)</h2>
 	<p>
 	  Electrical and Computer Engineering, NUS
 	</p>
@@ -108,7 +108,7 @@ The following schedule will not be strictly followed.
       <td rowspan="1"> Week 1
       <td>
 	
-	<b> 1.  Introduction </b>
+	<b> 1.  Introduction to Deep Learning  </b>
 	<br>
 	<br>
  <!-- 	Additional resources (optional):
@@ -120,7 +120,7 @@ The following schedule will not be strictly followed.
 	<br>
 -->
       <td align="left">
-	<a target="_blank">History of Deep Learning. Machine Learning Settings. </a>
+	<a target="_blank"> Machine Learning Basics. Data Pre-processing.</a>
    </tr>
     
     <!------------------------------------------------------------------------------>
@@ -129,11 +129,11 @@ The following schedule will not be strictly followed.
     <tr>
       <td rowspan="1"> Week 2
       <td>
-	<b> 2. Machine Learning Basics </b>
+	<b> 2. Neural networks, training pipeline and learning strategies </b>
 	<br>
 	<br>
       <td align="left">
-	<a target="_blank">Data representation. Linear Regression/Classification. K-NN. SVM. </a>
+	<a target="_blank">History of Deep Learning. Perceptrons. MLPs. Optimisation, Regularization. </a>
     </tr>
 	    
     <!------------------------------------------------------------------------------>
@@ -141,11 +141,11 @@ The following schedule will not be strictly followed.
     <tr>
       <td rowspan="1"> Week 3
       <td>
-	<b>3. Machine Learning Basics II </b>
+	<b>3. Autoencoder, CNN and RNN and their Variants  </b>
 	<br>
 	<br>
       <td align="left">
-	<a target="_blank">Linear Regression/Classification, Nonlinear  Classification, Overfitting, Regularization, Hypermeters. </a>
+	<a target="_blank">Denoising Autoencoder. Adversarial Examples. CNNs. RNNs. LSTMs.</a>
     </tr>  
     <!------------------------------------------------------------------------------>
     
@@ -154,11 +154,11 @@ The following schedule will not be strictly followed.
     <tr>
       <td rowspan="1"> Week 4
       <td>
-	<b>4. Fully Connected Neural Networks</b>
+	<b>4. Transformer</b>
 	<br> 
 	<br>
      <td align="left">
-	<a target="_blank"> Learning Visual Features. Training Neural Networks.  Loss Optimization, Gradient Descent. Regularization.</a>
+	<a target="_blank"> Sequence to Sequence with RNNs. Attention. Modules in GPTs. </a>
 	      
     </tr>
     <!------------------------------------------------------------------------------>
@@ -166,22 +166,22 @@ The following schedule will not be strictly followed.
     <tr>
       <td rowspan="1"> Week 5
       <td>
-	<b>5. Autoencoder & CNN  </b>
+	<b>5. Prompting </b>
 	<br> 
 	<br>
       <td align="left">
-	      <a target="_blank"> Variants of  Autoencoder CNN  Pipeline. Adversarial examples/training. </a>
+	      <a target="_blank"> Prompting in NLP/CV/vision-language models. Soft/hard Prompts. </a>
     </tr>
     <!------------------------------------------------------------------------------>
     
     <tr>
       <td rowspan="1"> Week 6
       <td>
-	<b>6. Why Deep? Why Small?</b>
+	<b>6. Model and Dataset Compression</b>
 	<br> 
 	<br>
       <td align="left">
-	<a target="_blank"> Deeper vs wider? Model Compression for DNN. </a>
+	<a target="_blank"> Model Compression for DNNs. Dataset Pruning/Distillation</a>
     </tr>
     <!------------------------------------------------------------------------------>
 
@@ -193,19 +193,38 @@ The following schedule will not be strictly followed.
 <hr>
 <h3>Syllabus:</h3>
 <ul>
-  <li> CNN, architectures, image classification, object detection,
-  domain adaptation
-  <li> Deep Generative Networks: Autoencoders, UNets, variational
-  autoencoders (VAE), generative adversarial networks (GAN), pix2pix,
-    cycleGAN, recent developments and applications
-  <li> RNN, LSTM, Attention, Transformer, Vision Transformer, recent
-    developments and applications
-  <li> Deep Reinforcement Learning, Q-Learning, DQN, Policy Gradient,
-    Value Function, Actor-Critics, applications
-  <li> Bayesian Neural Network (BNN), Bayesian deep learning,
-    applications
-  <li> Advanced topics: few shot, imbalanced classes, out of
-  distribution, etc.
+  <li> 1.	Introduction to deep learning (Week 1):
+a)	Relation and difference between deep learning and machine learning;
+b)	History of deep learning and recent developments;
+c)	Overview of popular models and applications;
+d)	Basic terminology and concepts: e.g., common learning methods, common network structures, etc.
+
+  <li> 2.	Neural networks, training pipeline and learning strategies (Week 2):
+a)	Introduction classic (and basic) multi-layer perceptron neural network (MLP);
+b)	Introduction the training pipeline of MLP: learning with backpropagation;
+c)	Explain the optimization algorithm: SGD (with momentum), Adam, Adagrad, Second-order optimization, Hessian-free optimization, theoretical analysis of deep neural network model performance;
+d)	Explain the different learning strategies: supervised, semi-supervised and unsupervised learning with examples. Include more specific but common learning strategies such as self-supervised learning (including contrastive learning) and transfer learning;
+e)	Explain the possible shortcomings of the training pipeline with BP: overfitting, and the solution to mitigate overfitting via regularization (network dropout, data augmentation, etc.)
+
+  <li>3.	The basic and classic deep learning networks: Convolutional and Recurrent neural networks with image and text classification (Week 3):
+a)	Introduction to convolutional / recurrent neural networks: structure, training, and characteristics, including the classic and recent variants;
+b)	Introduction to the two basic tasks in computer vision and natural language processing: image and text classification, including the tasks and dataset for the tasks;
+c)	Introduction to recent advances of CNNs/RNNs, including the combination of CNNs/RNNs for image captioning, action recognition, etc.;
+d)	Explain the reason for the rise and fall of CNNs and RNNs.
+
+  <li> 4.	The basic of recent deep learning networks: Transformers (Week 4):
+a)	Introduction to self-attention and Transformer model, including advantages over CNNs and RNNs;
+b)	Explain the expansion of Transformers to the vision tasks: the non-local block and the ViT. Further introduce the expansion of Transformers to regression-based task (object detection): DETR;
+c)	Introduce the recent advances of Transformer models (focus on advances in architecture, leave applications such as to videos and LL(V)Ms to following).
+
+  <li> 5.	Prompting (Week 5):
+a)	Introduction to prompting;
+b)	Explain the usage of prompting in both NLP and CV domains. 
+
+<li> 6.	Model and Dataset Compression (Week 6)
+a)	Introduction to Model Compression including pruning, distillation, and quantization. 
+b)	Introduction to Dataset Distillation and Pruning. 
+
 </ul>
 	    
  
