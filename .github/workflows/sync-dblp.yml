@@ -1,0 +1,28 @@
+name: Sync DBLP last-author publications
+
+on:
+  schedule:
+    # 08:00 Singapore time on day 1 each month (UTC).
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/sync_dblp.py
+      - name: Commit homepage updates
+        run: |
+          if git diff --quiet -- index.html; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Update DBLP last-author publications'
+          git push
