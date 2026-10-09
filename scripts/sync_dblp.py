@@ -10,15 +10,14 @@ import sys
 import time
 import urllib.error
 import urllib.request
-import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "index.html"
 OVERRIDES = ROOT / "data" / "publication_categories.json"
-DBLP_URL = "https://dblp.org/pid/123/5110.xml"
-DBLP_PID = "123/5110"
+DBLP_ENDPOINT = "https://sparql.dblp.org/sparql"
+DBLP_AUTHOR = "https://dblp.org/pid/123/5110"
 START = "<!-- DBLP_AUTO_START -->"
 END = "<!-- DBLP_AUTO_END -->"
 AUTHOR_NAMES = {"joey tianyi zhou", "joey zhou", "tianyi zhou 0007"}
@@ -63,61 +62,74 @@ def classify(title: str, venue: str, overrides: dict) -> int:
 
 
 def fetch_records():
+    query = f'''PREFIX dblp: <https://dblp.org/rdf/schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT ?paper ?title ?year ?venue ?ordinal ?authorName WHERE {{
+  ?paper dblp:hasSignature ?lastSig ; dblp:title ?title ; dblp:yearOfPublication ?year .
+  ?lastSig rdf:type dblp:AuthorSignature ; dblp:signatureCreator <{DBLP_AUTHOR}> ; dblp:signatureOrdinal ?lastOrdinal .
+  FILTER NOT EXISTS {{
+    ?paper dblp:hasSignature ?otherSig .
+    ?otherSig rdf:type dblp:AuthorSignature ; dblp:signatureOrdinal ?later .
+    FILTER(?later > ?lastOrdinal)
+  }}
+  ?paper dblp:hasSignature ?sig .
+  ?sig rdf:type dblp:AuthorSignature ; dblp:signatureCreator ?creator ; dblp:signatureOrdinal ?ordinal .
+  FILTER(?ordinal <= ?lastOrdinal)
+  ?creator rdfs:label ?authorName .
+  OPTIONAL {{ ?paper dblp:publishedInStream ?stream . ?stream dblp:primaryStreamTitle ?venue }}
+}}
+ORDER BY DESC(?year) ?paper ?ordinal'''
     request = urllib.request.Request(
-        DBLP_URL,
-        headers={"User-Agent": "JoeyHomepageDBLPSync/1.0 (https://joeyzhouty.github.io/)"},
+        DBLP_ENDPOINT,
+        data=query.encode("utf-8"),
+        headers={
+            "Accept": "application/sparql-results+json",
+            "Content-Type": "application/sparql-query",
+            "User-Agent": "JoeyHomepageDBLPSync/1.0 (https://joeyzhouty.github.io/)",
+        },
+        method="POST",
     )
     for attempt in range(4):
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
                 payload = response.read()
-            if not payload.lstrip().startswith(b"<?xml") and b"<dblp" not in payload[:1000]:
-                raise RuntimeError("DBLP returned a non-XML response; leaving homepage unchanged.")
-            # ElementTree does not fetch external DTDs, so DBLP's external DTD is safely ignored.
-            return ET.fromstring(payload)
+            rows = json.loads(payload).get("results", {}).get("bindings", [])
+            if not rows:
+                raise RuntimeError("DBLP returned no records; leaving homepage unchanged.")
+            return rows
         except (urllib.error.URLError, TimeoutError) as exc:
             if attempt == 3:
                 raise RuntimeError(f"Could not fetch DBLP after 4 attempts: {exc}") from exc
             time.sleep(3 * (attempt + 1))
 
 
-def record_fields(record):
-    authors = []
-    for author in record.findall("author"):
-        name = " ".join("".join(author.itertext()).split())
-        authors.append((name, author.get("pid", "")))
-    title = " ".join((record.findtext("title") or "").split())
-    year = " ".join((record.findtext("year") or "").split())
-    venue = " ".join((record.findtext("booktitle") or record.findtext("journal") or record.findtext("school") or "").split())
-    url = "https://dblp.org/rec/" + record.get("key", "").removeprefix("homepages/")
-    ee = record.findtext("ee")
-    if ee and ee.startswith(("https://", "http://")):
-        url = ee.strip()
-    return authors, title, year, venue, url
-
-
-def is_last_author(authors):
-    if not authors:
-        return False
-    name, pid = authors[-1]
-    normalized = name.casefold().strip()
-    return pid == DBLP_PID or normalized in AUTHOR_NAMES
-
-
-def collect(root, overrides, existing_titles):
+def collect(rows, overrides, existing_titles):
+    grouped = {}
+    for row in rows:
+        paper = row.get("paper", {}).get("value", "")
+        if not paper:
+            continue
+        item = grouped.setdefault(paper, {"authors": {}})
+        for field in ("title", "year", "venue"):
+            if row.get(field, {}).get("value"):
+                item[field] = row[field]["value"]
+        if row.get("authorName", {}).get("value") and row.get("ordinal", {}).get("value"):
+            item["authors"][int(row["ordinal"]["value"])] = row["authorName"]["value"]
     records = []
     seen = set(existing_titles)
-    for record in root.iter():
-        if record.tag not in {"article", "inproceedings", "incollection", "proceedings"}:
-            continue
-        authors, title, year, venue, url = record_fields(record)
+    for url, item in grouped.items():
+        authors = [item["authors"][number] for number in sorted(item["authors"])]
+        title = item.get("title", "")
+        year = item.get("year", "")
+        venue = item.get("venue", "")
         normalized_title = key_title(title)
-        if not title or not is_last_author(authors) or normalized_title in seen:
+        if not title or not authors or authors[-1].casefold().strip() not in AUTHOR_NAMES or normalized_title in seen:
             continue
         seen.add(normalized_title)
         records.append({
             "title": title, "year": year or "Preprint", "venue": venue,
-            "url": url, "authors": [name for name, _ in authors],
+            "url": url, "authors": authors,
             "category": classify(title, venue, overrides),
         })
     records.sort(key=lambda item: int(item["year"]) if item["year"].isdigit() else 0, reverse=True)
@@ -135,7 +147,7 @@ def render(record):
         author_text += ", "
     author_text += f'<strong>{esc(record["authors"][-1])}</strong>'
     venue = f"in {record['venue']} {record['year']}".strip() if record["venue"] else record["year"]
-    return (f'<article class="paper" data-category="{record["category"]}" data-dblp="{DBLP_PID}">'
+    return (f'<article class="paper" data-category="{record["category"]}" data-dblp="{DBLP_AUTHOR}">'
             f'<div class="paper-year">{esc(record["year"])}</div><div><h3>{title}</h3>'
             f'<p class="authors">{author_text}</p><p class="venue">{esc(venue)}</p></div></article>')
 
@@ -158,8 +170,7 @@ def main():
         raise RuntimeError("Could not locate publication list; leaving homepage unchanged.")
     paper_list = match.group(2)
     overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
-    root = fetch_records()
-    records = collect(root, overrides, current_manual_titles(paper_list))
+    records = collect(fetch_records(), overrides, current_manual_titles(paper_list))
     generated = "\n".join(render(record) for record in records)
     replacement = match.group(1) + "\n" + START + "\n" + generated + "\n" + END + "\n" + paper_list + match.group(3)
     updated = page[:match.start()] + replacement + page[match.end():]
