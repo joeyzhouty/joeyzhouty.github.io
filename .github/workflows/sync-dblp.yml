@@ -18,6 +18,27 @@ jobs:
         with:
           python-version: '3.x'
       - run: python scripts/sync_dblp.py
+      - name: Publish classification review summary
+        run: |
+          count=$(python -c 'import json; print(len(json.load(open("data/classification-review.json"))))')
+          if [ "$count" -eq 0 ]; then
+            echo 'No DBLP publication needs manual review.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "## DBLP publications held for review ($count)" >> "$GITHUB_STEP_SUMMARY"
+            python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          for item in json.load(open("data/classification-review.json")):
+              print('- **{}** ({}) — {}'.format(item['title'], item['year'], item.get('review_reason', 'Category needs your decision.')))
+          PY
+            echo '' >> "$GITHUB_STEP_SUMMARY"
+            echo 'Open the workflow run’s **classification-review** artifact. For category questions, add the title and category to `data/publication_categories.json`; for a venue that qualifies as CCF-A or ICORE A*, add its official name to `data/top_tier_venues.json`. Then rerun the workflow.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Save classification review file
+        uses: actions/upload-artifact@v4
+        with:
+          name: classification-review
+          path: data/classification-review.json
+          if-no-files-found: error
       - name: Commit homepage updates
         run: |
           if git diff --quiet -- index.html; then exit 0; fi
