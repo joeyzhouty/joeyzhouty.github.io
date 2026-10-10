@@ -204,7 +204,7 @@ def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str |
 
 def display_author(name):
     # Presentation only: eligibility always uses the unmodified DBLP signature.
-    return re.sub(r"\s+(?:\(disambiguation\)|[0-9]{4,})$", "", name).strip()
+    return re.sub(r"(?:\s+(?:\(disambiguation\)|[0-9]+))+$", "", name.strip())
 
 
 def render(record):

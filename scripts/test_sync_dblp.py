@@ -94,6 +94,8 @@ class EligibilityTests(unittest.TestCase):
         self.assertEqual(sync.display_author('Jing Huang (disambiguation)'), 'Jing Huang')
         self.assertEqual(sync.display_author('Xin Zhang 0092'), 'Xin Zhang')
         self.assertEqual(sync.display_author('Joey Tianyi Zhou'), 'Joey Tianyi Zhou')
+        for suffix in ['1', '92', '0092', '12345', '0092 (disambiguation)']:
+            self.assertEqual(sync.display_author('Xin Zhang ' + suffix + ' '), 'Xin Zhang')
         r = sync.group_records(rows(['Xin Zhang 0092', 'Jing Huang (disambiguation)', sync.AUTHOR_NAME]))[0]
         rendered = sync.render({**r, 'venue': 'ICML', 'category': 0})
         self.assertNotIn('0092', rendered)
