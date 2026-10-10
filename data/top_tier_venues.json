@@ -1,5 +1,5 @@
 {
-  "policy": "A new paper is eligible only if its venue matches CCF A (seventh edition, 2026) or ICORE 2026 A*. Matching is exact after lowercase, punctuation, year, and trailing parenthetical acronym normalization.",
+  "policy": "Every paper must match CCF A (seventh edition, 2026) or ICORE 2026 A*. Conference main proceedings only; Findings, workshops and preprints do not inherit the parent venue ranking.",
   "ccf_a": [
     "TOCS",
     "ACM Transactions on Computer Systems",
@@ -192,7 +192,9 @@
     "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval",
     "The Web Conference",
     "ACM SIGGRAPH Asia",
-    "Conference on Computer and Communications Security"
+    "Conference on Computer and Communications Security",
+    "IEEE Transactions on Networking",
+    "IEEE/ACM Transactions on Networking"
   ],
   "icore_2026_a_star": [
     "Usenix Symposium on Operating Systems Design and Implementation",

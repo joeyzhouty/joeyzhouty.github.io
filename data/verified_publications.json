@@ -1,0 +1,41 @@
+[
+  {
+    "title": "TokenSwap: Backdoor Attack on the Compositional Understanding of Large Vision-Language Models",
+    "year": "2026",
+    "url": "https://arxiv.org/abs/2509.24566",
+    "authors": [
+      "Zhifang Zhang",
+      "Qiqi Tao",
+      "Jiaqi Lv",
+      "Na Zhao",
+      "Lei Feng",
+      "Joey Tianyi Zhou"
+    ],
+    "venue": "ICML",
+    "verified_on": "2026-10-10",
+    "sources": [
+      "https://lfeng1995.github.io/research.html",
+      "https://lvjiaqi77.github.io/publication.html",
+      "https://arxiv.org/abs/2509.24566"
+    ]
+  },
+  {
+    "title": "Evolving Quantitative Reasoning through Self-Play in Digital Twin Markets",
+    "year": "2026",
+    "url": "https://openreview.net/forum?id=j4SxlIyvRg",
+    "authors": [
+      "Tianmi Ma",
+      "Wenxin Huang",
+      "Jiawei Du",
+      "Lin Li",
+      "Xian Zhong",
+      "Joey Tianyi Zhou"
+    ],
+    "venue": "ICML",
+    "verified_on": "2026-10-10",
+    "sources": [
+      "https://github.com/MTMQuantAI/Agent-Trading-Arena/blob/main/decoupledmarket/README.md",
+      "https://ai.whut.edu.cn/xsgz/xzfc/202607/t20260718_1412813.shtml"
+    ]
+  }
+]
