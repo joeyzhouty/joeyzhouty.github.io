@@ -17,6 +17,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+      - name: Test strict publication eligibility
+        run: python -m unittest discover -s scripts -p 'test_*.py'
       - run: python scripts/sync_dblp.py
       - name: Publish classification review summary
         run: |
@@ -37,7 +39,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: classification-review
-          path: data/classification-review.json
+          path: |
+            data/classification-review.json
+            data/publication-audit.json
           if-no-files-found: error
       - name: Commit homepage updates
         run: |
@@ -47,3 +51,11 @@ jobs:
           git add index.html
           git commit -m 'Update DBLP last-author publications'
           git push
+      - name: Request a category decision when needed
+        run: |
+          python - <<'PYTHON'
+          import json
+          pending = json.load(open("data/classification-review.json"))
+          if pending:
+              raise SystemExit("Category decision required: see the workflow summary and classification-review artifact. Papers remain unpublished until approved.")
+          PYTHON
