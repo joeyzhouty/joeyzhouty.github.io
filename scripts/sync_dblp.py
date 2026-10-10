@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Merge last-author publications from Joey Tianyi Zhou's DBLP profile."""
-
+"""Rebuild publications from complete DBLP signatures, using strict eligibility."""
 from __future__ import annotations
 
+import argparse
 import html
 import json
 import re
 import sys
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 from html.parser import HTMLParser
@@ -15,49 +16,144 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "index.html"
-OVERRIDES = ROOT / "data" / "publication_categories.json"
-REVIEW = ROOT / "data" / "classification-review.json"
-TOP_TIER_VENUES = ROOT / "data" / "top_tier_venues.json"
+OVERRIDES = ROOT / "data/publication_categories.json"
+REVIEW = ROOT / "data/classification-review.json"
+AUDIT = ROOT / "data/publication-audit.json"
+VERIFIED = ROOT / "data/verified_publications.json"
+TOP_TIER_VENUES = ROOT / "data/top_tier_venues.json"
 DBLP_ENDPOINT = "https://sparql.dblp.org/sparql"
 DBLP_AUTHOR = "https://dblp.org/pid/123/5110"
+AUTHOR_NAME = "Joey Tianyi Zhou"
 START = "<!-- DBLP_AUTO_START -->"
 END = "<!-- DBLP_AUTO_END -->"
-AUTHOR_NAMES = {"joey tianyi zhou", "joey zhou", "tianyi zhou 0007"}
-
 
 class TextOnly(HTMLParser):
     def __init__(self):
         super().__init__()
         self.parts = []
-
     def handle_data(self, data):
         self.parts.append(data)
 
-
-def plain_text(value: str) -> str:
+def plain_text(value):
     parser = TextOnly()
     parser.feed(value)
     return html.unescape(" ".join("".join(parser.parts).split()))
 
-
-def key_title(value: str) -> str:
-    value = plain_text(value).replace("↗", "")
+def key_title(value):
+    value = unicodedata.normalize("NFKC", plain_text(value)).replace("↗", "")
     return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
 
-
-def top_tier_venue_keys(data: dict) -> set[str]:
-    return {
-        key_venue(value)
-        for group in ("ccf_a", "icore_2026_a_star")
-        for value in data.get(group, [])
-    }
-
-
-def key_venue(value: str) -> str:
+def key_venue(value):
     value = re.sub(r"\s*\([^)]*\)", " ", value)
     value = re.sub(r"\b(?:19|20)\d{2}\b", " ", value)
     return key_title(value)
 
+def top_tier_venue_keys(data):
+    return {key_venue(v) for group in ("ccf_a", "icore_2026_a_star") for v in data.get(group, [])}
+
+# The profile is only a candidate source. Use each paper's signatureDblpName,
+# never the creator's canonical label (which merges different published names).
+# Fetch ALL signatures: no last-author/ordinal filters in SPARQL.
+QUERY = """PREFIX dblp: <https://dblp.org/rdf/schema#>
+SELECT DISTINCT ?paper ?title ?year ?venue ?stream ?sig ?ordinal ?authorName ?creator ?creatorCount ?book WHERE {
+  { SELECT DISTINCT ?paper WHERE {
+      ?paper dblp:hasSignature ?mine .
+      ?mine dblp:signatureCreator <https://dblp.org/pid/123/5110> .
+  } }
+  ?paper dblp:title ?title ; dblp:yearOfPublication ?year ; dblp:hasSignature ?sig .
+  ?sig a dblp:AuthorSignature .
+  OPTIONAL { ?sig dblp:signatureOrdinal ?ordinal }
+  OPTIONAL { ?sig dblp:signatureDblpName ?authorName }
+  OPTIONAL { ?sig dblp:signatureCreator ?creator }
+  OPTIONAL { ?paper dblp:numberOfCreators ?creatorCount }
+  OPTIONAL { ?paper dblp:publishedInBook ?book }
+  OPTIONAL { ?paper dblp:publishedInStream ?stream . ?stream dblp:primaryStreamTitle ?venue }
+}
+ORDER BY ?paper ?ordinal"""
+
+def fetch_records():
+    request = urllib.request.Request(DBLP_ENDPOINT, data=QUERY.encode(), headers={
+        "Accept": "application/sparql-results+json",
+        "Content-Type": "application/sparql-query",
+        "User-Agent": "JoeyHomepageDBLPSync/2.0 (https://joeyzhouty.github.io/)",
+    }, method="POST")
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(request, timeout=90) as response:
+                rows = json.load(response)["results"]["bindings"]
+            if not rows:
+                raise RuntimeError("DBLP returned no records; leaving homepage unchanged.")
+            return rows
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 3:
+                raise
+            time.sleep(3 * (attempt + 1))
+
+
+def group_records(rows):
+    if not rows:
+        raise ValueError("Empty source; leaving homepage unchanged.")
+    grouped = {}
+    for row in rows:
+        v = {k: x["value"] for k, x in row.items()}
+        if not all(v.get(k) for k in ("paper", "title", "year", "sig")):
+            raise ValueError("Incomplete source metadata; leaving homepage unchanged.")
+        r = grouped.setdefault(v["paper"], {"url": v["paper"], "titles": set(), "years": set(), "signatures": {}, "venues": set(), "books": set(), "counts": set()})
+        r["titles"].add(v["title"]); r["years"].add(v["year"])
+        if v.get("venue"): r["venues"].add(v["venue"])
+        if v.get("book"): r["books"].add(v["book"])
+        if v.get("creatorCount"): r["counts"].add(int(v["creatorCount"]))
+        signature = (v.get("ordinal", ""), v.get("authorName", ""), v.get("creator", ""))
+        if v["sig"] in r["signatures"] and r["signatures"][v["sig"]] != signature:
+            raise ValueError("Conflicting signature metadata; leaving homepage unchanged.")
+        r["signatures"][v["sig"]] = signature
+    result = []
+    for r in grouped.values():
+        sigs = list(r.pop("signatures").values())
+        counts = r.pop("counts")
+        titles, years = r.pop("titles"), r.pop("years")
+        if len(titles) != 1 or len(years) != 1:
+            raise ValueError("Conflicting publication metadata; leaving homepage unchanged.")
+        r["title"], r["year"] = next(iter(titles)), next(iter(years))
+        # Missing names, ordinals, gaps, duplicate ordinals, and truncated responses
+        # must never turn an earlier author into an apparent final author.
+        ordinals = [int(s[0]) for s in sigs if s[0].isdigit()]
+        if (len(ordinals) != len(sigs) or sorted(ordinals) != list(range(1, len(sigs)+1))
+                or any(not s[1] for s in sigs) or counts != {len(sigs)}):
+            raise ValueError(f"Incomplete author list for {r['url']}; leaving homepage unchanged.")
+        sigs.sort(key=lambda s: int(s[0]))
+        r["authors"] = [s[1] for s in sigs]
+        r["author_ids"] = [s[2] for s in sigs]
+        r["venues"], r["books"] = sorted(r["venues"]), sorted(r["books"])
+        result.append(r)
+    return result
+
+
+def author_reason(r):
+    matches = [i for i, name in enumerate(r["authors"]) if name == AUTHOR_NAME and (r.get("source") == "verified_primary_sources" or r["author_ids"][i] == DBLP_AUTHOR)]
+    if not matches:
+        return "identity: no exact Joey Tianyi Zhou signature linked to the verified profile"
+    if matches != [len(r["authors"]) - 1]:
+        return "author_order: Joey Tianyi Zhou is not the final author"
+    return None
+
+
+def eligible_venue(r, allowed):
+    if "/rec/conf/" in r["url"] or r.get("source") == "verified_primary_sources":
+        # A parent ACL/EMNLP/MM stream also contains Findings and workshops.
+        # Only match the actual proceedings/book, never inherit its parent rank.
+        for book in r["books"]:
+            if re.search(r"findings|workshop|companion|demo|short papers|student|tutorial|@", book, re.I):
+                continue
+            name = re.sub(r"\s*\(\d+\)$", "", book).strip()
+            if key_title(name) in allowed:
+                return name
+            if name == "IJCAI/ECAI" and key_title("IJCAI") in allowed:
+                return name
+        return None
+    if "/rec/journals/corr/" in r["url"] or "/rec/journals/" not in r["url"]:
+        return None
+    return next((v for v in r["venues"] if key_venue(v) in allowed), None)
 
 def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str | None]:
     override = overrides.get(key_title(title))
@@ -83,100 +179,6 @@ def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str |
     return winners[0], None
 
 
-def fetch_records():
-    query = f'''PREFIX dblp: <https://dblp.org/rdf/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT ?paper ?title ?year ?venue ?ordinal ?authorName WHERE {{
-  ?paper dblp:hasSignature ?lastSig ; dblp:title ?title ; dblp:yearOfPublication ?year .
-  ?lastSig rdf:type dblp:AuthorSignature ; dblp:signatureCreator <{DBLP_AUTHOR}> ; dblp:signatureOrdinal ?lastOrdinal .
-  FILTER NOT EXISTS {{
-    ?paper dblp:hasSignature ?otherSig .
-    ?otherSig rdf:type dblp:AuthorSignature ; dblp:signatureOrdinal ?later .
-    FILTER(?later > ?lastOrdinal)
-  }}
-  ?paper dblp:hasSignature ?sig .
-  ?sig rdf:type dblp:AuthorSignature ; dblp:signatureCreator ?creator ; dblp:signatureOrdinal ?ordinal .
-  FILTER(?ordinal <= ?lastOrdinal)
-  ?creator rdfs:label ?authorName .
-  OPTIONAL {{ ?paper dblp:publishedInStream ?stream . ?stream dblp:primaryStreamTitle ?venue }}
-}}
-ORDER BY DESC(?year) ?paper ?ordinal'''
-    request = urllib.request.Request(
-        DBLP_ENDPOINT,
-        data=query.encode("utf-8"),
-        headers={
-            "Accept": "application/sparql-results+json",
-            "Content-Type": "application/sparql-query",
-            "User-Agent": "JoeyHomepageDBLPSync/1.0 (https://joeyzhouty.github.io/)",
-        },
-        method="POST",
-    )
-    for attempt in range(4):
-        try:
-            with urllib.request.urlopen(request, timeout=60) as response:
-                payload = response.read()
-            rows = json.loads(payload).get("results", {}).get("bindings", [])
-            if not rows:
-                raise RuntimeError("DBLP returned no records; leaving homepage unchanged.")
-            return rows
-        except (urllib.error.URLError, TimeoutError) as exc:
-            if attempt == 3:
-                raise RuntimeError(f"Could not fetch DBLP after 4 attempts: {exc}") from exc
-            time.sleep(3 * (attempt + 1))
-
-
-def collect(rows, overrides, existing_titles, existing_auto_categories, existing_auto_titles, top_tier_venues):
-    grouped = {}
-    for row in rows:
-        paper = row.get("paper", {}).get("value", "")
-        if not paper:
-            continue
-        item = grouped.setdefault(paper, {"authors": {}})
-        for field in ("title", "year", "venue"):
-            if row.get(field, {}).get("value"):
-                item[field] = row[field]["value"]
-        if row.get("authorName", {}).get("value") and row.get("ordinal", {}).get("value"):
-            item["authors"][int(row["ordinal"]["value"])] = row["authorName"]["value"]
-    records = []
-    seen = set(existing_titles)
-    for url, item in grouped.items():
-        authors = [item["authors"][number] for number in sorted(item["authors"])]
-        title = item.get("title", "")
-        year = item.get("year", "")
-        venue = item.get("venue", "")
-        normalized_title = key_title(title)
-        if not title or not authors or authors[-1].casefold().strip() not in AUTHOR_NAMES or normalized_title in seen:
-            continue
-        seen.add(normalized_title)
-        if normalized_title not in existing_auto_titles and key_venue(venue) not in top_tier_venues:
-            records.append({
-                "title": title, "year": year or "Preprint", "venue": venue,
-                "url": url, "authors": authors, "needs_review": True,
-                "review_reason": "Venue is not on the CCF-A / ICORE 2026 A* allowlist; held out of the homepage.",
-                "review_type": "venue",
-            })
-            continue
-        category, review_reason = classify(title, venue, overrides)
-        if review_reason and normalized_title in existing_auto_categories:
-            category, review_reason = existing_auto_categories[normalized_title], None
-        record = {
-            "title": title, "year": year or "Preprint", "venue": venue,
-            "url": url, "authors": authors,
-            "category": category,
-        }
-        if review_reason:
-            record["review_reason"] = review_reason
-            record["choices"] = [
-                "Efficient AI", "Trustworthy AI", "Foundation Models & Agents"
-            ]
-            records.append({**record, "needs_review": True})
-        else:
-            records.append(record)
-    records.sort(key=lambda item: int(item["year"]) if item["year"].isdigit() else 0, reverse=True)
-    return records
-
-
 def render(record):
     esc = lambda value: html.escape(value, quote=True)
     if record["url"]:
@@ -188,77 +190,115 @@ def render(record):
         author_text += ", "
     author_text += f'<strong>{esc(record["authors"][-1])}</strong>'
     venue = f"in {record['venue']} {record['year']}".strip() if record["venue"] else record["year"]
-    return (f'<article class="paper" data-category="{record["category"]}" data-dblp="{DBLP_AUTHOR}">'
+    return (f'<article class="paper" data-category="{record["category"]}" data-source="{esc(record.get("source", "dblp"))}">'
             f'<div class="paper-year">{esc(record["year"])}</div><div><h3>{title}</h3>'
             f'<p class="authors">{author_text}</p><p class="venue">{esc(venue)}</p></div></article>')
 
 
-def current_manual_titles(paper_list):
-    without_auto = re.sub(
-        re.escape(START) + r".*?" + re.escape(END) + r"\s*",
-        "", paper_list, flags=re.S,
-    )
-    return {key_title(match) for match in re.findall(r"<h3\b[^>]*>(.*?)</h3>", without_auto, flags=re.I | re.S)}
+
+def current_articles(page):
+    articles = []
+    for raw in re.findall(r'<article\b[^>]*class="paper"[^>]*>.*?</article>', page, re.S):
+        title = re.search(r"<h3\b[^>]*>(.*?)</h3>", raw, re.S)
+        category = re.search(r'data-category="([012])"', raw)
+        if title and category:
+            articles.append({"title": plain_text(title[1]).replace("↗", "").strip(),
+                             "category": int(category[1]), "html": raw})
+    return articles
 
 
-def remove_auto_blocks(paper_list):
-    return re.sub(
-        re.escape(START) + r".*?" + re.escape(END) + r"\s*",
-        "", paper_list, flags=re.S,
-    )
+def verified_records(items, indexed):
+    # Supplements bridge DBLP indexing delays, with inspectable primary evidence.
+    # Once proceedings appear in DBLP, the complete indexed record takes precedence.
+    indexed_titles = {key_title(r["title"]) for r in indexed if "/rec/conf/" in r["url"]}
+    records = []
+    for item in items:
+        if (not all(item.get(k) for k in ("title", "year", "url", "authors", "venue", "sources", "verified_on"))
+                or not isinstance(item["authors"], list)
+                or any(not isinstance(a, str) or not a.strip() for a in item["authors"])
+                or any(not u.startswith("https://") for u in item["sources"])):
+            raise ValueError("Invalid verified publication evidence; leaving homepage unchanged.")
+        if key_title(item["title"]) not in indexed_titles:
+            records.append({**item, "source": "verified_primary_sources", "books": [item["venue"]],
+                            "venues": [item["venue"]], "author_ids": [""] * len(item["authors"])})
+    return records
 
 
-def existing_auto_categories(paper_list):
-    if START not in paper_list or END not in paper_list:
-        return {}
-    block = paper_list.split(START, 1)[1].split(END, 1)[0]
-    result = {}
-    for article in re.findall(r'<article\b[^>]*data-category="([012])"[^>]*>(.*?)</article>', block, flags=re.I | re.S):
-        category, body = article
-        title = re.search(r"<h3\b[^>]*>(.*?)</h3>", body, flags=re.I | re.S)
-        if title:
-            result[key_title(title.group(1))] = int(category)
-    return result
-
-
-def existing_auto_titles(paper_list):
-    return set(existing_auto_categories(paper_list))
+def rebuild(page, rows, overrides, venue_data, verified=()):
+    match = re.search(r'(<div\s+class="paper-list"\s*>)(.*?)(</div>\s*<p\s+id="empty")', page, re.S)
+    if not match or page.count('class="paper-list"') != 1:
+        raise ValueError("Expected exactly one publication list; leaving homepage unchanged.")
+    old = current_articles(match[2])
+    old_categories = {key_title(a["title"]): a["category"] for a in old}
+    allowed = top_tier_venue_keys(venue_data)
+    if not allowed:
+        raise ValueError("Missing venue allowlist; leaving homepage unchanged.")
+    records = group_records(rows)
+    source_count = len(records)
+    records += verified_records(verified, records)
+    decisions, candidates, pending = [], [], []
+    for r in records:
+        reason = author_reason(r)
+        venue = eligible_venue(r, allowed)
+        if not reason and not venue:
+            reason = "venue: publication is not in the CCF-A / CORE A* allowlist (Findings, workshops and preprints excluded)"
+        if reason:
+            decisions.append({**r, "decision": "excluded", "reason": reason})
+            continue
+        category, uncertainty = classify(r["title"], venue, overrides)
+        if uncertainty and key_title(r["title"]) in old_categories:
+            category, uncertainty = old_categories[key_title(r["title"])], None
+        r = {**r, "venue": venue, "category": category}
+        if uncertainty:
+            review = {**r, "needs_review": True, "review_type": "category", "review_reason": uncertainty,
+                      "choices": ["Efficient AI", "Trustworthy AI", "Foundation Models & Agents"]}
+            pending.append(review)
+            decisions.append({**r, "decision": "held_for_review", "reason": uncertainty})
+        else:
+            candidates.append(r)
+            decisions.append({**r, "decision": "eligible"})
+    candidates.sort(key=lambda r: (-int(r["year"]), r["title"], r["url"]))
+    published, seen = [], set()
+    for r in candidates:
+        key = key_title(r["title"])
+        if key not in seen:
+            published.append(r); seen.add(key)
+    removed = []
+    by_title = {}
+    for r in decisions:
+        by_title.setdefault(key_title(r["title"]), []).append(r)
+    for a in old:
+        key = key_title(a["title"])
+        if key not in seen:
+            matches = by_title.get(key, [])
+            removed.append({"title": a["title"], "previous_html": a["html"],
+                            "source_records": matches,
+                            "reason": "; ".join(sorted({r.get("reason", r["decision"]) for r in matches})) if matches else "unverified: no exact DBLP title match; retained in audit for manual verification"})
+    generated = "\n".join(render(r) for r in published)
+    replacement = match[1] + "\n" + START + "\n" + generated + "\n" + END + "\n" + match[3]
+    updated = page[:match.start()] + replacement + page[match.end():]
+    updated = re.sub(r'(<p class="result-count"[^>]*>).*?(</p>)', lambda m: f'{m[1]}{len(published)} publications{m[2]}', updated, count=1)
+    audit = {"source": DBLP_ENDPOINT, "author": DBLP_AUTHOR, "required_name": AUTHOR_NAME,
+             "policy": "Exact per-publication signature + final author + CCF-A / CORE A*, applied to every entry",
+             "source_publications": source_count, "verified_supplements": len(records) - source_count, "previous_count": len(old), "published_count": len(published),
+             "removed": removed, "published": published, "decisions": decisions}
+    return updated, pending, audit
 
 
 def main():
-    page = PAGE.read_text(encoding="utf-8")
-    if page.count('class="paper-list"') != 1:
-        raise RuntimeError("Expected exactly one publication list; leaving homepage unchanged.")
-    match = re.search(r'(<div\s+class="paper-list"\s*>)(.*?)(</div>\s*<p\s+id="empty")', page, re.I | re.S)
-    if not match:
-        raise RuntimeError("Could not locate publication list; leaving homepage unchanged.")
-    paper_list = match.group(2)
-    overrides = json.loads(OVERRIDES.read_text(encoding="utf-8")) if OVERRIDES.exists() else {}
-    venue_data = json.loads(TOP_TIER_VENUES.read_text(encoding="utf-8")) if TOP_TIER_VENUES.exists() else {}
-    top_tier_venues = top_tier_venue_keys(venue_data)
-    manual_papers = remove_auto_blocks(paper_list)
-    records = collect(
-        fetch_records(), overrides, current_manual_titles(paper_list),
-        existing_auto_categories(paper_list), existing_auto_titles(paper_list), top_tier_venues,
-    )
-    pending = [record for record in records if record.get("needs_review")]
-    published_records = [record for record in records if not record.get("needs_review")]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", type=Path, help="Previously downloaded complete DBLP SPARQL JSON (for a reproducible audit)")
+    args = parser.parse_args()
+    rows = json.loads(args.input.read_text())["results"]["bindings"] if args.input else fetch_records()
+    page = PAGE.read_text()
+    updated, pending, audit = rebuild(page, rows, json.loads(OVERRIDES.read_text()), json.loads(TOP_TIER_VENUES.read_text()), json.loads(VERIFIED.read_text()) if VERIFIED.exists() else [])
     REVIEW.parent.mkdir(parents=True, exist_ok=True)
-    REVIEW.write_text(json.dumps(pending, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    generated = "\n".join(render(record) for record in published_records)
-    replacement = match.group(1) + "\n" + START + "\n" + generated + "\n" + END + "\n" + manual_papers + match.group(3)
-    updated = page[:match.start()] + replacement + page[match.end():]
-    publication_count = len(re.findall(r'<article\b[^>]*class="paper"', updated))
-    updated = re.sub(r'(<p class="result-count"[^>]*>).*?(</p>)', lambda m: f'{m.group(1)}{publication_count} publications{m.group(2)}', updated, count=1)
-    if published_records or START not in page:
-        PAGE.write_text(updated, encoding="utf-8")
-    print(f"DBLP top-tier publications in generated block: {len(published_records)}")
-    print(f"Publications awaiting category review: {len(pending)}")
-    if pending:
-        print("\nUncertain publications:")
-        for record in pending:
-            print(f'- {record["title"]} ({record["year"]})')
-
+    REVIEW.write_text(json.dumps(pending, ensure_ascii=False, indent=2) + "\n")
+    AUDIT.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
+    # A valid source with zero eligible results must remove stale entries too.
+    PAGE.write_text(updated)
+    print(f"Source publications checked: {audit['source_publications']}")
+    print(f"Published: {audit['published_count']}; removed/held: {len(audit['removed'])}; category review: {len(pending)}")
 
 if __name__ == "__main__":
     try:
