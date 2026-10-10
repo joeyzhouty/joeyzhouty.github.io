@@ -1,17 +1,32 @@
 # DBLP publication sync
 
-GitHub Actions queries Joey Tianyi Zhou's DBLP author record (`123/5110`) through DBLP's SPARQL endpoint on the first day of each month at 08:00 Singapore time. Run it manually from the repository's **Actions** tab by choosing **Sync DBLP last-author publications** → **Run workflow**.
+The workflow runs on day 1 of each month at 08:00 Singapore time (00:00 UTC; GitHub may delay scheduled jobs). It can also be started through Actions → Sync DBLP last-author publications → Run workflow.
 
-The workflow imports DBLP records where Joey is the final listed author, merges publications into the generated block in `index.html`, and preserves the hand-curated entries already on the page. It deduplicates by normalized title and updates the displayed publication count. The generated entries appear between `DBLP_AUTO_START` and `DBLP_AUTO_END` markers.
+## Eligibility applies to every paper
 
-New DBLP entries are added only when their venue matches the allowlist in `data/top_tier_venues.json`: the CCF seventh-edition 2026 A list or ICORE 2026 A* conference list. New papers at other or unrecognized venues are not published automatically. Unrecognized venues appear in the workflow review summary/artifact so they can be checked; if a venue qualifies, add its official name to the relevant list and rerun. Existing homepage entries are preserved when this rule is introduced.
+All homepage entries, including formerly hand-curated papers, must satisfy both rules:
 
-Topic categories are assigned from title and venue keywords by `scripts/sync_dblp.py`. If the title and venue contain no category keywords, or the keyword scores tie, the script treats the classification as uncertain. New uncertain papers are held out of the homepage until they are reviewed; papers already on the homepage keep their current category. The monthly workflow lists uncertain titles in its run summary and saves their details as the `classification-review` artifact.
+- The actual per-paper published name is exactly **Joey Tianyi Zhou**, and that person is the final listed author. Joey Zhou, Tianyi Zhou and DBLP-disambiguated variants are excluded. A shared DBLP profile is not identity evidence by itself.
+- The actual venue is in `data/top_tier_venues.json` (CCF-A or ICORE 2026 A*). Findings, workshops, companion proceedings and preprints do not inherit the parent conference ranking.
 
-After checking that workflow run, add the normalized lowercase title as a key in `data/publication_categories.json` and use one of `Efficient AI`, `Trustworthy AI`, or `Foundation Models & Agents` as the value. Then rerun the workflow to publish it. For example:
+The script uses `signatureDblpName`, all author signatures and numeric author ordinals. It cross-checks the complete author count before modifying the page. Missing or inconsistent source data fails the run and leaves the homepage unchanged. It rebuilds the entire publication list, removes ineligible older entries, deduplicates normalized titles and updates the count. Zero eligible papers clears the old list; a missing/empty response never does.
+
+`data/verified_publications.json` contains two source-checked ICML 2026 papers awaiting DBLP proceedings indexing. Each includes the complete author list and public primary-source evidence. These records must pass the same exact-name, last-author and venue checks. Once DBLP contains a proceedings record with that title, the DBLP record takes precedence. This is an indexing supplement, not an eligibility exemption.
+
+## Topic decisions
+
+`data/publication_categories.json` maps normalized paper titles to **Efficient AI**, **Trustworthy AI**, or **Foundation Models & Agents**. It only controls categories; it cannot bypass author or venue eligibility.
+
+New papers with no clear keyword match or a tie are held for the owner's decision. Previously displayed eligible papers retain their category when the new classifier is uncertain. Pending titles appear in the workflow summary and `classification-review` artifact. A pending decision marks the run as needing attention (failed), so GitHub Actions failure notifications can alert the repository owner according to their notification settings. Add the approved category to the JSON and rerun to publish.
 
 ```json
 {
   "a sample paper title": "Trustworthy AI"
 }
 ```
+
+## Audit and testing
+
+`data/publication-audit.json` records source author lists and decisions for the 2026-10-10 correction (322 previous entries, 39 retained, 283 removed). Subsequent workflow runs upload a fresh audit as an artifact without committing over this initial record. Removed original HTML remains in the initial audit for inspection.
+
+Run `python3 -m unittest discover -s scripts -p 'test_*.py'` to check strict identity, full author order, incomplete responses, child venues, manual entries, supplementary evidence, category review and repeatability. Run `python3 scripts/sync_dblp.py --input complete-dblp-response.json` to reproduce a sync from a saved SPARQL response, or omit `--input` to query DBLP.
