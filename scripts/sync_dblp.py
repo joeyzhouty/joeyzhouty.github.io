@@ -179,16 +179,21 @@ def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str |
     return winners[0], None
 
 
+def display_author(name):
+    # Presentation only: eligibility always uses the unmodified DBLP signature.
+    return re.sub(r"\s+(?:\(disambiguation\)|[0-9]{4,})$", "", name).strip()
+
+
 def render(record):
     esc = lambda value: html.escape(value, quote=True)
     if record["url"]:
         title = f'<a href="{esc(record["url"])}">{esc(record["title"])} <span aria-hidden="true">↗</span></a>'
     else:
         title = esc(record["title"])
-    author_text = ", ".join(esc(name) for name in record["authors"][:-1])
+    author_text = ", ".join(esc(display_author(name)) for name in record["authors"][:-1])
     if author_text:
         author_text += ", "
-    author_text += f'<strong>{esc(record["authors"][-1])}</strong>'
+    author_text += f'<strong>{esc(display_author(record["authors"][-1]))}</strong>'
     venue = f"in {record['venue']} {record['year']}".strip() if record["venue"] else record["year"]
     return (f'<article class="paper" data-category="{record["category"]}" data-source="{esc(record.get("source", "dblp"))}">'
             f'<div class="paper-year">{esc(record["year"])}</div><div><h3>{title}</h3>'

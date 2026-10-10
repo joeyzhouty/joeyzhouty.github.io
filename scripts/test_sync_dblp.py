@@ -90,6 +90,25 @@ class EligibilityTests(unittest.TestCase):
         with self.assertRaises(ValueError): sync.verified_records([{**item, 'sources': []}], [])
         self.assertEqual(sync.verified_records([{**item, 'title': 'Efficient learning'}], sync.group_records(rows())), [])
 
+    def test_author_suffixes_are_display_only(self):
+        self.assertEqual(sync.display_author('Jing Huang (disambiguation)'), 'Jing Huang')
+        self.assertEqual(sync.display_author('Xin Zhang 0092'), 'Xin Zhang')
+        self.assertEqual(sync.display_author('Joey Tianyi Zhou'), 'Joey Tianyi Zhou')
+        r = sync.group_records(rows(['Xin Zhang 0092', 'Jing Huang (disambiguation)', sync.AUTHOR_NAME]))[0]
+        rendered = sync.render({**r, 'venue': 'ICML', 'category': 0})
+        self.assertNotIn('0092', rendered)
+        self.assertNotIn('(disambiguation)', rendered)
+        self.assertEqual(r['authors'][0], 'Xin Zhang 0092')
+        wrong = sync.group_records(rows(['Alice', 'Tianyi Zhou 0007']))[0]
+        self.assertIn('identity:', sync.author_reason(wrong))
+
+    def test_corr_excluded_in_every_year(self):
+        for year in ['2026', '2025', '2020']:
+            data = rows(url='https://dblp.org/rec/journals/corr/Test', book='ICML')
+            for row in data: row['year']['value'] = year
+            r = sync.group_records(data)[0]
+            self.assertIsNone(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)))
+
     def test_unicode_title_dedup(self):
         self.assertEqual(sync.key_title('Efﬁcient AI.'), sync.key_title('Efficient AI'))
 
