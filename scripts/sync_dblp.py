@@ -129,12 +129,35 @@ def group_records(rows):
     return result
 
 
+def author_role(r):
+    matches = [i for i, name in enumerate(r["authors"]) if name == AUTHOR_NAME and
+               (r.get("source") == "verified_primary_sources" or r["author_ids"][i] == DBLP_AUTHOR)]
+    if matches == [0]:
+        return "first"
+    if matches == [len(r["authors"]) - 1]:
+        return "last"
+    return None
+
+
 def author_reason(r):
-    matches = [i for i, name in enumerate(r["authors"]) if name == AUTHOR_NAME and (r.get("source") == "verified_primary_sources" or r["author_ids"][i] == DBLP_AUTHOR)]
+    matches = [i for i, name in enumerate(r["authors"]) if name == AUTHOR_NAME and
+               (r.get("source") == "verified_primary_sources" or r["author_ids"][i] == DBLP_AUTHOR)]
     if not matches:
         return "identity: no exact Joey Tianyi Zhou signature linked to the verified profile"
-    if matches != [len(r["authors"]) - 1]:
-        return "author_order: Joey Tianyi Zhou is not the final author"
+    if not author_role(r):
+        return "author_order: Joey Tianyi Zhou is neither the first nor the final author"
+    return None
+
+
+def published_venue(r, allowed):
+    if author_role(r) != "first":
+        return eligible_venue(r, allowed)
+    # First-author articles have no ranking restriction, but must have a formal
+    # conference/journal record. CoRR, theses and informal records are excluded.
+    if r.get("source") == "verified_primary_sources" or "/rec/conf/" in r["url"]:
+        return next(iter(r["books"]), None)
+    if "/rec/journals/" in r["url"] and "/rec/journals/corr/" not in r["url"]:
+        return next(iter(r["venues"]), None)
     return None
 
 
@@ -190,10 +213,9 @@ def render(record):
         title = f'<a href="{esc(record["url"])}">{esc(record["title"])} <span aria-hidden="true">↗</span></a>'
     else:
         title = esc(record["title"])
-    author_text = ", ".join(esc(display_author(name)) for name in record["authors"][:-1])
-    if author_text:
-        author_text += ", "
-    author_text += f'<strong>{esc(display_author(record["authors"][-1]))}</strong>'
+    author_text = ", ".join(
+        f"<strong>{esc(display_author(name))}</strong>" if name == AUTHOR_NAME else esc(display_author(name))
+        for name in record["authors"])
     venue = f"in {record['venue']} {record['year']}".strip() if record["venue"] else record["year"]
     return (f'<article class="paper" data-category="{record["category"]}" data-source="{esc(record.get("source", "dblp"))}">'
             f'<div class="paper-year">{esc(record["year"])}</div><div><h3>{title}</h3>'
@@ -244,9 +266,10 @@ def rebuild(page, rows, overrides, venue_data, verified=()):
     decisions, candidates, pending = [], [], []
     for r in records:
         reason = author_reason(r)
-        venue = eligible_venue(r, allowed)
+        venue = published_venue(r, allowed)
+        r = {**r, "author_role": author_role(r)}
         if not reason and not venue:
-            reason = "venue: publication is not in the CCF-A / CORE A* allowlist (Findings, workshops and preprints excluded)"
+            reason = ("venue: first-author record is not a verified formal conference/journal publication" if author_role(r) == "first" else "venue: last-author publication is not in the CCF-A / CORE A* allowlist (Findings, workshops and preprints excluded)")
         if reason:
             decisions.append({**r, "decision": "excluded", "reason": reason})
             continue
@@ -284,7 +307,7 @@ def rebuild(page, rows, overrides, venue_data, verified=()):
     updated = page[:match.start()] + replacement + page[match.end():]
     updated = re.sub(r'(<p class="result-count"[^>]*>).*?(</p>)', lambda m: f'{m[1]}{len(published)} publications{m[2]}', updated, count=1)
     audit = {"source": DBLP_ENDPOINT, "author": DBLP_AUTHOR, "required_name": AUTHOR_NAME,
-             "policy": "Exact per-publication signature + final author + CCF-A / CORE A*, applied to every entry",
+             "policy": "Exact per-publication signature; first-author formal articles at any venue OR final-author CCF-A / CORE A* articles; no CoRR",
              "source_publications": source_count, "verified_supplements": len(records) - source_count, "previous_count": len(old), "published_count": len(published),
              "removed": removed, "published": published, "decisions": decisions}
     return updated, pending, audit

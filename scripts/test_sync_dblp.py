@@ -56,7 +56,7 @@ class EligibilityTests(unittest.TestCase):
         self.assertEqual(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)), 'ECCV')
 
     def test_existing_manual_entry_has_no_exemption(self):
-        for data in [rows([sync.AUTHOR_NAME, 'Alice']), rows(book='WACV')]:
+        for data in [rows(['Alice', sync.AUTHOR_NAME, 'Bob']), rows(book='WACV')]:
             updated, pending, audit = sync.rebuild(PAGE, data, {}, VENUES)
             self.assertEqual(audit['published_count'], 0)
             self.assertNotIn('<article', updated)
@@ -82,7 +82,7 @@ class EligibilityTests(unittest.TestCase):
         item = dict(title='Efficient supplement', year='2026', url='https://example.org/paper',
                     authors=['Alice', sync.AUTHOR_NAME], venue='ICML', sources=['https://example.org/evidence'], verified_on='2026-10-10')
         for names, venue, expected in [(['Alice', sync.AUTHOR_NAME], 'ICML', 2),
-                                      ([sync.AUTHOR_NAME, 'Alice'], 'ICML', 1),
+                                      ([sync.AUTHOR_NAME, 'Alice'], 'ICML', 2),
                                       (['Alice', 'Joey Zhou'], 'ICML', 1),
                                       (['Alice', sync.AUTHOR_NAME], 'WACV', 1)]:
             _, _, audit = sync.rebuild(PAGE, rows(), {}, VENUES, [{**item, 'authors': names, 'venue': venue}])
@@ -108,6 +108,24 @@ class EligibilityTests(unittest.TestCase):
             for row in data: row['year']['value'] = year
             r = sync.group_records(data)[0]
             self.assertIsNone(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)))
+
+    def test_first_author_any_formal_venue_and_correct_bolding(self):
+        for book in ['ACML', 'ACL (Findings)', 'WACV']:
+            data = rows([sync.AUTHOR_NAME, 'Alice'], book=book)
+            updated, _, audit = sync.rebuild(PAGE, data, {}, VENUES)
+            self.assertEqual(audit['published_count'], 1)
+            self.assertIn('<strong>Joey Tianyi Zhou</strong>, Alice', updated)
+            self.assertNotIn('<strong>Alice</strong>', updated)
+        for url in ['https://dblp.org/rec/journals/corr/Test', 'https://dblp.org/rec/phd/Test']:
+            _, _, audit = sync.rebuild(PAGE, rows([sync.AUTHOR_NAME, 'Alice'], url=url), {}, VENUES)
+            self.assertEqual(audit['published_count'], 0)
+
+    def test_first_author_non_top_journal_is_allowed(self):
+        data = rows([sync.AUTHOR_NAME, 'Alice'], url='https://dblp.org/rec/journals/ml/Test')
+        for row in data: row['venue']['value'] = 'Machine Learning'
+        _, _, audit = sync.rebuild(PAGE, data, {}, VENUES)
+        self.assertEqual(audit['published_count'], 1)
+        self.assertEqual(audit['published'][0]['venue'], 'Machine Learning')
 
     def test_unicode_title_dedup(self):
         self.assertEqual(sync.key_title('Efﬁcient AI.'), sync.key_title('Efficient AI'))
