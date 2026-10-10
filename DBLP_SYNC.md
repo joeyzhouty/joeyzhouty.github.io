@@ -1,19 +1,22 @@
 # DBLP publication sync
 
-The workflow runs on day 1 of each month at 08:00 Singapore time (00:00 UTC; GitHub may delay scheduled jobs). It can also be started through Actions → Sync DBLP last-author publications → Run workflow.
+The workflow runs on day 1 of each month at 08:00 Singapore time (00:00 UTC; GitHub may delay scheduled jobs). It can also be started through Actions → Sync DBLP first- and last-author publications → Run workflow.
 
 ## Eligibility applies to every paper
 
-All homepage entries, including formerly hand-curated papers, must satisfy both rules:
+All homepage entries, including formerly hand-curated papers, require the actual per-paper published name **Joey Tianyi Zhou**. Joey Zhou, Tianyi Zhou and DBLP-disambiguated variants are excluded. A shared DBLP profile is not identity evidence by itself.
 
-- The actual per-paper published name is exactly **Joey Tianyi Zhou**, and that person is the final listed author. Joey Zhou, Tianyi Zhou and DBLP-disambiguated variants are excluded. A shared DBLP profile is not identity evidence by itself.
-- The actual venue is in `data/top_tier_venues.json` (CCF-A or ICORE 2026 A*). Findings, workshops, companion proceedings and preprints do not inherit the parent conference ranking.
+- **First author:** formally published conference or journal articles at any venue are eligible, without a CCF/CORE ranking restriction. This includes published editorials. CoRR, theses and informal records are excluded.
+- **Last author:** the actual venue must be in `data/top_tier_venues.json` (CCF-A or ICORE 2026 A*). Findings, workshops, companion proceedings and preprints do not inherit the parent conference ranking.
+- **Middle author:** excluded, even when a corresponding author.
+
+A single-author formal article follows the first-author rule. Displayed author order is unchanged, and only Joey Tianyi Zhou is highlighted.
 
 Displayed author names omit DBLP numeric disambiguators and `(disambiguation)` suffixes. These are removed only when rendering; identity and author-order validation always use the original signatures. CoRR preprints from every year are excluded.
 
 The script uses `signatureDblpName`, all author signatures and numeric author ordinals. It cross-checks the complete author count before modifying the page. Missing or inconsistent source data fails the run and leaves the homepage unchanged. It rebuilds the entire publication list, removes ineligible older entries, deduplicates normalized titles and updates the count. Zero eligible papers clears the old list; a missing/empty response never does.
 
-`data/verified_publications.json` contains two source-checked ICML 2026 papers awaiting DBLP proceedings indexing. Each includes the complete author list and public primary-source evidence. These records must pass the same exact-name, last-author and venue checks. Once DBLP contains a proceedings record with that title, the DBLP record takes precedence. This is an indexing supplement, not an eligibility exemption.
+`data/verified_publications.json` contains two source-checked ICML 2026 papers awaiting DBLP proceedings indexing. Each includes the complete author list and public primary-source evidence. These records must pass the same exact-name, author-position and publication-status/venue checks. Once DBLP contains a proceedings record with that title, the DBLP record takes precedence. This is an indexing supplement, not an eligibility exemption.
 
 ## Topic decisions
 
@@ -29,6 +32,6 @@ New papers with no clear keyword match or a tie are held for the owner's decisio
 
 ## Audit and testing
 
-`data/publication-audit.json` records source author lists and decisions for the 2026-10-10 correction (322 previous entries, 39 retained, 283 removed). Subsequent workflow runs upload a fresh audit as an artifact without committing over this initial record. Removed original HTML remains in the initial audit for inspection.
+`data/publication-audit.json` records source author lists and decisions for the initial 2026-10-10 last-author-only correction (322 previous entries, 39 retained, 283 removed); it is a historical audit, predating the later first-author expansion. Subsequent workflow runs upload a fresh audit as an artifact without committing over this initial record. Removed original HTML remains in the initial audit for inspection.
 
 Run `python3 -m unittest discover -s scripts -p 'test_*.py'` to check strict identity, full author order, incomplete responses, child venues, manual entries, supplementary evidence, category review and repeatability. Run `python3 scripts/sync_dblp.py --input complete-dblp-response.json` to reproduce a sync from a saved SPARQL response, or omit `--input` to query DBLP.
