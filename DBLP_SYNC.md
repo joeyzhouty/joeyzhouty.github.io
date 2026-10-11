@@ -18,13 +18,22 @@ The script uses `signatureDblpName`, all author signatures and numeric author or
 
 ## Topic decisions
 
-`data/publication_categories.json` maps normalized paper titles to **Efficient AI**, **Trustworthy AI**, or **Foundation Models & Agents**. It only controls categories; it cannot bypass author or venue eligibility.
+`data/publication_categories.json` maps normalized paper titles to **Efficient AI**, **Trustworthy AI**, **Foundation Models & Agents**, or **Others**. Categories never bypass author or formal-publication eligibility. Owner-confirmed choices take priority over automated decisions.
 
-New papers with no clear keyword match or a tie are held for the owner's decision. Previously displayed eligible papers retain their category when the new classifier is uncertain. Pending titles appear in the workflow summary and `classification-review` artifact. A pending decision marks the run as needing attention (failed), so GitHub Actions failure notifications can alert the repository owner according to their notification settings. Add the approved category to the JSON and rerun to publish.
+The GitHub workflow checks DBLP on day 1 at 08:00 Singapore time. A companion Codex task in the original conversation runs monthly at 08:30 Singapore time, retrieves fresh source data when necessary, and handles papers whose title classifier was uncertain. It reads publisher/proceedings abstracts, author-hosted papers or the matching manuscript, rather than guessing from titles. It records source links, short reasons, confidence and the classification date in `data/publication_category_evidence.json` and saves decisions in the category JSON before rebuilding and publishing the page. No per-paper owner approval is required under the current policy.
+
+Choose the primary research contribution, not every technique named in the paper:
+
+- **Efficient AI:** computing, training, inference, energy, memory or data/annotation efficiency.
+- **Trustworthy AI:** security, privacy, adversarial robustness, bias/fairness, uncertainty, explainability, anomaly detection or forgery detection.
+- **Foundation Models & Agents:** general pretrained/foundation models, language or generative models, general multimodal models, agents or agent reasoning.
+- **Others:** specialized applications outside the three themes, ambiguous contributions, or papers whose abstract/text could not be read reliably. Record whether this is a topic decision or an evidence-access fallback.
+
+A task-specific Transformer or routine adversarial training does not alone establish a foundation-model or safety contribution. Explicit owner decisions remain unchanged. Already displayed eligible papers keep their existing category when a future title classifier is uncertain. New uncertain items appear in `classification-review.json` temporarily until the monthly agent finishes its pass; this is staging, not a request for manual decisions. Publishing the agent's overrides empties that queue.
 
 ```json
 {
-  "a sample paper title": "Trustworthy AI"
+  "a sample paper title": "Others"
 }
 ```
 
@@ -34,4 +43,4 @@ New papers with no clear keyword match or a tie are held for the owner's decisio
 
 Run `python3 -m unittest discover -s scripts -p 'test_*.py'` to check strict identity, full author order, incomplete responses, child venues, manual entries, supplementary evidence, category review and repeatability. Run `python3 scripts/sync_dblp.py --input complete-dblp-response.json` to reproduce a sync from a saved SPARQL response, or omit `--input` to query DBLP.
 
-On 2026-10-11 the all-author audit identified 231 formally published records: 107 classified entries are displayed and 124 uncertain entries are held for the owner’s category decisions. The complete held list is in `data/classification-review.json`. The workflow commits both the homepage and the current review file, then explicitly requests a GitHub Pages rebuild; each run also uploads a fresh audit artifact. `data/top_tier_venues.json` is historical and no longer used by the sync.
+On 2026-10-11 the all-author audit identified 231 formally published records. The initial 124 pending entries are now processed using 22 explicit owner selections and 102 agent abstract/topic decisions. The complete decision evidence is in `data/publication_category_evidence.json`. All 231 entries are displayed: 72 Efficient AI, 58 Trustworthy AI, 44 Foundation Models & Agents, and 57 Others. Of the 102 agent-reviewed entries, 11 were conservatively assigned to Others because a reliable abstract/text could not be retrieved. The workflow commits both the homepage and the current review file, then explicitly requests a GitHub Pages rebuild; each run also uploads a fresh audit artifact. `data/top_tier_venues.json` is historical and no longer used by the sync.
