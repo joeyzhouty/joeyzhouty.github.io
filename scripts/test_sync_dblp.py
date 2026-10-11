@@ -1,4 +1,3 @@
-import copy
 import unittest
 import sync_dblp as sync
 
@@ -15,7 +14,6 @@ def rows(names=None, book='ICML', title='Efficient learning', url='https://dblp.
 
 
 PAGE = '<p class="result-count">1 publications</p><div class="paper-list"><article class="paper" data-category="0"><h3>Efficient learning</h3></article></div><p id="empty">Empty</p>'
-VENUES = {'ccf_a': ['ICML', 'ACL', 'ECCV']}
 
 
 class EligibilityTests(unittest.TestCase):
@@ -27,7 +25,8 @@ class EligibilityTests(unittest.TestCase):
     def test_complete_sqlagent_author_order(self):
         r = sync.group_records(rows(['Wenjia Jiang', 'Yiwei Wang 0001', 'Boyan Han', sync.AUTHOR_NAME, 'Chi Zhang 0007']))[0]
         self.assertEqual(r['authors'][-1], 'Chi Zhang 0007')
-        self.assertIn('author_order:', sync.author_reason(r))
+        self.assertIsNone(sync.author_reason(r))
+        self.assertEqual(sync.author_role(r), 'middle')
 
     def test_numeric_author_ordinals(self):
         r = sync.group_records(list(reversed(rows([f'A{i}' for i in range(11)] + [sync.AUTHOR_NAME]))))[0]
@@ -48,32 +47,32 @@ class EligibilityTests(unittest.TestCase):
     def test_duplicate_signature_join_rows_are_safe(self):
         data = rows(); self.assertEqual(len(sync.group_records(data + data)[0]['authors']), 2)
 
-    def test_child_venues_do_not_inherit_rank(self):
-        for book in ['ACL (Findings)', 'ACL (Student Research Workshop)', 'Workshop@ACL', 'ACL (Short Papers)']:
-            r = sync.group_records(rows(book=book))[0]
-            self.assertIsNone(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)))
-        r = sync.group_records(rows(book='ECCV (20)'))[0]
-        self.assertEqual(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)), 'ECCV')
+    def test_all_positions_and_formal_venues_are_eligible(self):
+        for names in [[sync.AUTHOR_NAME, 'Alice'], ['Alice', sync.AUTHOR_NAME, 'Bob'], ['Alice', sync.AUTHOR_NAME]]:
+            for book in ['WACV', 'ACL (Findings)', 'Workshop@ACL', 'ACL (Short Papers)']:
+                updated, pending, audit = sync.rebuild(PAGE, rows(names, book=book), {})
+                self.assertEqual(audit['published_count'], 1)
+                self.assertIn('<strong>Joey Tianyi Zhou</strong>', updated)
+                self.assertEqual(audit['removed'], [])
 
-    def test_existing_manual_entry_has_no_exemption(self):
-        for data in [rows(['Alice', sync.AUTHOR_NAME, 'Bob']), rows(book='WACV')]:
-            updated, pending, audit = sync.rebuild(PAGE, data, {}, VENUES)
-            self.assertEqual(audit['published_count'], 0)
-            self.assertNotIn('<article', updated)
-            self.assertEqual(len(audit['removed']), 1)
+    def test_ineligible_existing_entry_is_removed(self):
+        updated, _, audit = sync.rebuild(PAGE, rows(['Alice', 'Tianyi Zhou 0007']), {})
+        self.assertEqual(audit['published_count'], 0)
+        self.assertNotIn('<article', updated)
+        self.assertEqual(len(audit['removed']), 1)
 
     def test_uncertain_new_category_waits_for_user(self):
         data = rows(title='Unclassified title')
-        _, pending, audit = sync.rebuild(PAGE, data, {}, VENUES)
+        _, pending, audit = sync.rebuild(PAGE, data, {})
         self.assertEqual(len(pending), 1)
         self.assertEqual(audit['published_count'], 0)
-        _, pending, audit = sync.rebuild(PAGE, data, {'unclassified title': 'Trustworthy AI'}, VENUES)
+        _, pending, audit = sync.rebuild(PAGE, data, {'unclassified title': 'Trustworthy AI'})
         self.assertEqual(len(pending), 0)
         self.assertEqual(audit['published'][0]['category'], 1)
 
     def test_rebuild_is_idempotent_and_preserves_surrounding_page(self):
-        updated, _, _ = sync.rebuild(PAGE, rows(), {}, VENUES)
-        again, _, audit = sync.rebuild(updated, rows(), {}, VENUES)
+        updated, _, _ = sync.rebuild(PAGE, rows(), {})
+        again, _, audit = sync.rebuild(updated, rows(), {})
         self.assertEqual(updated, again)
         self.assertEqual(audit['removed'], [])
         self.assertTrue(updated.endswith('<p id="empty">Empty</p>'))
@@ -84,8 +83,8 @@ class EligibilityTests(unittest.TestCase):
         for names, venue, expected in [(['Alice', sync.AUTHOR_NAME], 'ICML', 2),
                                       ([sync.AUTHOR_NAME, 'Alice'], 'ICML', 2),
                                       (['Alice', 'Joey Zhou'], 'ICML', 1),
-                                      (['Alice', sync.AUTHOR_NAME], 'WACV', 1)]:
-            _, _, audit = sync.rebuild(PAGE, rows(), {}, VENUES, [{**item, 'authors': names, 'venue': venue}])
+                                      (['Alice', sync.AUTHOR_NAME], 'WACV', 2)]:
+            _, _, audit = sync.rebuild(PAGE, rows(), {}, [{**item, 'authors': names, 'venue': venue}])
             self.assertEqual(audit['published_count'], expected)
         with self.assertRaises(ValueError): sync.verified_records([{**item, 'sources': []}], [])
         self.assertEqual(sync.verified_records([{**item, 'title': 'Efficient learning'}], sync.group_records(rows())), [])
@@ -109,23 +108,23 @@ class EligibilityTests(unittest.TestCase):
             data = rows(url='https://dblp.org/rec/journals/corr/Test', book='ICML')
             for row in data: row['year']['value'] = year
             r = sync.group_records(data)[0]
-            self.assertIsNone(sync.eligible_venue(r, sync.top_tier_venue_keys(VENUES)))
+            self.assertIsNone(sync.published_venue(r))
 
     def test_first_author_any_formal_venue_and_correct_bolding(self):
         for book in ['ACML', 'ACL (Findings)', 'WACV']:
             data = rows([sync.AUTHOR_NAME, 'Alice'], book=book)
-            updated, _, audit = sync.rebuild(PAGE, data, {}, VENUES)
+            updated, _, audit = sync.rebuild(PAGE, data, {})
             self.assertEqual(audit['published_count'], 1)
             self.assertIn('<strong>Joey Tianyi Zhou</strong>, Alice', updated)
             self.assertNotIn('<strong>Alice</strong>', updated)
         for url in ['https://dblp.org/rec/journals/corr/Test', 'https://dblp.org/rec/phd/Test']:
-            _, _, audit = sync.rebuild(PAGE, rows([sync.AUTHOR_NAME, 'Alice'], url=url), {}, VENUES)
+            _, _, audit = sync.rebuild(PAGE, rows([sync.AUTHOR_NAME, 'Alice'], url=url), {})
             self.assertEqual(audit['published_count'], 0)
 
     def test_first_author_non_top_journal_is_allowed(self):
         data = rows([sync.AUTHOR_NAME, 'Alice'], url='https://dblp.org/rec/journals/ml/Test')
         for row in data: row['venue']['value'] = 'Machine Learning'
-        _, _, audit = sync.rebuild(PAGE, data, {}, VENUES)
+        _, _, audit = sync.rebuild(PAGE, data, {})
         self.assertEqual(audit['published_count'], 1)
         self.assertEqual(audit['published'][0]['venue'], 'Machine Learning')
 

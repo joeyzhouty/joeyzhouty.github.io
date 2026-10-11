@@ -20,7 +20,6 @@ OVERRIDES = ROOT / "data/publication_categories.json"
 REVIEW = ROOT / "data/classification-review.json"
 AUDIT = ROOT / "data/publication-audit.json"
 VERIFIED = ROOT / "data/verified_publications.json"
-TOP_TIER_VENUES = ROOT / "data/top_tier_venues.json"
 DBLP_ENDPOINT = "https://sparql.dblp.org/sparql"
 DBLP_AUTHOR = "https://dblp.org/pid/123/5110"
 AUTHOR_NAME = "Joey Tianyi Zhou"
@@ -42,14 +41,6 @@ def plain_text(value):
 def key_title(value):
     value = unicodedata.normalize("NFKC", plain_text(value)).replace("↗", "")
     return re.sub(r"[^a-z0-9]+", " ", value.casefold()).strip()
-
-def key_venue(value):
-    value = re.sub(r"\s*\([^)]*\)", " ", value)
-    value = re.sub(r"\b(?:19|20)\d{2}\b", " ", value)
-    return key_title(value)
-
-def top_tier_venue_keys(data):
-    return {key_venue(v) for group in ("ccf_a", "icore_2026_a_star") for v in data.get(group, [])}
 
 # The profile is only a candidate source. Use each paper's signatureDblpName,
 # never the creator's canonical label (which merges different published names).
@@ -136,7 +127,7 @@ def author_role(r):
         return "first"
     if matches == [len(r["authors"]) - 1]:
         return "last"
-    return None
+    return "middle" if len(matches) == 1 else None
 
 
 def author_reason(r):
@@ -145,38 +136,19 @@ def author_reason(r):
     if not matches:
         return "identity: no exact Joey Tianyi Zhou signature linked to the verified profile"
     if not author_role(r):
-        return "author_order: Joey Tianyi Zhou is neither the first nor the final author"
+        return "identity: ambiguous duplicate Joey Tianyi Zhou signatures"
     return None
 
 
-def published_venue(r, allowed):
-    if author_role(r) != "first":
-        return eligible_venue(r, allowed)
-    # First-author articles have no ranking restriction, but must have a formal
-    # conference/journal record. CoRR, theses and informal records are excluded.
+def published_venue(r):
+    # Every author position and venue is eligible when formally published.
+    # CoRR, theses and informal records are excluded.
     if r.get("source") == "verified_primary_sources" or "/rec/conf/" in r["url"]:
         return next(iter(r["books"]), None)
     if "/rec/journals/" in r["url"] and "/rec/journals/corr/" not in r["url"]:
         return next(iter(r["venues"]), None)
     return None
 
-
-def eligible_venue(r, allowed):
-    if "/rec/conf/" in r["url"] or r.get("source") == "verified_primary_sources":
-        # A parent ACL/EMNLP/MM stream also contains Findings and workshops.
-        # Only match the actual proceedings/book, never inherit its parent rank.
-        for book in r["books"]:
-            if re.search(r"findings|workshop|companion|demo|short papers|student|tutorial|@", book, re.I):
-                continue
-            name = re.sub(r"\s*\(\d+\)$", "", book).strip()
-            if key_title(name) in allowed:
-                return name
-            if name == "IJCAI/ECAI" and key_title("IJCAI") in allowed:
-                return name
-        return None
-    if "/rec/journals/corr/" in r["url"] or "/rec/journals/" not in r["url"]:
-        return None
-    return next((v for v in r["venues"] if key_venue(v) in allowed), None)
 
 def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str | None]:
     override = overrides.get(key_title(title))
@@ -251,25 +223,22 @@ def verified_records(items, indexed):
     return records
 
 
-def rebuild(page, rows, overrides, venue_data, verified=()):
+def rebuild(page, rows, overrides, verified=()):
     match = re.search(r'(<div\s+class="paper-list"\s*>)(.*?)(</div>\s*<p\s+id="empty")', page, re.S)
     if not match or page.count('class="paper-list"') != 1:
         raise ValueError("Expected exactly one publication list; leaving homepage unchanged.")
     old = current_articles(match[2])
     old_categories = {key_title(a["title"]): a["category"] for a in old}
-    allowed = top_tier_venue_keys(venue_data)
-    if not allowed:
-        raise ValueError("Missing venue allowlist; leaving homepage unchanged.")
     records = group_records(rows)
     source_count = len(records)
     records += verified_records(verified, records)
     decisions, candidates, pending = [], [], []
     for r in records:
         reason = author_reason(r)
-        venue = published_venue(r, allowed)
+        venue = published_venue(r)
         r = {**r, "author_role": author_role(r)}
         if not reason and not venue:
-            reason = ("venue: first-author record is not a verified formal conference/journal publication" if author_role(r) == "first" else "venue: last-author publication is not in the CCF-A / CORE A* allowlist (Findings, workshops and preprints excluded)")
+            reason = "venue: not a verified formal conference/journal publication (CoRR and theses excluded)"
         if reason:
             decisions.append({**r, "decision": "excluded", "reason": reason})
             continue
@@ -307,7 +276,7 @@ def rebuild(page, rows, overrides, venue_data, verified=()):
     updated = page[:match.start()] + replacement + page[match.end():]
     updated = re.sub(r'(<p class="result-count"[^>]*>).*?(</p>)', lambda m: f'{m[1]}{len(published)} publications{m[2]}', updated, count=1)
     audit = {"source": DBLP_ENDPOINT, "author": DBLP_AUTHOR, "required_name": AUTHOR_NAME,
-             "policy": "Exact per-publication signature; first-author formal articles at any venue OR final-author CCF-A / CORE A* articles; no CoRR",
+             "policy": "Exact per-publication signature Joey Tianyi Zhou; all author positions and formally published venues; no CoRR or theses",
              "source_publications": source_count, "verified_supplements": len(records) - source_count, "previous_count": len(old), "published_count": len(published),
              "removed": removed, "published": published, "decisions": decisions}
     return updated, pending, audit
@@ -319,7 +288,7 @@ def main():
     args = parser.parse_args()
     rows = json.loads(args.input.read_text())["results"]["bindings"] if args.input else fetch_records()
     page = PAGE.read_text()
-    updated, pending, audit = rebuild(page, rows, json.loads(OVERRIDES.read_text()), json.loads(TOP_TIER_VENUES.read_text()), json.loads(VERIFIED.read_text()) if VERIFIED.exists() else [])
+    updated, pending, audit = rebuild(page, rows, json.loads(OVERRIDES.read_text()), json.loads(VERIFIED.read_text()) if VERIFIED.exists() else [])
     REVIEW.parent.mkdir(parents=True, exist_ok=True)
     REVIEW.write_text(json.dumps(pending, ensure_ascii=False, indent=2) + "\n")
     AUDIT.write_text(json.dumps(audit, ensure_ascii=False, indent=2) + "\n")
