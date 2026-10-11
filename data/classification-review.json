@@ -1,1 +1,4633 @@
-[]
+[
+  {
+    "url": "https://dblp.org/rec/conf/aaai/HuiL0FZ019",
+    "venues": [
+      "AAAI Conference on Artificial Intelligence (AAAI)"
+    ],
+    "books": [
+      "AAAI"
+    ],
+    "title": "Inter-Class Angular Loss for Convolutional Neural Networks.",
+    "year": "2019",
+    "authors": [
+      "Le Hui",
+      "Xiang Li 0041",
+      "Chen Gong 0002",
+      "Meng Fang 0004",
+      "Joey Tianyi Zhou",
+      "Jian Yang 0003"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/211/6859",
+      "https://dblp.org/pid/40/1491-41",
+      "https://dblp.org/pid/21/8587-2",
+      "https://dblp.org/pid/67/463-4",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/y/JianYang3"
+    ],
+    "author_role": "middle",
+    "venue": "AAAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/aaai/Li0LPZ021",
+    "venues": [
+      "AAAI Conference on Artificial Intelligence (AAAI)"
+    ],
+    "books": [
+      "AAAI"
+    ],
+    "title": "Contrastive Clustering.",
+    "year": "2021",
+    "authors": [
+      "Yunfan Li 0003",
+      "Peng Hu 0002",
+      "Jerry Zitao Liu",
+      "Dezhong Peng",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/80/1874-3",
+      "https://dblp.org/pid/11/6278-2",
+      "https://dblp.org/pid/210/0898",
+      "https://dblp.org/pid/17/6253",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "AAAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/aaai/QinSPPZSH26",
+    "venues": [
+      "AAAI Conference on Artificial Intelligence (AAAI)"
+    ],
+    "books": [
+      "AAAI"
+    ],
+    "title": "Robust Semi-paired Multimodal Learning for Cross-modal Retrieval.",
+    "year": "2026",
+    "authors": [
+      "Yang Qin",
+      "Yuan Sun 0016",
+      "Xi Peng 0001",
+      "Dezhong Peng",
+      "Joey Tianyi Zhou",
+      "Xiaomin Song",
+      "Peng Hu 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2860",
+      "https://dblp.org/pid/75/5247-16",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/17/6253",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/22/2030",
+      "https://dblp.org/pid/11/6278-2"
+    ],
+    "author_role": "middle",
+    "venue": "AAAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/aaai/Zhu0ZYCLL19",
+    "venues": [
+      "AAAI Conference on Artificial Intelligence (AAAI)"
+    ],
+    "books": [
+      "AAAI"
+    ],
+    "title": "Singe Image Rain Removal with Unpaired Information: A Differentiable Programming Perspective.",
+    "year": "2019",
+    "authors": [
+      "Hongyuan Zhu 0002",
+      "Xi Peng 0001",
+      "Joey Tianyi Zhou",
+      "Songfan Yang",
+      "Vijay Chanderasekh",
+      "Liyuan Li",
+      "Joo-Hwee Lim"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/94/9605",
+      "https://dblp.org/pid/245/3575",
+      "https://dblp.org/pid/14/333",
+      "https://dblp.org/pid/56/432"
+    ],
+    "author_role": "middle",
+    "venue": "AAAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/accv/GuntukuZRLT14",
+    "venues": [
+      "Asian Conference on Computer Vision (ACCV)",
+      "Lecture Notes in Computer Science (LNCS)"
+    ],
+    "books": [
+      "ACCV (1)"
+    ],
+    "title": "Deep Representations to Model User 'Likes'.",
+    "year": "2015",
+    "authors": [
+      "Sharath Chandra Guntuku",
+      "Joey Tianyi Zhou",
+      "Sujoy Roy",
+      "Weisi Lin",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/132/8947",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/99/903",
+      "https://dblp.org/pid/14/3737",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "ACCV (1)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/acl/0002F0XZZP25",
+    "venues": [
+      "Annual Meeting of the Association for Computational Linguistics (ACL)"
+    ],
+    "books": [
+      "ACL (1)"
+    ],
+    "title": "Understanding Large Language Model Vulnerabilities to Social Bias Attacks.",
+    "year": "2025",
+    "authors": [
+      "Jiaxu Zhao 0002",
+      "Meng Fang",
+      "Fanghua Ye 0001",
+      "Ke Xu",
+      "Qin Zhang",
+      "Joey Tianyi Zhou",
+      "Mykola Pechenizkiy"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/175/7100-2",
+      "https://dblp.org/pid/67/463",
+      "https://dblp.org/pid/203/0957",
+      "https://dblp.org/pid/181/2626",
+      "https://dblp.org/pid/45/47",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/37/4649"
+    ],
+    "author_role": "middle",
+    "venue": "ACL (1)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/acl/JinJZOS20",
+    "venues": [
+      "Annual Meeting of the Association for Computational Linguistics (ACL)"
+    ],
+    "books": [
+      "ACL"
+    ],
+    "title": "Hooks in the Headline: Learning to Generate Headlines with Controlled Styles.",
+    "year": "2020",
+    "authors": [
+      "Di Jin 0005",
+      "Zhijing Jin 0001",
+      "Joey Tianyi Zhou",
+      "Lisa Orii",
+      "Peter Szolovits"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/67/1861-5",
+      "https://dblp.org/pid/229/4267-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/262/3340",
+      "https://dblp.org/pid/11/6043"
+    ],
+    "author_role": "middle",
+    "venue": "ACL",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/acl/XuFCDZZ22",
+    "venues": [
+      "Annual Meeting of the Association for Computational Linguistics (ACL)"
+    ],
+    "books": [
+      "ACL (1)"
+    ],
+    "title": "Perceiving the World: Question-guided Reinforcement Learning for Text-based Games.",
+    "year": "2022",
+    "authors": [
+      "Yunqiu Xu",
+      "Meng Fang 0004",
+      "Ling Chen 0006",
+      "Yali Du 0001",
+      "Joey Tianyi Zhou",
+      "Chengqi Zhang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/235/5061",
+      "https://dblp.org/pid/67/463-4",
+      "https://dblp.org/pid/17/1237-6",
+      "https://dblp.org/pid/46/10185-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/71/964"
+    ],
+    "author_role": "middle",
+    "venue": "ACL (1)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/acl/ZhangSJZZG21",
+    "venues": [
+      "Annual Meeting of the Association for Computational Linguistics (ACL)",
+      "Findings of ACL",
+      "International Joint Conference on Natural Language Processing (IJCNLP)"
+    ],
+    "books": [
+      "ACL/IJCNLP (Findings)"
+    ],
+    "title": "Parallel Attention Network with Sequence Matching for Video Grounding.",
+    "year": "2021",
+    "authors": [
+      "Hao Zhang 0048",
+      "Aixin Sun",
+      "Wei Jing",
+      "Liangli Zhen",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/55/2270-48",
+      "https://dblp.org/pid/78/5155",
+      "https://dblp.org/pid/62/1017",
+      "https://dblp.org/pid/128/3352",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "ACL/IJCNLP (Findings)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/cvpr/LiHLZ0025",
+    "venues": [
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "books": [
+      "CVPR"
+    ],
+    "title": "Learning with Noisy Triplet Correspondence for Composed Image Retrieval.",
+    "year": "2025",
+    "authors": [
+      "Shuxian Li",
+      "Changhao He",
+      "Xiting Liu",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001",
+      "Peng Hu 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/126/8058",
+      "https://dblp.org/pid/352/6170",
+      "https://dblp.org/pid/148/3220",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/11/6278-2"
+    ],
+    "author_role": "middle",
+    "venue": "CVPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/cvpr/QinCP0Z024",
+    "venues": [
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "books": [
+      "CVPR"
+    ],
+    "title": "Noisy-Correspondence Learning for Text-to-Image Person Re-Identification.",
+    "year": "2024",
+    "authors": [
+      "Yang Qin",
+      "Yingke Chen",
+      "Dezhong Peng",
+      "Xi Peng 0001",
+      "Joey Tianyi Zhou",
+      "Peng Hu 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2860",
+      "https://dblp.org/pid/27/10279",
+      "https://dblp.org/pid/17/6253",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/11/6278-2"
+    ],
+    "author_role": "middle",
+    "venue": "CVPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/cvpr/Wang0XJCZY20",
+    "venues": [
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "books": [
+      "CVPR"
+    ],
+    "title": "3DV: 3D Dynamic Voxel for Action Recognition in Depth Video.",
+    "year": "2020",
+    "authors": [
+      "Yancheng Wang 0002",
+      "Yang Xiao 0007",
+      "Fu Xiong",
+      "Wenxiang Jiang 0001",
+      "Zhiguo Cao 0001",
+      "Joey Tianyi Zhou",
+      "Junsong Yuan 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/89/2805-2",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/224/0257",
+      "https://dblp.org/pid/252/4137-1",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/42/3332"
+    ],
+    "author_role": "middle",
+    "venue": "CVPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/cvpr/YangZCO17",
+    "venues": [
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "books": [
+      "CVPR"
+    ],
+    "title": "MIML-FCN+: Multi-Instance Multi-Label Learning via Fully Convolutional Networks with Privileged Information.",
+    "year": "2017",
+    "authors": [
+      "Hao Yang 0033",
+      "Joey Tianyi Zhou",
+      "Jianfei Cai 0001",
+      "Yew-Soon Ong"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/54/4089-33",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/83/6096",
+      "https://dblp.org/pid/64/4136"
+    ],
+    "author_role": "middle",
+    "venue": "CVPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/cvpr/YangZZGWC16",
+    "venues": [
+      "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+    ],
+    "books": [
+      "CVPR"
+    ],
+    "title": "Exploit Bounding Box Annotations for Multi-Label Object Recognition.",
+    "year": "2016",
+    "authors": [
+      "Hao Yang 0033",
+      "Joey Tianyi Zhou",
+      "Yu Zhang 0004",
+      "Bin-Bin Gao",
+      "Jianxin Wu 0001",
+      "Jianfei Cai 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/54/4089-33",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/50/671-4",
+      "https://dblp.org/pid/152/6672",
+      "https://dblp.org/pid/w/JianxinWu",
+      "https://dblp.org/pid/83/6096"
+    ],
+    "author_role": "middle",
+    "venue": "CVPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/eccv/ChengYWZKW24",
+    "venues": [
+      "European Conference on Computer Vision (ECCV)",
+      "Lecture Notes in Computer Science (LNCS)"
+    ],
+    "books": [
+      "ECCV (28)"
+    ],
+    "title": "STSP: Spatial-Temporal Subspace Projection for Video Class-Incremental Learning.",
+    "year": "2025",
+    "authors": [
+      "Hao Cheng 0016",
+      "Siyuan Yang 0001",
+      "Chong Wang 0011",
+      "Joey Tianyi Zhou",
+      "Alex C. Kot",
+      "Bihan Wen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/09/5158-16",
+      "https://dblp.org/pid/201/7699-1",
+      "https://dblp.org/pid/72/1334-11",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/k/AlexChiChungKot",
+      "https://dblp.org/pid/158/9840"
+    ],
+    "author_role": "middle",
+    "venue": "ECCV (28)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/eccv/LiuZTMHT14",
+    "venues": [
+      "European Conference on Computer Vision (ECCV)",
+      "Lecture Notes in Computer Science (LNCS)"
+    ],
+    "books": [
+      "ECCV (4)"
+    ],
+    "title": "Feature Disentangling Machine - A Novel Approach of Feature Selection and Disentangling in Facial Expression Analysis.",
+    "year": "2014",
+    "authors": [
+      "Ping Liu 0004",
+      "Joey Tianyi Zhou",
+      "Ivor Wai-Hung Tsang",
+      "Zibo Meng",
+      "Shizhong Han",
+      "Yan Tong"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/34/188-4",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/35/5873",
+      "https://dblp.org/pid/126/8042",
+      "https://dblp.org/pid/73/7894",
+      "https://dblp.org/pid/20/2146"
+    ],
+    "author_role": "middle",
+    "venue": "ECCV (4)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/eccv/YangZC16",
+    "venues": [
+      "European Conference on Computer Vision (ECCV)",
+      "Lecture Notes in Computer Science (LNCS)"
+    ],
+    "books": [
+      "ECCV (1)"
+    ],
+    "title": "Improving Multi-label Learning with Missing Labels by Structured Semantic Correlations.",
+    "year": "2016",
+    "authors": [
+      "Hao Yang 0033",
+      "Joey Tianyi Zhou",
+      "Jianfei Cai 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/54/4089-33",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/83/6096"
+    ],
+    "author_role": "middle",
+    "venue": "ECCV (1)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/globecom/YangL0Z20",
+    "venues": [
+      "Global Communications Conference (GLOBECOM)"
+    ],
+    "books": [
+      "GLOBECOM"
+    ],
+    "title": "Deep Reinforcement Learning for RIS-Aided Non-Orthogonal Multiple Access Downlink Networks.",
+    "year": "2020",
+    "authors": [
+      "Zhong Yang 0001",
+      "Yuanwei Liu",
+      "Yue Chen 0002",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/46/2248-1",
+      "https://dblp.org/pid/93/8541",
+      "https://dblp.org/pid/79/5815-2",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "GLOBECOM",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icarcv/JingZGLTY18",
+    "venues": [
+      "International Conference on Control, Automation, Robotics and Vision (ICARCV)"
+    ],
+    "books": [
+      "ICARCV"
+    ],
+    "title": "A Learning-based Approach for Error Compensation of Industrial Manipulator with Hybrid Model.",
+    "year": "2018",
+    "authors": [
+      "Wei Jing",
+      "Joey Tianyi Zhou",
+      "Fei Gao",
+      "Yong Liu 0026",
+      "Pey Yuen Tao",
+      "Guilin Yang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/62/1017",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/16/722",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/49/7743",
+      "https://dblp.org/pid/49/2831"
+    ],
+    "author_role": "middle",
+    "venue": "ICARCV",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/iccv/ChengYZGW23",
+    "venues": [
+      "IEEE/CVF International Conference on Computer Vision (ICCV)"
+    ],
+    "books": [
+      "ICCV"
+    ],
+    "title": "Frequency Guidance Matters in Few-Shot Learning.",
+    "year": "2023",
+    "authors": [
+      "Hao Cheng 0016",
+      "Siyuan Yang 0001",
+      "Joey Tianyi Zhou",
+      "Lanqing Guo",
+      "Bihan Wen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/09/5158-16",
+      "https://dblp.org/pid/201/7699-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/229/8223",
+      "https://dblp.org/pid/158/9840"
+    ],
+    "author_role": "middle",
+    "venue": "ICCV",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/iccv/LiZF0ZH19",
+    "venues": [
+      "IEEE/CVF International Conference on Computer Vision (ICCV)"
+    ],
+    "books": [
+      "ICCV"
+    ],
+    "title": "Reciprocal Multi-Layer Subspace Learning for Multi-View Clustering.",
+    "year": "2019",
+    "authors": [
+      "Ruihuang Li",
+      "Changqing Zhang 0002",
+      "Huazhu Fu",
+      "Xi Peng 0001",
+      "Joey Tianyi Zhou",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/246/2977",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "ICCV",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/iccv/XiongZ0CYZY19",
+    "venues": [
+      "IEEE/CVF International Conference on Computer Vision (ICCV)"
+    ],
+    "books": [
+      "ICCV"
+    ],
+    "title": "A2J: Anchor-to-Joint Regression Network for 3D Articulated Pose Estimation From a Single Depth Image.",
+    "year": "2019",
+    "authors": [
+      "Fu Xiong",
+      "Boshen Zhang",
+      "Yang Xiao 0007",
+      "Zhiguo Cao 0001",
+      "Taidong Yu",
+      "Joey Tianyi Zhou",
+      "Junsong Yuan 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/224/0257",
+      "https://dblp.org/pid/145/3980",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/247/9666",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/42/3332"
+    ],
+    "author_role": "middle",
+    "venue": "ICCV",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icdcs/HuangLZ20",
+    "venues": [
+      "IEEE International Conference on Distributed Computing Systems (ICDCS)"
+    ],
+    "books": [
+      "ICDCS"
+    ],
+    "title": "Adaptive Precision Training for Resource Constrained Devices.",
+    "year": "2020",
+    "authors": [
+      "Tian Huang",
+      "Tao Luo 0014",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/89/2520",
+      "https://dblp.org/pid/43/4720-14",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "ICDCS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icip/Zha0Z0WZ20",
+    "venues": [
+      "IEEE International Conference on Image Processing (ICIP)"
+    ],
+    "books": [
+      "ICIP"
+    ],
+    "title": "The Power Of Triply Complementary Priors For Image Compressive Sensing.",
+    "year": "2020",
+    "authors": [
+      "Zhiyuan Zha",
+      "Xin Yuan 0002",
+      "Joey Tianyi Zhou",
+      "Jiantao Zhou 0001",
+      "Bihan Wen",
+      "Ce Zhu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/185/0750",
+      "https://dblp.org/pid/78/713-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/52/4786-1",
+      "https://dblp.org/pid/158/9840",
+      "https://dblp.org/pid/69/2369"
+    ],
+    "author_role": "middle",
+    "venue": "ICIP",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icip/ZhangZZGZM23",
+    "venues": [
+      "IEEE International Conference on Image Processing (ICIP)"
+    ],
+    "books": [
+      "ICIP"
+    ],
+    "title": "Semi-Supervised Few-Shot Segmentation with Noisy Support Images.",
+    "year": "2023",
+    "authors": [
+      "Runtong Zhang",
+      "Hongyuan Zhu 0002",
+      "Hanwang Zhang",
+      "Chen Gong 0002",
+      "Joey Tianyi Zhou",
+      "Fanman Meng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/1350",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/79/8116",
+      "https://dblp.org/pid/21/8587-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/46/7666"
+    ],
+    "author_role": "middle",
+    "venue": "ICIP",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/iclr/DuZZYF20",
+    "venues": [
+      "International Conference on Learning Representations (ICLR)"
+    ],
+    "books": [
+      "ICLR"
+    ],
+    "title": "Query-efficient Meta Attack to Deep Neural Networks.",
+    "year": "2020",
+    "authors": [
+      "Jiawei Du 0002",
+      "Hu Zhang 0005",
+      "Joey Tianyi Zhou",
+      "Yi Yang 0001",
+      "Jiashi Feng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/69/5169-5",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/33/4854-1",
+      "https://dblp.org/pid/56/8278"
+    ],
+    "author_role": "middle",
+    "venue": "ICLR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/iclr/XiaoCLFZWLYL24",
+    "venues": [
+      "International Conference on Learning Representations (ICLR)"
+    ],
+    "books": [
+      "ICLR"
+    ],
+    "title": "FedLoGe: Joint Local and Generic Federated Learning under Long-tailed Data.",
+    "year": "2024",
+    "authors": [
+      "Zikai Xiao",
+      "Zihan Chen 0001",
+      "Liyinglan Liu",
+      "Yang Feng 0011",
+      "Joey Tianyi Zhou",
+      "Jian Wu 0001",
+      "Wanlu Liu",
+      "Howard Hao Yang",
+      "Zuozhu Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/358/9525",
+      "https://dblp.org/pid/139/3503-1",
+      "https://dblp.org/pid/367/1295",
+      "https://dblp.org/pid/07/6095-11",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/96/2744-1",
+      "https://dblp.org/pid/301/4862",
+      "https://dblp.org/pid/87/763",
+      "https://dblp.org/pid/173/9297"
+    ],
+    "author_role": "middle",
+    "venue": "ICLR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icmcs/MaZZZ22",
+    "venues": [
+      "IEEE International Conference on Multimedia and Expo (ICME)"
+    ],
+    "books": [
+      "ICME"
+    ],
+    "title": "Deep Unfolding for Compressed Sensing with Denoiser.",
+    "year": "2022",
+    "authors": [
+      "Chi Ma",
+      "Joey Tianyi Zhou",
+      "Xiao Zhang 0006",
+      "Yu Zhou 0027"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/40/4719",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/49/4478-6",
+      "https://dblp.org/pid/36/2728-27"
+    ],
+    "author_role": "middle",
+    "venue": "ICME",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/icml/SongX0Z0025",
+    "venues": [
+      "International Conference on Machine Learning (ICML)",
+      "Proceedings of Machine Learning Research (PMLR)"
+    ],
+    "books": [
+      "ICML"
+    ],
+    "title": "Deep Unsupervised Hashing via External Guidance.",
+    "year": "2025",
+    "authors": [
+      "Qihong Song",
+      "XitingLiu",
+      "Hongyuan Zhu 0002",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001",
+      "Peng Hu 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/374/0050",
+      "https://dblp.org/pid/404/6233",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/11/6278-2"
+    ],
+    "author_role": "middle",
+    "venue": "ICML",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/ijcai/HuangZ0ZZL19",
+    "venues": [
+      "International Joint Conference on Artificial Intelligence (IJCAI)"
+    ],
+    "books": [
+      "IJCAI"
+    ],
+    "title": "Multi-view Spectral Clustering Network.",
+    "year": "2019",
+    "authors": [
+      "Zhenyu Huang 0005",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001",
+      "Changqing Zhang 0002",
+      "Hongyuan Zhu 0002",
+      "Jiancheng Lv 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2445-5",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/68/2367-1"
+    ],
+    "author_role": "middle",
+    "venue": "IJCAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/ijcnn/HuYCYGZT24",
+    "venues": [
+      "IEEE International Joint Conference on Neural Network (IJCNN)"
+    ],
+    "books": [
+      "IJCNN"
+    ],
+    "title": "Ladder-of-Thought: Using Knowledge as Steps to Elevate Stance Detection.",
+    "year": "2024",
+    "authors": [
+      "Kairui Hu",
+      "Ming Yan 0007",
+      "Wen Haw Chong",
+      "Yong Keong Yap",
+      "Cuntai Guan",
+      "Joey Tianyi Zhou",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/355/6073",
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/65/471",
+      "https://dblp.org/pid/348/7059",
+      "https://dblp.org/pid/95/7006",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "IJCNN",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/interspeech/HouXPZC020",
+    "venues": [
+      "Conference of the International Speech Communication Association (INTERSPEECH)"
+    ],
+    "books": [
+      "INTERSPEECH"
+    ],
+    "title": "Speaker and Phoneme-Aware Speech Bandwidth Extension with Residual Dual-Path Network.",
+    "year": "2020",
+    "authors": [
+      "Nana Hou",
+      "Chenglin Xu",
+      "Van Tung Pham",
+      "Joey Tianyi Zhou",
+      "Eng Siong Chng",
+      "Haizhou Li 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/214/9959",
+      "https://dblp.org/pid/125/2814",
+      "https://dblp.org/pid/148/9588",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/c/ChngEngSiong",
+      "https://dblp.org/pid/36/4118"
+    ],
+    "author_role": "middle",
+    "venue": "INTERSPEECH",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/miccai/LeFXLXDZG22",
+    "venues": [
+      "Lecture Notes in Computer Science (LNCS)"
+    ],
+    "books": [
+      "REMIA@MICCAI"
+    ],
+    "title": "An Efficient Defending Mechanism Against Image Attacking on Medical Image Segmentation Models.",
+    "year": "2022",
+    "authors": [
+      "Linh D. Le",
+      "Huazhu Fu",
+      "Xinxing Xu",
+      "Yong Liu 0026",
+      "Yanyu Xu 0001",
+      "Jiawei Du 0002",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/328/9689",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/15/10654",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/188/7560-1",
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "REMIA@MICCAI",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/mipr/ChengZTW22",
+    "venues": [
+      "Conference on Multimedia Information Processing and Retrieval (MIPR)"
+    ],
+    "books": [
+      "MIPR"
+    ],
+    "title": "Attentive Graph Neural Networks for Few-Shot Learning.",
+    "year": "2022",
+    "authors": [
+      "Hao Cheng 0016",
+      "Joey Tianyi Zhou",
+      "Wee Peng Tay",
+      "Bihan Wen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/09/5158-16",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/45/3753",
+      "https://dblp.org/pid/158/9840"
+    ],
+    "author_role": "middle",
+    "venue": "MIPR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/mm/LuJ0Y0FZ22",
+    "venues": [
+      "International Workshop on Human-centric Multimedia Analysis (HCMA)"
+    ],
+    "books": [
+      "HCMA@MM"
+    ],
+    "title": "Real-time Embedded Demo System for Fall Detection under 15W Power.",
+    "year": "2022",
+    "authors": [
+      "Junyi Lu",
+      "Wenxiang Jiang 0001",
+      "Yang Xiao 0007",
+      "Tingbing Yan",
+      "Zhiguo Cao 0001",
+      "Zhiwen Fang",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/121/6221",
+      "https://dblp.org/pid/252/4137-1",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/331/2438",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "HCMA@MM",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/mm/MiaoZLFZ0GLD0ZH25",
+    "venues": [
+      "ACM International Conference on Multimedia (MM)"
+    ],
+    "books": [
+      "ACM Multimedia"
+    ],
+    "title": "MFFI: Multi-Dimensional Face Forgery Image Dataset for Real-World Scenarios.",
+    "year": "2025",
+    "authors": [
+      "Changtao Miao",
+      "Yi Zhang",
+      "Man Luo",
+      "Weiwei Feng",
+      "Kaiyuan Zheng",
+      "Qi Chu 0001",
+      "Tao Gong",
+      "Jianshu Li",
+      "Yunfeng Diao",
+      "Wei Zhou 0021",
+      "Joey Tianyi Zhou",
+      "Xiaoshuai Hao"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/287/9236",
+      "https://dblp.org/pid/64/6544",
+      "https://dblp.org/pid/44/10036",
+      "https://dblp.org/pid/162/3225",
+      "https://dblp.org/pid/231/7042",
+      "https://dblp.org/pid/52/9077-1",
+      "https://dblp.org/pid/89/340",
+      "https://dblp.org/pid/142/8988",
+      "https://dblp.org/pid/247/9292",
+      "https://dblp.org/pid/69/5011-21",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/271/8403"
+    ],
+    "author_role": "middle",
+    "venue": "ACM Multimedia",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/naacl/ChenLYFZWL25",
+    "venues": [
+      "Findings of ACL",
+      "North American Chapter of the Association for Computational Linguistics (NAACL)"
+    ],
+    "books": [
+      "NAACL (Findings)"
+    ],
+    "title": "Identifying and Mitigating Social Bias Knowledge in Language Models.",
+    "year": "2025",
+    "authors": [
+      "Ruizhe Chen",
+      "Yichen Li",
+      "Jianfei Yang 0001",
+      "Yang Feng 0011",
+      "Joey Tianyi Zhou",
+      "Jian Wu 0001",
+      "Zuozhu Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/286/3608",
+      "https://dblp.org/pid/27/2248",
+      "https://dblp.org/pid/06/5852-1",
+      "https://dblp.org/pid/07/6095-11",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/96/2744-1",
+      "https://dblp.org/pid/173/9297"
+    ],
+    "author_role": "middle",
+    "venue": "NAACL (Findings)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/BaiLWCMLZFWH23",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Towards Distribution-Agnostic Generalized Category Discovery.",
+    "year": "2023",
+    "authors": [
+      "Jianhong Bai",
+      "Zuozhu Liu",
+      "Hualiang Wang",
+      "Ruizhe Chen",
+      "Lianrui Mu",
+      "Xiaomeng Li 0001",
+      "Joey Tianyi Zhou",
+      "Yang Feng 0011",
+      "Jian Wu 0001",
+      "Haoji Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/349/0391",
+      "https://dblp.org/pid/173/9297",
+      "https://dblp.org/pid/302/5416",
+      "https://dblp.org/pid/286/3608",
+      "https://dblp.org/pid/358/4823",
+      "https://dblp.org/pid/02/9850-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/07/6095-11",
+      "https://dblp.org/pid/96/2744-1",
+      "https://dblp.org/pid/65/11145"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/GouHLZP22",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Multi-Scale Adaptive Network for Single Image Denoising.",
+    "year": "2022",
+    "authors": [
+      "Yuanbiao Gou",
+      "Peng Hu 0002",
+      "Jiancheng Lv 0001",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/6723",
+      "https://dblp.org/pid/11/6278-2",
+      "https://dblp.org/pid/68/2367-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/Huang0ZL020",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Partially View-aligned Clustering.",
+    "year": "2020",
+    "authors": [
+      "Zhenyu Huang 0005",
+      "Peng Hu 0002",
+      "Joey Tianyi Zhou",
+      "Jiancheng Lv 0001",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2445-5",
+      "https://dblp.org/pid/11/6278-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/68/2367-1",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/MaHZFZH21",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Trustworthy Multimodal Regression with Mixture of Normal-inverse Gamma Distributions.",
+    "year": "2021",
+    "authors": [
+      "Huan Ma 0006",
+      "Zongbo Han",
+      "Changqing Zhang 0002",
+      "Huazhu Fu",
+      "Joey Tianyi Zhou",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/07/8359-6",
+      "https://dblp.org/pid/255/6965",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/QinSPZ0023",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Cross-modal Active Complementary Learning with Self-refining Correspondence.",
+    "year": "2023",
+    "authors": [
+      "Yang Qin",
+      "Yuan Sun 0016",
+      "Dezhong Peng",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001",
+      "Peng Hu 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2860",
+      "https://dblp.org/pid/75/5247-16",
+      "https://dblp.org/pid/17/6253",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/11/6278-2"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/XiaoCLWFHZWYL23",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Fed-GraB: Federated Long-tailed Learning with Self-Adjusting Gradient Balancer.",
+    "year": "2023",
+    "authors": [
+      "Zikai Xiao",
+      "Zihan Chen 0001",
+      "Songshang Liu",
+      "Hualiang Wang",
+      "Yang Feng 0011",
+      "Jin Hao",
+      "Joey Tianyi Zhou",
+      "Jian Wu 0001",
+      "Howard H. Yang",
+      "Zuozhu Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/358/9525",
+      "https://dblp.org/pid/139/3503-1",
+      "https://dblp.org/pid/323/5697",
+      "https://dblp.org/pid/302/5416",
+      "https://dblp.org/pid/07/6095-11",
+      "https://dblp.org/pid/86/1845",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/96/2744-1",
+      "https://dblp.org/pid/87/763",
+      "https://dblp.org/pid/173/9297"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/XuF0DZZ20",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "Deep Reinforcement Learning with Stacked Hierarchical Attention for Text-based Games.",
+    "year": "2020",
+    "authors": [
+      "Yunqiu Xu",
+      "Meng Fang 0004",
+      "Ling Chen 0006",
+      "Yali Du 0001",
+      "Joey Tianyi Zhou",
+      "Chengqi Zhang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/235/5061",
+      "https://dblp.org/pid/67/463-4",
+      "https://dblp.org/pid/17/1237-6",
+      "https://dblp.org/pid/46/10185-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/71/964"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/ZhangFZBHZ24",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "The Best of Both Worlds: On the Dilemma of Out-of-distribution Detection.",
+    "year": "2024",
+    "authors": [
+      "Qingyang Zhang",
+      "Qiuxuan Feng",
+      "Joey Tianyi Zhou",
+      "Yatao Bian",
+      "Qinghua Hu",
+      "Changqing Zhang 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/157/9827",
+      "https://dblp.org/pid/390/8160",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/222/2694",
+      "https://dblp.org/pid/30/2395",
+      "https://dblp.org/pid/78/2668-2"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/nips/ZhangHcFZH19",
+    "venues": [
+      "Conference on Neural Information Processing Systems (NeurIPS)"
+    ],
+    "books": [
+      "NeurIPS"
+    ],
+    "title": "CPM-Nets: Cross Partial Multi-View Networks.",
+    "year": "2019",
+    "authors": [
+      "Changqing Zhang 0002",
+      "Zongbo Han",
+      "Yajie Cui",
+      "Huazhu Fu",
+      "Joey Tianyi Zhou",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/255/6965",
+      "https://dblp.org/pid/255/6975",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "NeurIPS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/pricai/ZhuMZWFZH24",
+    "venues": [
+      "Lecture Notes in Computer Science (LNCS)",
+      "Pacific Rim International Conference on Artificial Intelligence (PRICAI)"
+    ],
+    "books": [
+      "PRICAI (2)"
+    ],
+    "title": "Rethinking the Reliability of Post-hoc Calibration Methods Under Subpopulation Shift.",
+    "year": "2025",
+    "authors": [
+      "Yan Zhu",
+      "Huan Ma 0006",
+      "Changqing Zhang 0002",
+      "Bingzhe Wu",
+      "Huazhu Fu",
+      "Joey Tianyi Zhou",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/82/3167",
+      "https://dblp.org/pid/07/8359-6",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/207/4843",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "PRICAI (2)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/sigir/0048SJNZZG21",
+    "venues": [
+      "Annual International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
+    ],
+    "books": [
+      "SIGIR"
+    ],
+    "title": "Video Corpus Moment Retrieval with Contrastive Learning.",
+    "year": "2021",
+    "authors": [
+      "Hao Zhang 0048",
+      "Aixin Sun",
+      "Wei Jing",
+      "Guoshun Nan",
+      "Liangli Zhen",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/55/2270-48",
+      "https://dblp.org/pid/78/5155",
+      "https://dblp.org/pid/62/1017",
+      "https://dblp.org/pid/154/9547",
+      "https://dblp.org/pid/128/3352",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "SIGIR",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/wacv/XueLDZ25",
+    "venues": [
+      "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+    ],
+    "books": [
+      "WACV"
+    ],
+    "title": "PVP: Polar Representation Boost for 3D Semantic Occupancy Prediction.",
+    "year": "2025",
+    "authors": [
+      "Yujing Xue",
+      "Jiaxiang Liu",
+      "Jiawei Du 0002",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/288/1973",
+      "https://dblp.org/pid/287/4353",
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "WACV",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/wifs/LiuLLWZ25",
+    "venues": [
+      "International Workshop on Information Forensics and Security (WIFS)"
+    ],
+    "books": [
+      "WIFS"
+    ],
+    "title": "ADD: An Automated Neural Architecture Search Baseline for Deepfake Detection.",
+    "year": "2025",
+    "authors": [
+      "Ping Liu 0004",
+      "Yuewei Lin",
+      "Jingen Liu",
+      "Yunchao Wei",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/34/188-4",
+      "https://dblp.org/pid/41/1100",
+      "https://dblp.org/pid/10/5849",
+      "https://dblp.org/pid/118/5394",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "WIFS",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/conf/www/HuangTGZZMTYL26",
+    "venues": [
+      "The Web Conference (WWW)"
+    ],
+    "books": [
+      "WWW"
+    ],
+    "title": "LaV-CoT: Language-Aware Visual CoT with Multi-Aspect Reward Optimization for Multilingual Text-Centric VQA.",
+    "year": "2026",
+    "authors": [
+      "Jing Huang",
+      "Zhiya Tan",
+      "Shutao Gong",
+      "Fanwei Zeng",
+      "Joey Tianyi Zhou",
+      "Changtao Miao",
+      "Huazhe Tan",
+      "Weibin Yao",
+      "Jianshu Li"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/14/4834",
+      "https://dblp.org/pid/351/4876",
+      "https://dblp.org/pid/233/2067",
+      "https://dblp.org/pid/246/5839",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/287/9236",
+      "https://dblp.org/pid/193/9894",
+      "https://dblp.org/pid/261/1850",
+      "https://dblp.org/pid/142/8988"
+    ],
+    "author_role": "middle",
+    "venue": "WWW",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/access/TangFYZXZY20",
+    "venues": [
+      "IEEE Access"
+    ],
+    "books": [],
+    "title": "iMSCGnet: Iterative Multi-Scale Context-Guided Segmentation of Skin Lesion in Dermoscopic Images.",
+    "year": "2020",
+    "authors": [
+      "Yujiao Tang",
+      "Zhiwen Fang",
+      "Shaofeng Yuan",
+      "Chang'an A. Zhan",
+      "Yanyan Xing",
+      "Joey Tianyi Zhou",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/228/7858",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/228/7908",
+      "https://dblp.org/pid/128/5566",
+      "https://dblp.org/pid/260/3660",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Access",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/apin/Liang0ZYLF24",
+    "venues": [
+      "Applied Intelligence"
+    ],
+    "books": [],
+    "title": "C2Net: content-dependent and -independent cross-attention network for anomaly detection in videos.",
+    "year": "2024",
+    "authors": [
+      "Jiafei Liang",
+      "Yang Xiao 0007",
+      "Joey Tianyi Zhou",
+      "Feng Yang 0012",
+      "Ting Li",
+      "Zhiwen Fang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/316/0964",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/22/4613-12",
+      "https://dblp.org/pid/63/1303",
+      "https://dblp.org/pid/83/10447"
+    ],
+    "author_role": "middle",
+    "venue": "Applied Intelligence",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/asc/HuZZZCM18",
+    "venues": [
+      "Applied Soft Computing"
+    ],
+    "books": [],
+    "title": "Guide them through: An automatic crowd control framework using multi-objective genetic programming.",
+    "year": "2018",
+    "authors": [
+      "Nan Hu 0011",
+      "Jinghui Zhong",
+      "Joey Tianyi Zhou",
+      "Suiping Zhou",
+      "Wentong Cai 0001",
+      "Christopher P. Monterola"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/25/3444-11",
+      "https://dblp.org/pid/56/443",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/22/2383",
+      "https://dblp.org/pid/83/3179",
+      "https://dblp.org/pid/129/4146"
+    ],
+    "author_role": "middle",
+    "venue": "Applied Soft Computing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/asc/ZhangXXWCLZ22",
+    "venues": [
+      "Applied Soft Computing"
+    ],
+    "books": [],
+    "title": "3D human pose estimation with cross-modality training and multi-scale local refinement.",
+    "year": "2022",
+    "authors": [
+      "Boshen Zhang",
+      "Yang Xiao 0007",
+      "Fu Xiong",
+      "Cunlin Wu",
+      "Zhiguo Cao 0001",
+      "Ping Liu 0004",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/145/3980",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/224/0257",
+      "https://dblp.org/pid/323/9763",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/34/188-4",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Applied Soft Computing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/bigdatama/YanZT24",
+    "venues": [
+      "Big Data Mining and Analytics"
+    ],
+    "books": [],
+    "title": "Collaborative Knowledge Infusion for Low-Resource Stance Detection.",
+    "year": "2024",
+    "authors": [
+      "Ming Yan 0007",
+      "Joey Tianyi Zhou",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "Big Data Mining and Analytics",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/bspc/ZhangFLXZY23",
+    "venues": [
+      "Biomedical Signal Processing and Control"
+    ],
+    "books": [],
+    "title": "Retinal multi-lesion segmentation by reinforcing single-lesion guidance with multi-view learning.",
+    "year": "2023",
+    "authors": [
+      "Liyun Zhang",
+      "Zhiwen Fang",
+      "Ting Li",
+      "Yang Xiao 0007",
+      "Joey Tianyi Zhou",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/93/9315",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/63/1303",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "Biomedical Signal Processing and Control",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/icl/XuZZL23",
+    "venues": [
+      "IEEE Communications Letters"
+    ],
+    "books": [],
+    "title": "Active Simultaneously Transmitting and Reflecting (STAR)-RISs: Modeling and Analysis.",
+    "year": "2023",
+    "authors": [
+      "Jiaqi Xu 0009",
+      "Jiakuo Zuo",
+      "Joey Tianyi Zhou",
+      "Yuanwei Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/87/10695-9",
+      "https://dblp.org/pid/09/8549",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/93/8541"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Communications Letters",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ieeemm/WangFZMT20",
+    "venues": [
+      "IEEE MultiMedia"
+    ],
+    "books": [],
+    "title": "Big Cross-Modal Social Media Data Analytics With Deep Intelligence.",
+    "year": "2020",
+    "authors": [
+      "Yang Wang 0023",
+      "Meng Fang 0004",
+      "Joey Tianyi Zhou",
+      "Tingting Mu",
+      "Dacheng Tao"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/w/YangWang23",
+      "https://dblp.org/pid/67/463-4",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/89/4352",
+      "https://dblp.org/pid/46/3391"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE MultiMedia",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/iet-ipr/JiaZZLW22",
+    "venues": [
+      "IET Image Processing"
+    ],
+    "books": [],
+    "title": "Dynamic thresholding for video anomaly detection.",
+    "year": "2022",
+    "authors": [
+      "Diyang Jia",
+      "Xiao Zhang 0006",
+      "Joey Tianyi Zhou",
+      "Pan Lai",
+      "Yifei Wei"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/326/4551",
+      "https://dblp.org/pid/49/4478-6",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/139/7902",
+      "https://dblp.org/pid/77/7911"
+    ],
+    "author_role": "middle",
+    "venue": "IET Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/iet-ipr/YanYCZ0Z22",
+    "venues": [
+      "IET Image Processing"
+    ],
+    "books": [],
+    "title": "Enhanced gradient learning for deep neural networks.",
+    "year": "2022",
+    "authors": [
+      "Ming Yan 0007",
+      "Jianxi Yang",
+      "Cen Chen 0001",
+      "Joey Tianyi Zhou",
+      "Yi Pan 0001",
+      "Zeng Zeng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/28/2560",
+      "https://dblp.org/pid/152/6215-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/46/7028-1",
+      "https://dblp.org/pid/98/6997"
+    ],
+    "author_role": "middle",
+    "venue": "IET Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ijcv/LiGGLZP21",
+    "venues": [
+      "International Journal of Computer Vision"
+    ],
+    "books": [],
+    "title": "You Only Look Yourself: Unsupervised and Untrained Single Image Dehazing Neural Network.",
+    "year": "2021",
+    "authors": [
+      "Boyun Li",
+      "Yuanbiao Gou",
+      "Shuhang Gu",
+      "Zitao Liu 0001",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/6988",
+      "https://dblp.org/pid/268/6723",
+      "https://dblp.org/pid/126/1028",
+      "https://dblp.org/pid/210/0898",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "International Journal of Computer Vision",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ijon/ZengCVLZ22",
+    "venues": [
+      "Neurocomputing"
+    ],
+    "books": [],
+    "title": "Introduction to the Special Issue on edge intelligence: Neurocomputing meets edge computing.",
+    "year": "2022",
+    "authors": [
+      "Zeng Zeng",
+      "Cen Chen 0002",
+      "Bharadwaj Veeravalli",
+      "Keqin Li 0001",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/98/6997",
+      "https://dblp.org/pid/152/6215-2",
+      "https://dblp.org/pid/58/3541",
+      "https://dblp.org/pid/l/KeqinLi",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Neurocomputing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/inffus/LiuYCCXYCDZ25",
+    "venues": [
+      "Information Fusion"
+    ],
+    "books": [],
+    "title": "MAENet: Boost image-guided point cloud completion more accurate and even.",
+    "year": "2025",
+    "authors": [
+      "Moyun Liu",
+      "Ziheng Yang",
+      "Bing Chen",
+      "Youping Chen",
+      "Jingming Xie",
+      "Lei Yao",
+      "Lap-Pui Chau",
+      "Jiawei Du 0002",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/3069",
+      "https://dblp.org/pid/96/6856",
+      "https://dblp.org/pid/55/6253",
+      "https://dblp.org/pid/33/4414",
+      "https://dblp.org/pid/40/5814",
+      "https://dblp.org/pid/90/3572",
+      "https://dblp.org/pid/03/5597",
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Information Fusion",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/isci/FengCXFZ23",
+    "venues": [
+      "Information Sciences"
+    ],
+    "books": [],
+    "title": "Multi-spectral template matching based object detection in a few-shot learning manner.",
+    "year": "2023",
+    "authors": [
+      "Chen Feng 0002",
+      "Zhiguo Cao 0001",
+      "Yang Xiao 0007",
+      "Zhiwen Fang",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/01/161-2",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Information Sciences",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/isci/HanLFHZZ24",
+    "venues": [
+      "Information Sciences"
+    ],
+    "books": [],
+    "title": "A principled framework for explainable multimodal disentanglement.",
+    "year": "2024",
+    "authors": [
+      "Zongbo Han",
+      "Tao Luo 0014",
+      "Huazhu Fu",
+      "Qinghua Hu",
+      "Joey Tianyi Zhou",
+      "Changqing Zhang 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/255/6965",
+      "https://dblp.org/pid/43/4720-14",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/30/2395",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/78/2668-2"
+    ],
+    "author_role": "middle",
+    "venue": "Information Sciences",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/isci/XiaoCWCZB19",
+    "venues": [
+      "Information Sciences"
+    ],
+    "books": [],
+    "title": "Action recognition for depth video using multi-view dynamic images.",
+    "year": "2019",
+    "authors": [
+      "Yang Xiao 0007",
+      "Jun Chen 0001",
+      "Yancheng Wang 0002",
+      "Zhiguo Cao 0001",
+      "Joey Tianyi Zhou",
+      "Xiang Bai"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/85/5901-1",
+      "https://dblp.org/pid/89/2805-2",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/59/2741"
+    ],
+    "author_role": "middle",
+    "venue": "Information Sciences",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/isci/ZhuXLCFZ21",
+    "venues": [
+      "Information Sciences"
+    ],
+    "books": [],
+    "title": "LPQ++: A discriminative blur-insensitive textural descriptor with spatial-channel interaction.",
+    "year": "2021",
+    "authors": [
+      "Zihao Zhu",
+      "Yang Xiao 0007",
+      "Shuai Li",
+      "Zhiguo Cao 0001",
+      "Zhiwen Fang",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/194/4266",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/57/2281",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Information Sciences",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/jpdc/HuangLZ22",
+    "venues": [
+      "Journal of Parallel and Distributed Computing"
+    ],
+    "books": [],
+    "title": "APT: The master-copy-free training method for quantised neural network on edge devices.",
+    "year": "2022",
+    "authors": [
+      "Tian Huang",
+      "Tao Luo 0014",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/89/2520",
+      "https://dblp.org/pid/43/4720-14",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Journal of Parallel and Distributed Computing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/jsa/ChoongLLHZZ22",
+    "venues": [
+      "Journal of Systems Architecture (JSA)"
+    ],
+    "books": [],
+    "title": "Hardware-software co-exploration with racetrack memory based in-memory computing for CNN inference in embedded systems.",
+    "year": "2022",
+    "authors": [
+      "Benjamin Chen Ming Choong",
+      "Tao Luo 0014",
+      "Cheng Liu 0008",
+      "Bingsheng He",
+      "Wei Zhang 0012",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/322/4020",
+      "https://dblp.org/pid/43/4720-14",
+      "https://dblp.org/pid/15/2288-8",
+      "https://dblp.org/pid/h/BingshengHe",
+      "https://dblp.org/pid/10/4661-12",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Journal of Systems Architecture (JSA)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/jsa/WeiZYZ23",
+    "venues": [
+      "Journal of Systems Architecture (JSA)"
+    ],
+    "books": [],
+    "title": "TC-SEPM: Characterizing soft error resilience of CNNs on Tensor Cores from program and microarchitecture perspectives.",
+    "year": "2023",
+    "authors": [
+      "Xiaohui Wei 0002",
+      "Changbao Zhou",
+      "Hengshan Yue",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/25/4202-2",
+      "https://dblp.org/pid/136/3574",
+      "https://dblp.org/pid/237/1510",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Journal of Systems Architecture (JSA)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/kbs/KangSHCPZX20",
+    "venues": [
+      "Knowledge-Based Systems"
+    ],
+    "books": [],
+    "title": "Multi-graph fusion for multi-view spectral clustering.",
+    "year": "2020",
+    "authors": [
+      "Zhao Kang 0001",
+      "Guoxin Shi",
+      "Shudong Huang",
+      "Wenyu Chen 0001",
+      "Xiaorong Pu",
+      "Joey Tianyi Zhou",
+      "Zenglin Xu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2864",
+      "https://dblp.org/pid/249/2367",
+      "https://dblp.org/pid/48/2141",
+      "https://dblp.org/pid/55/6538",
+      "https://dblp.org/pid/74/6232",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/68/1538"
+    ],
+    "author_role": "middle",
+    "venue": "Knowledge-Based Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/kbs/LiuCCXYZZ24",
+    "venues": [
+      "Knowledge-Based Systems"
+    ],
+    "books": [],
+    "title": "A concise but high-performing network for image guided depth completion in autonomous driving.",
+    "year": "2024",
+    "authors": [
+      "Moyun Liu",
+      "Bing Chen",
+      "Youping Chen",
+      "Jingming Xie",
+      "Lei Yao",
+      "Yang Zhang 0053",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/3069",
+      "https://dblp.org/pid/55/6253",
+      "https://dblp.org/pid/33/4414",
+      "https://dblp.org/pid/40/5814",
+      "https://dblp.org/pid/90/3572",
+      "https://dblp.org/pid/06/6785-53",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "Knowledge-Based Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/mia/FengWXWFLZLCSTZ23",
+    "venues": [
+      "Medical Image Analysis"
+    ],
+    "books": [],
+    "title": "Contrastive domain adaptation with consistency match for automated pneumonia diagnosis.",
+    "year": "2023",
+    "authors": [
+      "Yangqin Feng",
+      "Zizhou Wang",
+      "Xinxing Xu",
+      "Yan Wang 0015",
+      "Huazhu Fu",
+      "Shaohua Li 0003",
+      "Liangli Zhen",
+      "Xiaofeng Lei",
+      "Yingnan Cui",
+      "Jordan Zheng Ting Sim",
+      "Yonghan Ting",
+      "Joey Tianyi Zhou",
+      "Yong Liu 0026",
+      "Rick Siow Mong Goh",
+      "Cher Heng Tan"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/214/3845",
+      "https://dblp.org/pid/84/6291",
+      "https://dblp.org/pid/15/10654",
+      "https://dblp.org/pid/59/2227-15",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/83/1926-3",
+      "https://dblp.org/pid/128/3352",
+      "https://dblp.org/pid/59/5417",
+      "https://dblp.org/pid/119/4303",
+      "https://dblp.org/pid/316/2763",
+      "https://dblp.org/pid/316/2732",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/24/2670",
+      "https://dblp.org/pid/147/4696"
+    ],
+    "author_role": "middle",
+    "venue": "Medical Image Analysis",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/mia/WangFZZLGZ22",
+    "venues": [
+      "Medical Image Analysis"
+    ],
+    "books": [],
+    "title": "Adversarial multimodal fusion with attention mechanism for skin lesion classification using clinical and dermoscopic images.",
+    "year": "2022",
+    "authors": [
+      "Yan Wang 0015",
+      "Yangqin Feng",
+      "Lei Zhang 0005",
+      "Joey Tianyi Zhou",
+      "Yong Liu 0026",
+      "Rick Siow Mong Goh",
+      "Liangli Zhen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/59/2227-15",
+      "https://dblp.org/pid/214/3845",
+      "https://dblp.org/pid/64/5666-5",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/24/2670",
+      "https://dblp.org/pid/128/3352"
+    ],
+    "author_role": "middle",
+    "venue": "Medical Image Analysis",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Keyword scores tied across categories.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ml/PanYNZT26",
+    "venues": [
+      "Machine Learning"
+    ],
+    "books": [],
+    "title": "Auto-Clustering with Continuous Distribution Estimation on Centroids.",
+    "year": "2026",
+    "authors": [
+      "Yuangang Pan",
+      "Yinghua Yao",
+      "Atsushi Nitanda",
+      "Joey Tianyi Zhou",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/215/4933",
+      "https://dblp.org/pid/256/0363",
+      "https://dblp.org/pid/155/1884",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "Machine Learning",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ml/ZhangHLBXZZ24",
+    "venues": [
+      "Machine Learning"
+    ],
+    "books": [],
+    "title": "Deep negative correlation classification.",
+    "year": "2024",
+    "authors": [
+      "Le Zhang 0001",
+      "Qibin Hou",
+      "Yun Liu 0011",
+      "Jia-Wang Bian",
+      "Xun Xu 0002",
+      "Joey Tianyi Zhou",
+      "Ce Zhu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/03/4043-1",
+      "https://dblp.org/pid/40/4112",
+      "https://dblp.org/pid/50/2482-11",
+      "https://dblp.org/pid/185/7894",
+      "https://dblp.org/pid/47/3944-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/69/2369"
+    ],
+    "author_role": "middle",
+    "venue": "Machine Learning",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/ml/ZhangHLBXZZ25",
+    "venues": [
+      "Machine Learning"
+    ],
+    "books": [],
+    "title": "Correction to: Deep negative correlation classification.",
+    "year": "2025",
+    "authors": [
+      "Le Zhang 0001",
+      "Qibin Hou",
+      "Yun Liu 0011",
+      "Jia-Wang Bian",
+      "Xun Xu 0002",
+      "Joey Tianyi Zhou",
+      "Ce Zhu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/03/4043-1",
+      "https://dblp.org/pid/40/4112",
+      "https://dblp.org/pid/50/2482-11",
+      "https://dblp.org/pid/185/7894",
+      "https://dblp.org/pid/47/3944-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/69/2369"
+    ],
+    "author_role": "middle",
+    "venue": "Machine Learning",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/nn/KangZPZZPCX20",
+    "venues": [
+      "Neural Networks"
+    ],
+    "books": [],
+    "title": "Partition level multiview subspace clustering.",
+    "year": "2020",
+    "authors": [
+      "Zhao Kang 0001",
+      "Xinjia Zhao",
+      "Chong Peng 0001",
+      "Hongyuan Zhu 0002",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001",
+      "Wenyu Chen 0001",
+      "Zenglin Xu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2864",
+      "https://dblp.org/pid/255/9443",
+      "https://dblp.org/pid/05/7401-1",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/55/6538",
+      "https://dblp.org/pid/68/1538"
+    ],
+    "author_role": "middle",
+    "venue": "Neural Networks",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/0001SZC0BZS21",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Ordered or Orderless: A Revisit for Video Based Person Re-Identification.",
+    "year": "2021",
+    "authors": [
+      "Le Zhang 0001",
+      "Zenglin Shi",
+      "Joey Tianyi Zhou",
+      "Ming-Ming Cheng",
+      "Yun Liu 0011",
+      "Jia-Wang Bian",
+      "Zeng Zeng",
+      "Chunhua Shen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/03/4043-1",
+      "https://dblp.org/pid/187/5383",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/45/7592",
+      "https://dblp.org/pid/50/2482-11",
+      "https://dblp.org/pid/185/7894",
+      "https://dblp.org/pid/98/6997",
+      "https://dblp.org/pid/56/1673"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/JiangXZKWZCDZY26",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "3D Hand Pose Estimation via Articulated Anchor-to-Joint 3D Local Regressors.",
+    "year": "2026",
+    "authors": [
+      "Changlong Jiang",
+      "Yang Xiao 0007",
+      "Jinghong Zheng 0002",
+      "Haohong Kuang",
+      "Cunlin Wu",
+      "Mingyang Zhang",
+      "Zhiguo Cao 0001",
+      "Min Du",
+      "Joey Tianyi Zhou",
+      "Junsong Yuan 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/223/5345",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/54/5344-2",
+      "https://dblp.org/pid/418/1479",
+      "https://dblp.org/pid/323/9763",
+      "https://dblp.org/pid/76/4874",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/78/1658",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/42/3332"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/XiaoXZF25",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Multilingual-Prompt-Guided Directional Feature Learning for Weakly Supervised Video Anomaly Detection.",
+    "year": "2025",
+    "authors": [
+      "Chizhuo Xiao",
+      "Yang Xiao 0007",
+      "Joey Tianyi Zhou",
+      "Zhiwen Fang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/417/2407",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/83/10447"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/ZhangCHZFH22",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Deep Partial Multi-View Learning.",
+    "year": "2022",
+    "authors": [
+      "Changqing Zhang 0002",
+      "Yajie Cui",
+      "Zongbo Han",
+      "Joey Tianyi Zhou",
+      "Huazhu Fu",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/255/6975",
+      "https://dblp.org/pid/255/6965",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/ZhangSCLBZZZ21",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Nonlinear Regression via Deep Negative Correlation Learning.",
+    "year": "2021",
+    "authors": [
+      "Le Zhang 0001",
+      "Zenglin Shi",
+      "Ming-Ming Cheng",
+      "Yun Liu 0011",
+      "Jia-Wang Bian",
+      "Joey Tianyi Zhou",
+      "Guoyan Zheng",
+      "Zeng Zeng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/03/4043-1",
+      "https://dblp.org/pid/187/5383",
+      "https://dblp.org/pid/45/7592",
+      "https://dblp.org/pid/50/2482-11",
+      "https://dblp.org/pid/185/7894",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/85/5912",
+      "https://dblp.org/pid/98/6997"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/ZhangSCLBZZZ21a",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Correction to \"Nonlinear Regression via Deep Negative Correlation Learning\".",
+    "year": "2021",
+    "authors": [
+      "Le Zhang 0001",
+      "Zenglin Shi",
+      "Ming-Ming Cheng",
+      "Yun Liu 0011",
+      "Jia-Wang Bian",
+      "Joey Tianyi Zhou",
+      "Guoyan Zheng",
+      "Zeng Zeng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/03/4043-1",
+      "https://dblp.org/pid/187/5383",
+      "https://dblp.org/pid/45/7592",
+      "https://dblp.org/pid/50/2482-11",
+      "https://dblp.org/pid/185/7894",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/85/5912",
+      "https://dblp.org/pid/98/6997"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pami/ZhangSJZZG22",
+    "venues": [
+      "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)"
+    ],
+    "books": [],
+    "title": "Natural Language Video Localization: A Revisit in Span-Based Question Answering Framework.",
+    "year": "2022",
+    "authors": [
+      "Hao Zhang 0048",
+      "Aixin Sun",
+      "Wei Jing",
+      "Liangli Zhen",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/55/2270-48",
+      "https://dblp.org/pid/78/5155",
+      "https://dblp.org/pid/62/1017",
+      "https://dblp.org/pid/128/3352",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/patterns/LiuJHXCRXFHLZFWL26",
+    "venues": [
+      "Patterns"
+    ],
+    "books": [],
+    "title": "DestinyNet: A deep-learning framework for cell-fate analysis from lineage-tracing single-cell RNA sequencing data.",
+    "year": "2026",
+    "authors": [
+      "Zuozhu Liu",
+      "Songtao Jiang",
+      "Tianxiang Hu",
+      "Ziwei Xue",
+      "Yuhui Chen",
+      "Dengfeng Ruan",
+      "Haoxiang Xia",
+      "Yang Feng 0011",
+      "Jin Hao",
+      "Wei Li",
+      "Joey Tianyi Zhou",
+      "Bing Fang",
+      "Jian Wu 0001",
+      "Wanlu Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/173/9297",
+      "https://dblp.org/pid/97/3729",
+      "https://dblp.org/pid/237/8490",
+      "https://dblp.org/pid/301/5017",
+      "https://dblp.org/pid/94/6814",
+      "https://dblp.org/pid/437/5766",
+      "https://dblp.org/pid/39/5229",
+      "https://dblp.org/pid/07/6095-11",
+      "https://dblp.org/pid/86/1845",
+      "https://dblp.org/pid/64/6025",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/96/6509",
+      "https://dblp.org/pid/96/2744-1",
+      "https://dblp.org/pid/301/4862"
+    ],
+    "author_role": "middle",
+    "venue": "Patterns",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/pr/ZhangZZGZM24",
+    "venues": [
+      "Pattern Recognition"
+    ],
+    "books": [],
+    "title": "Blessing few-shot segmentation via semi-supervised learning with noisy support images.",
+    "year": "2024",
+    "authors": [
+      "Runtong Zhang",
+      "Hongyuan Zhu 0002",
+      "Hanwang Zhang",
+      "Chen Gong 0002",
+      "Joey Tianyi Zhou",
+      "Fanman Meng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/1350",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/79/8116",
+      "https://dblp.org/pid/21/8587-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/46/7666"
+    ],
+    "author_role": "middle",
+    "venue": "Pattern Recognition",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/taffco/GuntukuZRLT18",
+    "venues": [
+      "IEEE Transactions on Affective Computing"
+    ],
+    "books": [],
+    "title": "'Who Likes What and, Why?' Insights into Modeling Users' Personality Based on Image 'Likes'.",
+    "year": "2018",
+    "authors": [
+      "Sharath Chandra Guntuku",
+      "Joey Tianyi Zhou",
+      "Sujoy Roy",
+      "Weisi Lin",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/132/8947",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/99/903",
+      "https://dblp.org/pid/14/3737",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Affective Computing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tcsv/ChenLWZZ22",
+    "venues": [
+      "IEEE Transactions on Circuits and Systems for Video Technology"
+    ],
+    "books": [],
+    "title": "Hierarchical Graph Neural Networks for Few-Shot Learning.",
+    "year": "2022",
+    "authors": [
+      "Cen Chen 0002",
+      "Kenli Li 0001",
+      "Wei Wei 0006",
+      "Joey Tianyi Zhou",
+      "Zeng Zeng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/152/6215-2",
+      "https://dblp.org/pid/l/KenliLi",
+      "https://dblp.org/pid/24/4105-6",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/98/6997"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tcsv/LiuZLYZ25",
+    "venues": [
+      "IEEE Transactions on Circuits and Systems for Video Technology"
+    ],
+    "books": [],
+    "title": "L2A: Learning Affinity From Attention for Weakly Supervised Continual Semantic Segmentation.",
+    "year": "2025",
+    "authors": [
+      "Hao Liu 0065",
+      "Yong Zhou 0003",
+      "Bing Liu 0016",
+      "Ming Yan 0007",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/09/3214-65",
+      "https://dblp.org/pid/90/5836-3",
+      "https://dblp.org/pid/l/BingLiu16",
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tcsv/TongXTYCZY24",
+    "venues": [
+      "IEEE Transactions on Circuits and Systems for Video Technology"
+    ],
+    "books": [],
+    "title": "You Will Never Walk Alone: One-Shot 3D Action Recognition With Point Cloud Sequence.",
+    "year": "2024",
+    "authors": [
+      "Xingyu Tong 0002",
+      "Yang Xiao 0007",
+      "Bo Tan",
+      "Jianyu Yang 0002",
+      "Zhiguo Cao 0001",
+      "Joey Tianyi Zhou",
+      "Junsong Yuan 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/307/9656-2",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/99/6163",
+      "https://dblp.org/pid/23/6903-2",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/42/3332"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tcyb/LiZZFXH22",
+    "venues": [
+      "IEEE Transactions on Cybernetics"
+    ],
+    "books": [],
+    "title": "Deep-LIFT: Deep Label-Specific Feature Learning for Image Annotation.",
+    "year": "2022",
+    "authors": [
+      "Junbing Li",
+      "Changqing Zhang 0002",
+      "Joey Tianyi Zhou",
+      "Huazhu Fu",
+      "Shuyin Xia",
+      "Qinghua Hu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/62/10774",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/63/7767",
+      "https://dblp.org/pid/154/1976",
+      "https://dblp.org/pid/30/2395"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Cybernetics",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tcyb/XiongXCWZW22",
+    "venues": [
+      "IEEE Transactions on Cybernetics"
+    ],
+    "books": [],
+    "title": "ECML: An Ensemble Cascade Metric-Learning Mechanism Toward Face Verification.",
+    "year": "2022",
+    "authors": [
+      "Fu Xiong",
+      "Yang Xiao 0007",
+      "Zhiguo Cao 0001",
+      "Yancheng Wang 0002",
+      "Joey Tianyi Zhou",
+      "Jianxin Wu 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/224/0257",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/89/2805-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/w/JianxinWu"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Cybernetics",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tie/HuangZZP19",
+    "venues": [
+      "IEEE Transactions on Industrial Electronics"
+    ],
+    "books": [],
+    "title": "Multiple Marginal Fisher Analysis.",
+    "year": "2019",
+    "authors": [
+      "Zhenyu Huang 0005",
+      "Hongyuan Zhu 0002",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2445-5",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Industrial Electronics",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tii/YanCDPZZ22",
+    "venues": [
+      "IEEE Transactions on Industrial Informatics"
+    ],
+    "books": [],
+    "title": "Memory-Assistant Collaborative Language Understanding for Artificial Intelligence of Things.",
+    "year": "2022",
+    "authors": [
+      "Ming Yan 0007",
+      "Cen Chen 0002",
+      "Jiawei Du 0002",
+      "Xi Peng 0001",
+      "Joey Tianyi Zhou",
+      "Zeng Zeng"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/152/6215-2",
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/98/6997"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Industrial Informatics",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/GengHWZW26",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Safe Image Generation via Lightweight Concept Erasure in Diffusion Models.",
+    "year": "2026",
+    "authors": [
+      "Xiaoyu Geng",
+      "Shuaixiong Hui",
+      "Yuxin Wang",
+      "Joey Tianyi Zhou",
+      "Zheng Wang 0007"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/267/4988",
+      "https://dblp.org/pid/332/4565",
+      "https://dblp.org/pid/68/1041",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/w/ZhengWang7"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/GuntukuZRLT16",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Understanding Deep Representations Learned in Modeling Users Likes.",
+    "year": "2016",
+    "authors": [
+      "Sharath Chandra Guntuku",
+      "Joey Tianyi Zhou",
+      "Sujoy Roy",
+      "Weisi Lin",
+      "Ivor W. Tsang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/132/8947",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/99/903",
+      "https://dblp.org/pid/14/3737",
+      "https://dblp.org/pid/35/5873"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/HuangZZZLP21",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Deep Spectral Representation Learning From Multi-View Data.",
+    "year": "2021",
+    "authors": [
+      "Zhenyu Huang 0005",
+      "Joey Tianyi Zhou",
+      "Hongyuan Zhu 0002",
+      "Changqing Zhang 0002",
+      "Jiancheng Lv 0001",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/181/2445-5",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/78/2668-2",
+      "https://dblp.org/pid/68/2367-1",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/LiGLZZP20",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Zero-Shot Image Dehazing.",
+    "year": "2020",
+    "authors": [
+      "Boyun Li",
+      "Yuanbiao Gou",
+      "Jerry Zitao Liu",
+      "Hongyuan Zhu 0002",
+      "Joey Tianyi Zhou",
+      "Xi Peng 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/6988",
+      "https://dblp.org/pid/268/6723",
+      "https://dblp.org/pid/210/0898",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/18/931-1"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/PengFXYZY18",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Structured AutoEncoders for Subspace Clustering.",
+    "year": "2018",
+    "authors": [
+      "Xi Peng 0001",
+      "Jiashi Feng",
+      "Shijie Xiao",
+      "Wei-Yun Yau",
+      "Joey Tianyi Zhou",
+      "Songfan Yang"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/56/8278",
+      "https://dblp.org/pid/135/4891",
+      "https://dblp.org/pid/15/6819",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/94/9605"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/TangJZZG24",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Learning Student Network Under Universal Label Noise.",
+    "year": "2024",
+    "authors": [
+      "Jialiang Tang",
+      "Ning Jiang 0002",
+      "Hongyuan Zhu 0002",
+      "Joey Tianyi Zhou",
+      "Chen Gong 0002"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/279/0611",
+      "https://dblp.org/pid/74/2686-2",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/21/8587-2"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/ZhaoLXZW26",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "PhyTrace: Tracing Physical Inconsistency in AI-Generated Images via ISP Emulation.",
+    "year": "2026",
+    "authors": [
+      "Shilei Zhao",
+      "Wenxuan Liu 0008",
+      "Danni Xu",
+      "Joey Tianyi Zhou",
+      "Zheng Wang 0007"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/119/9136",
+      "https://dblp.org/pid/197/5243-8",
+      "https://dblp.org/pid/243/3637",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/w/ZhengWang7"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tip/ZhaWYZZZ21",
+    "venues": [
+      "IEEE Transactions on Image Processing"
+    ],
+    "books": [],
+    "title": "Triply Complementary Priors for Image Restoration.",
+    "year": "2021",
+    "authors": [
+      "Zhiyuan Zha",
+      "Bihan Wen",
+      "Xin Yuan 0002",
+      "Joey Tianyi Zhou",
+      "Jiantao Zhou 0001",
+      "Ce Zhu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/185/0750",
+      "https://dblp.org/pid/158/9840",
+      "https://dblp.org/pid/78/713-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/52/4786-1",
+      "https://dblp.org/pid/69/2369"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Image Processing",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/titb/FengXWLTSTZZLT22",
+    "venues": [
+      "IEEE Journal of Biomedical and Health Informatics (J-BHI)"
+    ],
+    "books": [],
+    "title": "Deep Supervised Domain Adaptation for Pneumonia Diagnosis From Chest X-Ray Images.",
+    "year": "2022",
+    "authors": [
+      "Yangqin Feng",
+      "Xinxing Xu",
+      "Yan Wang 0015",
+      "Xiaofeng Lei",
+      "Soo Kng Teo",
+      "Jordan Zheng Ting Sim",
+      "Yonghan Ting",
+      "Liangli Zhen",
+      "Joey Tianyi Zhou",
+      "Yong Liu 0026",
+      "Cher Heng Tan"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/214/3845",
+      "https://dblp.org/pid/15/10654",
+      "https://dblp.org/pid/59/2227-15",
+      "https://dblp.org/pid/59/5417",
+      "https://dblp.org/pid/135/0082",
+      "https://dblp.org/pid/316/2763",
+      "https://dblp.org/pid/316/2732",
+      "https://dblp.org/pid/128/3352",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/147/4696"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Journal of Biomedical and Health Informatics (J-BHI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/titb/WangLXZFY24",
+    "venues": [
+      "IEEE Journal of Biomedical and Health Informatics (J-BHI)"
+    ],
+    "books": [],
+    "title": "TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images.",
+    "year": "2024",
+    "authors": [
+      "Jinting Wang",
+      "Jiafei Liang",
+      "Yang Xiao 0007",
+      "Joey Tianyi Zhou",
+      "Zhiwen Fang",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/2860",
+      "https://dblp.org/pid/316/0964",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Journal of Biomedical and Health Informatics (J-BHI)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tits/LiuCXZZYBZHZ24",
+    "venues": [
+      "IEEE Transactions on Intelligent Transportation Systems"
+    ],
+    "books": [],
+    "title": "MENet: Multi-Modal Mapping Enhancement Network for 3D Object Detection in Autonomous Driving.",
+    "year": "2024",
+    "authors": [
+      "Moyun Liu",
+      "Youping Chen",
+      "Jingming Xie",
+      "Yijie Zhu",
+      "Yang Zhang 0053",
+      "Lei Yao",
+      "Zhenshan Bing",
+      "Genghang Zhuang",
+      "Kai Huang 0001",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/268/3069",
+      "https://dblp.org/pid/33/4414",
+      "https://dblp.org/pid/40/5814",
+      "https://dblp.org/pid/274/3585",
+      "https://dblp.org/pid/06/6785-53",
+      "https://dblp.org/pid/90/3572",
+      "https://dblp.org/pid/203/4777",
+      "https://dblp.org/pid/302/4312",
+      "https://dblp.org/pid/86/489-1",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Intelligent Transportation Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tmm/ChengZTW23",
+    "venues": [
+      "IEEE Transactions on Multimedia (TMM)"
+    ],
+    "books": [],
+    "title": "Graph Neural Networks With Triple Attention for Few-Shot Learning.",
+    "year": "2023",
+    "authors": [
+      "Hao Cheng 0016",
+      "Joey Tianyi Zhou",
+      "Wee Peng Tay",
+      "Bihan Wen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/09/5158-16",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/45/3753",
+      "https://dblp.org/pid/158/9840"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Multimedia (TMM)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tmm/FangZ00Y21",
+    "venues": [
+      "IEEE Transactions on Multimedia (TMM)"
+    ],
+    "books": [],
+    "title": "Multi-Encoder Towards Effective Anomaly Detection in Videos.",
+    "year": "2021",
+    "authors": [
+      "Zhiwen Fang",
+      "Joey Tianyi Zhou",
+      "Yang Xiao 0007",
+      "Yanan Li 0006",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/61/7498-6",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Multimedia (TMM)",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/FangLZXY22",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Anomaly Detection With Bidirectional Consistency in Videos.",
+    "year": "2022",
+    "authors": [
+      "Zhiwen Fang",
+      "Jiafei Liang",
+      "Joey Tianyi Zhou",
+      "Yang Xiao 0007",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/316/0964",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/HanTCZY19",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Beyond Majority Voting: A Coarse-to-Fine Label Filtration for Heavily Noisy Labels.",
+    "year": "2019",
+    "authors": [
+      "Bo Han 0003",
+      "Ivor W. Tsang",
+      "Ling Chen 0006",
+      "Joey Tianyi Zhou",
+      "Celina Ping Yu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/241/0472-3",
+      "https://dblp.org/pid/35/5873",
+      "https://dblp.org/pid/17/1237-6",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/202/6571"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/HuangLYZG24",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "RCT: Resource Constrained Training for Edge AI.",
+    "year": "2024",
+    "authors": [
+      "Tian Huang",
+      "Tao Luo 0014",
+      "Ming Yan 0007",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/89/2520",
+      "https://dblp.org/pid/43/4720-14",
+      "https://dblp.org/pid/51/5332-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/PengFZLY20",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Deep Subspace Clustering.",
+    "year": "2020",
+    "authors": [
+      "Xi Peng 0001",
+      "Jiashi Feng",
+      "Joey Tianyi Zhou",
+      "Yingjie Lei",
+      "Shuicheng Yan"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/56/8278",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/38/956",
+      "https://dblp.org/pid/y/ShuichengYan"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/PengZFSZZ20",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Deep Clustering With Sample-Assignment Invariance Prior.",
+    "year": "2020",
+    "authors": [
+      "Xi Peng 0001",
+      "Hongyuan Zhu 0002",
+      "Jiashi Feng",
+      "Chunhua Shen",
+      "Haixian Zhang",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/18/931-1",
+      "https://dblp.org/pid/133/4527-2",
+      "https://dblp.org/pid/56/8278",
+      "https://dblp.org/pid/56/1673",
+      "https://dblp.org/pid/08/7360",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/TanXLTYCZ25",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Language-Guided 3-D Action Feature Learning Without Ground-Truth Sample Class Label.",
+    "year": "2025",
+    "authors": [
+      "Bo Tan",
+      "Yang Xiao 0007",
+      "Shuai Li",
+      "Xingyu Tong 0002",
+      "Tingbing Yan",
+      "Zhiguo Cao 0001",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/99/6163",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/57/2281",
+      "https://dblp.org/pid/307/9656-2",
+      "https://dblp.org/pid/331/2438",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/TanXWLYCZY24",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Beyond Pattern Variance: Unsupervised 3-D Action Representation Learning With Point Cloud Sequence.",
+    "year": "2024",
+    "authors": [
+      "Bo Tan",
+      "Yang Xiao 0007",
+      "Yancheng Wang 0002",
+      "Shuai Li",
+      "Jianyu Yang 0002",
+      "Zhiguo Cao 0001",
+      "Joey Tianyi Zhou",
+      "Junsong Yuan 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/99/6163",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/89/2805-2",
+      "https://dblp.org/pid/57/2281",
+      "https://dblp.org/pid/23/6903-2",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/42/3332"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/WangTXZFY24",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "GREnet: Gradually REcurrent Network With Curriculum Learning for 2-D Medical Image Segmentation.",
+    "year": "2024",
+    "authors": [
+      "Jinting Wang",
+      "Yujiao Tang",
+      "Yang Xiao 0007",
+      "Joey Tianyi Zhou",
+      "Zhiwen Fang",
+      "Feng Yang 0012"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/78/2860",
+      "https://dblp.org/pid/228/7858",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/83/10447",
+      "https://dblp.org/pid/22/4613-12"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/WangWFDZGLZ26",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Single-Domain Generalization via Path Flatness-Aware Optimization of Loss Landscapes.",
+    "year": "2026",
+    "authors": [
+      "Zizhou Wang",
+      "Yan Wang 0015",
+      "Yangqin Feng",
+      "Jiawei Du 0002",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh",
+      "Yong Liu 0026",
+      "Liangli Zhen"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/84/6291",
+      "https://dblp.org/pid/59/2227-15",
+      "https://dblp.org/pid/214/3845",
+      "https://dblp.org/pid/193/2215-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670",
+      "https://dblp.org/pid/29/4867-26",
+      "https://dblp.org/pid/128/3352"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tnn/WangXLTCZZ22",
+    "venues": [
+      "IEEE Transactions on Neural Networks and Learning Systems"
+    ],
+    "books": [],
+    "title": "Discriminative Multi-View Dynamic Image Fusion for Cross-View 3-D Action Recognition.",
+    "year": "2022",
+    "authors": [
+      "Yancheng Wang 0002",
+      "Yang Xiao 0007",
+      "Junyi Lu",
+      "Bo Tan",
+      "Zhiguo Cao 0001",
+      "Zhenjun Zhang",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/89/2805-2",
+      "https://dblp.org/pid/181/1848-7",
+      "https://dblp.org/pid/121/6221",
+      "https://dblp.org/pid/99/6163",
+      "https://dblp.org/pid/01/4449-1",
+      "https://dblp.org/pid/171/6089",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/tsmc/XiaoZFZZG21",
+    "venues": [
+      "IEEE Transactions on Systems, Man, and Cybernetics: Systems"
+    ],
+    "books": [],
+    "title": "Concurrent Processing Cluster Design to Empower Simultaneous Prediction for Hundreds of Vessels' Trajectories in Near Real-Time.",
+    "year": "2021",
+    "authors": [
+      "Zhe Xiao",
+      "Liye Zhang",
+      "Xiuju Fu",
+      "Wanbing Zhang",
+      "Joey Tianyi Zhou",
+      "Rick Siow Mong Goh"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/60/11082",
+      "https://dblp.org/pid/172/4485",
+      "https://dblp.org/pid/39/5205",
+      "https://dblp.org/pid/208/9143",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/24/2670"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Systems, Man, and Cybernetics: Systems",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/twc/MengLLCZZ24",
+    "venues": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "books": [],
+    "title": "GrapHAR: A Lightweight Human Activity Recognition Model by Exploring the Sub-Carrier Correlations.",
+    "year": "2024",
+    "authors": [
+      "Wei Meng 0002",
+      "Zhicong Liu",
+      "Bing Li 0002",
+      "Wei Cui 0002",
+      "Joey Tianyi Zhou",
+      "Le Zhang 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/05/3920-2",
+      "https://dblp.org/pid/82/2686",
+      "https://dblp.org/pid/13/2692-2",
+      "https://dblp.org/pid/42/3805-2",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/03/4043-1"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Wireless Communications",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/twc/YangLCZ22",
+    "venues": [
+      "IEEE Transactions on Wireless Communications"
+    ],
+    "books": [],
+    "title": "Deep Learning for Latent Events Forecasting in Content Caching Networks.",
+    "year": "2022",
+    "authors": [
+      "Zhong Yang 0001",
+      "Yuanwei Liu",
+      "Yue Chen 0002",
+      "Joey Tianyi Zhou"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/46/2248-1",
+      "https://dblp.org/pid/93/8541",
+      "https://dblp.org/pid/79/5815-2",
+      "https://dblp.org/pid/123/5110"
+    ],
+    "author_role": "last",
+    "venue": "IEEE Transactions on Wireless Communications",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/vtm/XuLMZSPH22",
+    "venues": [
+      "IEEE Vehicular Technology Magazine"
+    ],
+    "books": [],
+    "title": "Simultaneously Transmitting and Reflecting Intelligent Omni-Surfaces: Modeling and Implementation.",
+    "year": "2022",
+    "authors": [
+      "Jiaqi Xu 0009",
+      "Yuanwei Liu",
+      "Xidong Mu",
+      "Joey Tianyi Zhou",
+      "Lingyang Song",
+      "H. Vincent Poor",
+      "Lajos Hanzo"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/87/10695-9",
+      "https://dblp.org/pid/93/8541",
+      "https://dblp.org/pid/195/4935",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/02/2683",
+      "https://dblp.org/pid/p/HVincentPoor",
+      "https://dblp.org/pid/92/5955"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Vehicular Technology Magazine",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  },
+  {
+    "url": "https://dblp.org/rec/journals/wcl/XuMZL23",
+    "venues": [
+      "IEEE Wireless Communications Letters"
+    ],
+    "books": [],
+    "title": "Simultaneously Transmitting and Reflecting (STAR)-RISs: Are They Applicable to Dual-Sided Incidence?",
+    "year": "2023",
+    "authors": [
+      "Jiaqi Xu 0009",
+      "Xidong Mu",
+      "Joey Tianyi Zhou",
+      "Yuanwei Liu"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/87/10695-9",
+      "https://dblp.org/pid/195/4935",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/93/8541"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Wireless Communications Letters",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "No category keywords matched.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents"
+    ]
+  }
+]
