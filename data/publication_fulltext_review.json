@@ -1,0 +1,1584 @@
+{
+  "reviewed_on": "2026-10-11",
+  "scope": "102 agent-classified records; 22 owner-selected categories unchanged",
+  "policy": "Review paper main sections when abstract classification is insufficient; verify title/authors and version. Unavailable matching full text or unreliable category => Others.",
+  "reviewed_count": 68,
+  "unavailable_count": 34,
+  "entries": [
+    {
+      "number": 23,
+      "title": "A concise but high-performing network for image guided depth completion in autonomous driving.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/2401.15902",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "fast guidance/decoupled head pp3–5",
+        "KITTI/NYUv2 experiments and complexity pp6–10",
+        "conclusion p11"
+      ],
+      "reason": "低成本与实时深度补全是主要目标，正文实测参数、FLOPs与推理耗时，归入计算效率。",
+      "evidence_summary": "CHNet采用低成本channel-wise guidance和解耦预测头；KITTI/NYUv2比较准确度与计算量。p8的guidance消融报告0.011s与17.63G FLOPs，对照0.026s与100.50G；结论明确速度/精度折中。",
+      "confidence": "high"
+    },
+    {
+      "number": 24,
+      "title": "A principled framework for explainable multimodal disentanglement.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0020025524006820",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "出版社页面只提供abstract/section预览，未取得可核对完整方法、实验、结论的全文或作者稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 25,
+      "title": "Beyond Pattern Variance: Unsupervised 3-D Action Representation Learning With Point Cloud Sequence.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://researchconnect.buffalo.edu/en/publications/beyond-pattern-variance-unsupervised-3-d-action-representation-le/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "作者代码仓库FACL与机构记录可访问，但未发现可读取同标题完整论文。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 26,
+      "title": "Blessing few-shot segmentation via semi-supervised learning with noisy support images.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://gcatnjust.github.io/ChenGong/paper/zhang_pr24.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp2–5",
+        "ranking/filtering method pp9–13",
+        "causal justification p13",
+        "experiments pp18,22,26–27",
+        "conclusion p28"
+      ],
+      "reason": "主要新方法是检测并过滤错误伪标签与噪声支持样本，数据效率虽受益，噪声鲁棒性为更直接的分类依据。",
+      "evidence_summary": "F4S以entropy、co-teaching/cycle一致性和类间相似度给支持样本评分。因果图将噪声支持集作为混杂因素；PASCAL/COCO实验与消融验证去噪分量，结论聚焦消除类内/类间noise。",
+      "confidence": "high"
+    },
+    {
+      "number": 27,
+      "title": "C2Net: content-dependent and -independent cross-attention network for anomaly detection in videos.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://link.springer.com/article/10.1007/s10489-023-05252-6",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Springer页面与摘要可访问，但未取得C2Net完整论文正文。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 28,
+      "title": "Collaborative Knowledge Infusion for Low-Resource Stance Detection.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/2403.19219",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "verified knowledge and collaborative adapters pp3–6",
+        "results/ablation pp7–9",
+        "parameter-efficiency analysis pp10–11",
+        "conclusion p11"
+      ],
+      "reason": "正文明确冻结大模型、少量适配参数和低资源学习为核心方案，并有完整fine-tuning对照。",
+      "evidence_summary": "协同gated LoRA、prefix与attentive fusion只训练适配器，配合分阶段loss；VAST及PStance/COVID低资源实验、参数数量比较支持效率目标。p10–11报告冻结PLM后的训练参数减少，结论再次明确efficient training。",
+      "confidence": "high"
+    },
+    {
+      "number": 29,
+      "title": "Deep negative correlation classification.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/2212.07070",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "Bregman correlation/shared-backbone method pp2–4",
+        "experiments pp5–7",
+        "conclusion pp7–8"
+      ],
+      "reason": "通过共享backbone降低ensemble冗余，正文主要贡献明确计算/参数效率。",
+      "evidence_summary": "DNCC在共享backbone上训练多个heads，负相关损失保持多样性。ImageNet实验比较计算和模型大小：ResNet101配置55M/8.3G，相比独立ensemble356.8M/62.6G；结论强调efficient ensembles。",
+      "confidence": "high"
+    },
+    {
+      "number": 30,
+      "title": "FedLoGe: Joint Local and Generic Federated Learning under Long-tailed Data.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://arxiv.org/pdf/2401.08977",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–3",
+        "SSE-C and GLA-FR method pp3–7",
+        "experiments pp7–9",
+        "conclusion p9"
+      ],
+      "reason": "主要解决联邦学习下数据异质性、长尾偏差与噪声特征，符合鲁棒/偏差类别。",
+      "evidence_summary": "SSE-C抑制噪声特征，GLA-FR同时重新对齐全局与客户端分类器。CIFAR/ImageNet/iNaturalist报告head/medium/tail与personalized表现；p9结论确认目标为local/generic long-tail FL质量而非foundation model。",
+      "confidence": "high"
+    },
+    {
+      "number": 31,
+      "title": "GREnet: Gradually REcurrent Network With Curriculum Learning for 2-D Medical Image Segmentation.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/37022080/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "PubMed/IEEE/ResearchGate可查到元数据，未取得GREnet公开作者稿或正式全文。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 32,
+      "title": "GrapHAR: A Lightweight Human Activity Recognition Model by Exploring the Sub-Carrier Correlations.",
+      "previous_category": "Efficient AI",
+      "category": "Others",
+      "source_url": "https://ieeexplore.ieee.org/document/10217165/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "未找到GrapHAR同标题可读取全文；不能以lightweight标题替代正文核实。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 33,
+      "title": "Ladder-of-Thought: Using Knowledge as Steps to Elevate Stance Detection.",
+      "previous_category": "Foundation Models & Agents",
+      "category": "Foundation Models & Agents",
+      "source_url": "https://arxiv.org/pdf/2308.16763",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "retrieval and progressive reasoning fine-tuning pp2–3",
+        "experiments/ablations pp3–4",
+        "conclusion p4"
+      ],
+      "reason": "核心是预训练语言模型的外部知识与中间推理能力，直接对应foundation-model reasoning。",
+      "evidence_summary": "以FLAN-T5-Large为backbone，先利用检索知识生成中间rationales，再进行stance预测微调。VAST比较GPT-3.5/CoT与generation/phase消融；结论强调增强小型LM的reasoning能力。",
+      "confidence": "high"
+    },
+    {
+      "number": 34,
+      "title": "Learning Student Network Under Universal Label Noise.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/TIP.2024.3430539",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "作者主页访问失败，IEEE/PubMed只取得abstract/元数据；未取得Universal Label Noise的完整稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 35,
+      "title": "MENet: Multi-Modal Mapping Enhancement Network for 3D Object Detection in Autonomous Driving.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://lmomoy.github.io/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "下载候选35.pdf实际是Visual Latents Know More Than They Say（2026），与MENet标题不符，已拒绝将其用作正文证据；正确MENet全文未取到。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 36,
+      "title": "Noisy-Correspondence Learning for Text-to-Image Person Re-Identification.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Qin_Noisy-Correspondence_Learning_for_Text-to-Image_Person_Re-identification_CVPR_2024_paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "NC problem/CCD/TAL method pp3–6",
+        "experiments/noise ablations pp6–8",
+        "conclusion p8"
+      ],
+      "reason": "明确针对图文错误对应带来的监督噪声与训练崩溃，归入噪声鲁棒性。",
+      "evidence_summary": "RDE使用双embedding共识分割clean pairs，并用TAL避免hard-negative loss在噪声下崩溃。三个人物检索数据集以20%/50%noise检验；p8结果和结论确认robustness而非一般图文基础模型。",
+      "confidence": "high"
+    },
+    {
+      "number": 37,
+      "title": "RCT: Resource Constrained Training for Edge AI.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/2103.14493",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "quantized-only training and underflow policy pp3–5",
+        "vision/NLP memory/energy experiments pp6–9",
+        "hardware discussion p10",
+        "conclusion p11"
+      ],
+      "reason": "边缘训练的memory与energy限制贯穿问题、方法和实验，效率分类明确。",
+      "evidence_summary": "RCT仅保留量化权重，用Gavg动态调整逐层bitwidth。正文比较训练能源、参数内存及accuracy，在视觉和BERT任务评估；pp7–9对照QAT的master-copy存储，p11结论明确节约训练资源。",
+      "confidence": "high"
+    },
+    {
+      "number": 38,
+      "title": "TaiChiNet: Negative-Positive Cross-Attention Network for Breast Lesion Segmentation in Ultrasound Images.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.researchgate.net/publication/377333973_TaiChiNet_Negative-Positive_Cross-Attention_Network_for_Breast_Lesion_Segmentation_in_Ultrasound_Images",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Author-uploaded manuscript: Introduction I pp1–2",
+        "TaiChiNet III pp3–4",
+        "Experiments V pp7–11",
+        "Conclusion VI pp11–12"
+      ],
+      "reason": "全文确认是任务专用乳腺病灶分割方法，轻量化属于设计细节，未建立通用效率或trustworthy任务。",
+      "evidence_summary": "正负foreground/background双U-Net通过cross-attention、MLP head及互补loss交互，实验为BUSI/Dataset B和甲状腺/retina分割。结论着重减少分割误检/漏检；普通医学分割性能改进保守归Others。",
+      "confidence": "high"
+    },
+    {
+      "number": 39,
+      "title": "The Best of Both Worlds: On the Dilemma of Out-of-distribution Detection.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://papers.nips.cc/paper_files/paper/2024/file/8143b8c73073a9a23b9c18e400066471-Paper-Conference.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "uncertainty formulation/theory pp3–7",
+        "experiments pp8–9",
+        "conclusion p10"
+      ],
+      "reason": "全文直接研究OOD检测和受噪声/分布漂移影响的generalization冲突，trustworthy目标明确。",
+      "evidence_summary": "DUL从Bayesian视角分离distributional/overall uncertainty。CIFAR/ImageNet实验同时检查OOD AUROC/FPR与corrupted分类准确率；p10结论指出模型trustworthiness，并披露需要auxiliary outliers的限制。",
+      "confidence": "high"
+    },
+    {
+      "number": 40,
+      "title": "You Will Never Walk Alone: One-Shot 3D Action Recognition With Point Cloud Sequence.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://researchconnect.buffalo.edu/en/publications/you-will-never-walk-alone-one-shot-3d-action-recognition-with-poi/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "作者YNWA代码仓库可访问，未发现完整正文PDF或可读取作者稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 41,
+      "title": "Active Simultaneously Transmitting and Reflecting (STAR)-RISs: Modeling and Analysis.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/2302.04432",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "hardware/system model pp3–6",
+        "scaling/outage analysis pp7–9",
+        "numerical results pp10–11",
+        "conclusion p11"
+      ],
+      "reason": "全文为无线通信硬件及信号模型，不属于三个AI研究主题。",
+      "evidence_summary": "基于quadrature hybrid、phase-shifters与reflection amplifiers建模active STAR-RIS；推导SNR scaling/diversity/outage，仿真对照passive RIS。未提出AI学习或agent方法。",
+      "confidence": "high"
+    },
+    {
+      "number": 42,
+      "title": "Contrastive domain adaptation with consistency match for automated pneumonia diagnosis.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://liangli-zhen.github.io/assets/pdf/MedIA2022_CDACM.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "two-phase CDACM pp3–5",
+        "pneumonia experiments/data-deficiency tests pp5–7",
+        "conclusion p8"
+      ],
+      "reason": "全文明确减少目标域标注投入并解决数据缺乏，超越仅标题所示迁移学习。",
+      "evidence_summary": "CDACM通过source-label transfer与feature-cloud一致性扩充无标签target数据。p2明确降低annotation effort；p6少数据实验检验data deficiency；p8结论同时解决domain adaptation与data efficiency。",
+      "confidence": "high"
+    },
+    {
+      "number": 43,
+      "title": "Cross-modal Active Complementary Learning with Self-refining Correspondence.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://papers.neurips.cc/paper_files/paper/2023/file/4e580cdd54fe38ca9a5b8ea6fe99bb44-Paper-Conference.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "ACL/SCC method pp3–6",
+        "synthetic/real noise experiments pp7–9",
+        "conclusion/limitations pp9–10"
+      ],
+      "reason": "ACL与历史correspondence校正针对标注噪声和过拟合，为鲁棒学习类别。",
+      "evidence_summary": "CRCL用active-complementary loss及self-refining correction修复错误图文对齐；Flickr/MSCOCO 20–80%synthetic noise与CC152K真实噪声检验。结论确认noisy correspondence robustness并说明仅研究两种模态。",
+      "confidence": "high"
+    },
+    {
+      "number": 44,
+      "title": "Fed-GraB: Federated Long-tailed Learning with Self-Adjusting Gradient Balancer.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://arxiv.org/pdf/2310.07587",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–3",
+        "DPA/SGB method pp4–6",
+        "privacy discussion p6",
+        "long-tail/communication experiments pp6–9",
+        "conclusion p10"
+      ],
+      "reason": "重点是在privacy约束下纠正长尾类别预测偏差，属于隐私/偏差与鲁棒性主题。",
+      "evidence_summary": "DPA仅使用classifier weights估计global prior，SGB以闭环gradient feedback平衡head/tail。实验检查minority表现与异质性；p6明确常规FL仍有gradient-inversion风险，不能声称其提供完整隐私保证。",
+      "confidence": "high"
+    },
+    {
+      "number": 45,
+      "title": "Frequency Guidance Matters in Few-Shot Learning.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2023/papers/Cheng_Frequency_Guidance_Matters_in_Few-Shot_Learning_ICCV_2023_paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "frequency masks/multi-level metric pp3–6",
+        "standard/cross-domain/annotation experiments pp6–9",
+        "conclusion p9"
+      ],
+      "reason": "主要贡献是few-shot分类的频域特征与泛化，不因few-shot或使用attention就自动归效率或foundation。",
+      "evidence_summary": "FGFL由DCT/Grad-CAM生成任务频率mask，再通过triplet/contrastive/augmentation losses学习空间特征。实验评价mini/tieredImageNet、CUB与Quickdraw的分类表现；没有主导性的资源节约目标。",
+      "confidence": "high"
+    },
+    {
+      "number": 46,
+      "title": "Graph Neural Networks With Triple Attention for Few-Shot Learning.",
+      "previous_category": "Others",
+      "category": "Efficient AI",
+      "source_url": "https://www.researchgate.net/publication/366813371_Graph_Neural_Networks_With_Triple_Attention_for_Few-Shot_Learning",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Published TMM author-uploaded fulltext: IV method pp8228–8230",
+        "V-B/C theory pp8231–8232",
+        "VI experiments pp8233–8237",
+        "VII conclusion p8237",
+        "preliminary comparison with arxiv2007.06878"
+      ],
+      "reason": "正文理论显式降低trainable parameter复杂度并减少layer-memory负担，效率标签有正文依据；同时主要目标含过拟合/过平滑。",
+      "evidence_summary": "正式journal Proposition1为O(dx(dx+L))到O(dx de)，与旧arxiv的O(1)不同。理论用较少参数替代额外GNN层；四数据集实验含semi-supervised setting；结论同时披露graph-size带来的空间/计算限制。",
+      "confidence": "medium"
+    },
+    {
+      "number": 47,
+      "title": "Multi-spectral template matching based object detection in a few-shot learning manner.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S0020025522015626",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "ScienceDirect仅摘要/局部section信息，未找到同标题完整作者稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 48,
+      "title": "Retinal multi-lesion segmentation by reinforcing single-lesion guidance with multi-view learning.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1746809423007826",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "ScienceDirect仅摘要/局部section信息，Trans2UNet代码仓库未提供可读取全文。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 49,
+      "title": "Semi-Supervised Few-Shot Segmentation with Noisy Support Images.",
+      "previous_category": "Efficient AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://gcatnjust.github.io/ChenGong/paper/zhang_icip23.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "ranking/entropy/instance consensus method pp2–3",
+        "COCO experiment and cost table p4",
+        "conclusion p4"
+      ],
+      "reason": "正文把识别并排除两种噪声支持样本作为主要新技术，应与其PR扩展#26同归Trustworthy。",
+      "evidence_summary": "使用entropy、双网络mask consensus与class-prototype similarity来排除类内/类间噪声，随后以精选伪标签扩support set。COCO实验验证1-shot提升，Table2显示baseline与本方法参数/FLOPs近似相同；因此不把效率当主导创新。",
+      "confidence": "high"
+    },
+    {
+      "number": 50,
+      "title": "Simultaneously Transmitting and Reflecting (STAR)-RISs: Are They Applicable to Dual-Sided Incidence?",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/2209.05317",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "EM hardware/signal model pp3–6",
+        "uplink analysis pp6–10",
+        "numerical results pp10–12",
+        "conclusion p12"
+      ],
+      "reason": "全文为双侧入射STAR-RIS通信理论和硬件建模。",
+      "evidence_summary": "推导scalar impedance下两侧T/R symmetry、cascaded Rician统计与uplink NOMA/OMA outage；数值验证功率比及error floor。无AI模型、效率学习或agent贡献。",
+      "confidence": "high"
+    },
+    {
+      "number": 51,
+      "title": "TC-SEPM: Characterizing soft error resilience of CNNs on Tensor Cores from program and microarchitecture perspectives.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1383762123002035",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "SSRN Delivery URL返回landing page而非38页PDF；出版社未提供完整公开稿，不能只按摘要分类。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 52,
+      "title": "Towards Distribution-Agnostic Generalized Category Discovery.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/b7216f4a324864e1f592c18de4d83d10-Paper-Conference.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction/problem pp1–3",
+        "BaCon/debiasing method pp4–6",
+        "accuracy/balancedness experiments pp7–9",
+        "conclusion/limitations p10"
+      ],
+      "reason": "正文问题与评价均围绕未知类别和长尾预测偏差，支持open-world可靠性/偏差类别。",
+      "evidence_summary": "BaCon把long-tail与open-set分类整合，双分支互相监督并用distribution prior debiasing/sampling；不仅cluster普通数据。实验比较known/new classes和many/med/few balancedness，结论明示fight against imbalance与开放类预测。",
+      "confidence": "high"
+    },
+    {
+      "number": 53,
+      "title": "3D human pose estimation with cross-modality training and multi-scale local refinement.",
+      "previous_category": "Efficient AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S1568494622002940",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "出版社仅摘要/局部section信息，未取得同标题完整作者稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 54,
+      "title": "APT: The master-copy-free training method for quantised neural network on edge devices.",
+      "previous_category": "Efficient AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S074373152200082X",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "APT正式journal完整稿未取得；RCT虽有相近量化技术却是不同标题/作者列表，不将RCT全文代替APT。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 55,
+      "title": "Adversarial multimodal fusion with attention mechanism for skin lesion classification using clinical and dermoscopic images.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://liangli-zhen.github.io/assets/pdf/MedIA2022_AMFAM.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "AMFAM method pp3–6",
+        "ablations/comparisons pp6–10",
+        "discussion/conclusion pp11–12"
+      ],
+      "reason": "全文确认adversarial指模态对齐训练，不是安全防御；属于任务专用医学图像分类。",
+      "evidence_summary": "AMFAM将clinical/dermoscopic CNN特征通过domain discriminator对齐，用attention reconstruction与concatenation融合。7-point lesion实验比较诊断分类；p12讨论明确模型未处理class imbalance，故不能当fairness研究。",
+      "confidence": "high"
+    },
+    {
+      "number": 56,
+      "title": "An Efficient Defending Mechanism Against Image Attacking on Medical Image Segmentation Models.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-031-16876-5_7",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Springer章节与ResearchGate摘要可查，未取得完整章节PDF或作者稿。",
+      "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
+      "confidence": "low"
+    },
+    {
+      "number": 57,
+      "title": "Anomaly Detection With Bidirectional Consistency in Videos.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33296312/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 58,
+      "title": "Attentive Graph Neural Networks for Few-Shot Learning.",
+      "previous_category": "Others",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/2007.06878",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "Method p3–4",
+        "Experiments p5–7",
+        "Conclusion p7",
+        "parameter-complexity proof Appendix p8"
+      ],
+      "reason": "Same title and authors as record; explicit parameter-complexity and few-shot data-efficiency contributions support Efficient AI. Unify duplicate/version #46 accordingly.",
+      "evidence_summary": "Node/memory/layer attention tackles few-shot overfitting; the proof reduces per-layer trainable parameter complexity from O(d(d+L)) to O(1).",
+      "confidence": "high"
+    },
+    {
+      "number": 59,
+      "title": "Deep Learning for Latent Events Forecasting in Content Caching Networks.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/abs/2101.01149",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "TAC framework/method",
+        "forecasting experiments",
+        "Conclusion"
+      ],
+      "reason": "Author version uses Twitter Aided Caching Networks wording, with same authors and TAC framework; primary contribution is a communications application, not efficiency of AI itself.",
+      "evidence_summary": "Tweet topics and geographic information forecast content popularity for base-station caches; evaluations concern forecasting and communication caching.",
+      "confidence": "high"
+    },
+    {
+      "number": 60,
+      "title": "Deep Partial Multi-View Learning.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://arxiv.org/abs/2011.06170",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "Method p2–4",
+        "Experiments p6–9",
+        "Conclusion"
+      ],
+      "reason": "Main contribution includes robust predictions under heavily missing modalities and an interpretable classification mechanism.",
+      "evidence_summary": "A common latent representation reconstructs available views under missing-view masks, with a classification constraint; tests vary missing-view patterns and rates.",
+      "confidence": "high"
+    },
+    {
+      "number": 61,
+      "title": "Deep Supervised Domain Adaptation for Pneumonia Diagnosis From Chest X-Ray Images.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://liangli-zhen.github.io/assets/pdf/JBHI2021-Deep_Supervised_Domain_Adaptation_for_Pneumonia_Diagnosis_From_Chest_X-Ray_Images.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "III Proposed Method",
+        "IV Experimental Study",
+        "V Discussion and Conclusion"
+      ],
+      "reason": "Transfer of source knowledge improves target learning with limited medical labels; a data-efficiency contribution. The author-hosted PDF is the final JBHI article with matching title and authors.",
+      "evidence_summary": "DSDA aligns semantic representations between a large multi-label source dataset and a smaller target pneumonia dataset, using both domains iteratively.",
+      "confidence": "medium"
+    },
+    {
+      "number": 62,
+      "title": "Deep Unfolding for Compressed Sensing with Denoiser.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/ICME52920.2022.9859640",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 63,
+      "title": "Deep-LIFT: Deep Label-Specific Feature Learning for Image Annotation.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33566780/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 64,
+      "title": "Discriminative Multi-View Dynamic Image Fusion for Cross-View 3-D Action Recognition.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/33852396/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 65,
+      "title": "Dynamic thresholding for video anomaly detection.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/ipr2.12532",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Approach",
+        "4 Experiments including 4.5–4.8",
+        "5 Conclusion"
+      ],
+      "reason": "Explicit anomaly detection and robustness to environmental distribution changes support Trustworthy AI.",
+      "evidence_summary": "Dynamic thresholds combine quartile initialization, illumination compensation and sliding-window statistics; tests measure false alerts and robustness to gradual/sudden lighting changes.",
+      "confidence": "high"
+    },
+    {
+      "number": 66,
+      "title": "ECML: An Ensemble Cascade Metric-Learning Mechanism Toward Face Verification.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/2007.05720",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "Method ECML/RMML",
+        "experimental comparisons and running-time analysis",
+        "Conclusion"
+      ],
+      "reason": "Avoiding expensive iterative/inverse operations is an explicit learning-efficiency contribution alongside verification accuracy.",
+      "evidence_summary": "A cascade of metrics and feature ensembles includes a one-pass closed-form metric learner; experiments compare accuracy and training time.",
+      "confidence": "high"
+    },
+    {
+      "number": 67,
+      "title": "Enhanced gradient learning for deep neural networks.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/ipr2.12353",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 SCNet",
+        "4 Experiments",
+        "5 Discussion including 5.5 efficiency",
+        "6 Conclusion"
+      ],
+      "reason": "Primary contribution is faster/better neural-network optimization with no material inference burden. Official publisher HTML provides full article.",
+      "evidence_summary": "SCNet modifies the gradient path through skip connections, improving convergence; experiments cover classification and compare unchanged deployment/inference costs.",
+      "confidence": "high"
+    },
+    {
+      "number": 68,
+      "title": "Hardware-software co-exploration with racetrack memory based in-memory computing for CNN inference in embedded systems.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/2507.01429",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "hardware/circuit design and quantization method",
+        "SPICE/system experiments",
+        "Conclusion"
+      ],
+      "reason": "The 2025 author manuscript has identical title/authors and explicit related DOI 10.1016/j.sysarc.2022.102507 linking the 2022 formal article; it is evidence for that record, not a new publication.",
+      "evidence_summary": "Racetrack-memory in-memory CNN inference co-design reduces arithmetic energy and latency, with circuit/system evaluations and accuracy tradeoffs.",
+      "confidence": "high"
+    },
+    {
+      "number": 69,
+      "title": "Hierarchical Graph Neural Networks for Few-Shot Learning.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/TCSVT.2021.3058098",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 70,
+      "title": "Introduction to the Special Issue on edge intelligence: Neurocomputing meets edge computing.",
+      "previous_category": "Efficient AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S092523122101746X",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 71,
+      "title": "Memory-Assistant Collaborative Language Understanding for Artificial Intelligence of Things.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://xlearning-lab.com/assets/2021-TII-Memory-assistant-Collaborative-Language-Understanding-for-Artificial-Intelligence-of-Things.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "memory-assistant architecture",
+        "GLUE experiments",
+        "Conclusion"
+      ],
+      "reason": "Explicit low-resource language learning and no additional inference cost support Efficient AI.",
+      "evidence_summary": "An auxiliary memory supports lightweight MobileBERT learning on low-resource tasks and is unplugged at deployment.",
+      "confidence": "high"
+    },
+    {
+      "number": 72,
+      "title": "Multi-Scale Adaptive Network for Single Image Denoising.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/5b288823575bb29654b0953a251e933b-Paper-Conference.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Proposed Method",
+        "4 Experiments",
+        "5 Conclusions"
+      ],
+      "reason": "The main contribution is task-specific image restoration architecture/quality, with no central general-model, trustworthy-decision or AI-efficiency contribution.",
+      "evidence_summary": "An asymmetric multi-scale encoder/subnetwork/decoder combines adaptive filtering, context mining and feature fusion; experiments emphasize denoising PSNR/SSIM.",
+      "confidence": "high"
+    },
+    {
+      "number": 73,
+      "title": "Natural Language Video Localization: A Revisit in Span-Based Question Answering Framework.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/abs/2102.13558",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "3 Methodology including span QA and highlighting",
+        "4 Experiments",
+        "Conclusion"
+      ],
+      "reason": "A task-specific temporal localization model rather than a foundation model or agent system; primary contribution is grounding accuracy.",
+      "evidence_summary": "VSLNet reformulates video moment localization as span QA, with query-guided highlighting and multi-scale split/concatenation for long videos.",
+      "confidence": "high"
+    },
+    {
+      "number": 74,
+      "title": "Perceiving the World: Question-guided Reinforcement Learning for Text-based Games.",
+      "previous_category": "Foundation Models & Agents",
+      "category": "Foundation Models & Agents",
+      "source_url": "https://aclanthology.org/2022.acl-long.41.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "4 Methodology",
+        "5 Experiment setup",
+        "6 Results/discussions",
+        "Conclusion"
+      ],
+      "reason": "Agent goal decomposition, language-grounded action selection and decision making are central; efficiency is a secondary benefit.",
+      "evidence_summary": "A QA task selector and action validator decompose text-game goals and filter actions, followed by a reinforcement-learned action selector.",
+      "confidence": "high"
+    },
+    {
+      "number": 75,
+      "title": "Real-time Embedded Demo System for Fall Detection under 15W Power.",
+      "previous_category": "Efficient AI",
+      "category": "Others",
+      "source_url": "https://www.a-star.edu.sg/cfar/research/research-pillars/sustainable-ai",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 76,
+      "title": "Simultaneously Transmitting and Reflecting Intelligent Omni-Surfaces: Modeling and Implementation.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/abs/2108.06233",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "hardware implementations",
+        "hardware/channel-model analysis",
+        "Conclusion"
+      ],
+      "reason": "A communications/hardware modeling article; no AI learning-system contribution. This paper does not have an empirical ML experiments section.",
+      "evidence_summary": "STAR surfaces control transmitted/reflected radio signals; hardware options and near/far-field models are analyzed.",
+      "confidence": "high"
+    },
+    {
+      "number": 77,
+      "title": "Concurrent Processing Cluster Design to Empower Simultaneous Prediction for Hundreds of Vessels' Trajectories in Near Real-Time.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/TSMC.2019.2906381",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 78,
+      "title": "Contrastive Clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/2009.09687",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Method",
+        "4 Experiments",
+        "5 Conclusion"
+      ],
+      "reason": "Although online one-stage learning avoids alternating clustering stages, the principal contribution and evaluation are unsupervised clustering/representation quality; retain Others.",
+      "evidence_summary": "Instance-level and cluster-level contrastive heads jointly learn an online clustering model; image datasets evaluate clustering accuracy.",
+      "confidence": "medium"
+    },
+    {
+      "number": 79,
+      "title": "Correction to \"Nonlinear Regression via Deep Negative Correlation Learning\".",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/TPAMI.2021.3071929",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Correction notice: matching full-text correction was not obtained; it is retained as Others, not classified from the original article.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 80,
+      "title": "Deep Spectral Representation Learning From Multi-View Data.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34081580/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 81,
+      "title": "LPQ++: A discriminative blur-insensitive textural descriptor with spatial-channel interaction.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S0020025520309919",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 82,
+      "title": "Multi-Encoder Towards Effective Anomaly Detection in Videos.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://doi.org/10.1109/TMM.2020.3037538",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 83,
+      "title": "Nonlinear Regression via Deep Negative Correlation Learning.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/1908.09066",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "3.2 Method and network structure",
+        "4 Experiments",
+        "Conclusion"
+      ],
+      "reason": "Directly addresses the computational complexity of deep ensembles through shared representation; author version says Robust Regression, with same authors/method as formal Nonlinear Regression record.",
+      "evidence_summary": "Negative-correlation ensemble regression shares lower CNN feature extractors and divides higher features among regressors, avoiding independent full-CNN ensembles.",
+      "confidence": "high"
+    },
+    {
+      "number": 84,
+      "title": "Ordered or Orderless: A Revisit for Video Based Person Re-Identification.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/1912.11236",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction",
+        "diagnostic CNN/RNN analysis",
+        "5 ensemble method including 5.3",
+        "6 Experiments",
+        "Conclusion"
+      ],
+      "reason": "Section 5.3 explicitly contrasts the shared ranker with costly independent ensemble models; eliminating recurrent video modeling and shared computation support Efficient AI.",
+      "evidence_summary": "Video re-identification uses a shared image base ranker and Kemeny–Young aggregation; compares with recurrent ordered video models.",
+      "confidence": "medium"
+    },
+    {
+      "number": 85,
+      "title": "Parallel Attention Network with Sequence Matching for Video Grounding.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/abs/2105.08481",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Proposed Method",
+        "4 Experiments",
+        "Conclusion"
+      ],
+      "reason": "Main contribution is task-specific multimodal grounding, rather than foundation-model pretraining or agents; quality dominates evaluation.",
+      "evidence_summary": "Parallel self/cross attention and sequence matching improve temporal boundaries in text-query video grounding.",
+      "confidence": "high"
+    },
+    {
+      "number": 86,
+      "title": "Triply Complementary Priors for Image Restoration.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://pubmed.ncbi.nlm.nih.gov/34133279/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text. A differently titled conference compressed-sensing paper was not substituted for this journal restoration article.",
+      "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
+      "confidence": "low"
+    },
+    {
+      "number": 87,
+      "title": "Trustworthy Multimodal Regression with Mixture of Normal-inverse Gamma Distributions.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/371bce7dc83817b7893bcdeed13799b5-Paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "4 Trustworthy Multimodal Regression",
+        "5 Experiments including noisy modalities and uncertainty",
+        "6 Conclusion"
+      ],
+      "reason": "Explicit calibrated uncertainty and noise-aware multimodal decisions support Trustworthy AI.",
+      "evidence_summary": "Normal-inverse Gamma evidential distributions model modality-specific and fused uncertainty; a pseudo modality supplements fusion under noisy observations.",
+      "confidence": "high"
+    },
+    {
+      "number": 88,
+      "title": "Video Corpus Moment Retrieval with Contrastive Learning.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/abs/2105.06247",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 ReLoCLNet model",
+        "4 Experiments including retrieval-time table",
+        "5 Conclusion"
+      ],
+      "reason": "Retrieval computation is a central tradeoff; reported average query time is 3.86 ms versus 218.33 ms for HAMMER in the comparison.",
+      "evidence_summary": "Separate video/query encoders use training-only contrastive alignment; retrieval avoids per-query cross-modal encoding of every video.",
+      "confidence": "high"
+    },
+    {
+      "number": 89,
+      "title": "You Only Look Yourself: Unsupervised and Untrained Single Image Dehazing Neural Network.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://xlearning-lab.com/assets/2021-IJCV-You-Only-Look-Yourself-Unsupervised-and-Untrained-Single-Image-Dehazing-Neural-Network.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Proposed Method",
+        "4 Experiments including model size/runtime",
+        "5 Conclusion"
+      ],
+      "reason": "A clear data-efficiency contribution: optimization uses only the observed image. Untrained does not mean no per-image optimization; use the same contribution criterion for conference version #104.",
+      "evidence_summary": "YOLY jointly decomposes a single hazy image into scene, transmission and light components, without an external training collection or paired labels.",
+      "confidence": "high"
+    },
+    {
+      "number": 90,
+      "title": "3DV: 3D Dynamic Voxel for Action Recognition in Depth Video.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_3DV_3D_Dynamic_Voxel_for_Action_Recognition_in_Depth_Video_CVPR_2020_paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 3DV representation",
+        "6 Experiments including 6.3/6.5 and Table 9",
+        "7 Conclusions"
+      ],
+      "reason": "Table 9 compares 1.24M/1.24G parameters/FLOPs against C3D 29.2M/10.99G; explicit compact representation and efficiency support Efficient AI.",
+      "evidence_summary": "Compact voxel motion representation and PointNet++ replace dense 3D-CNN input; experiments compare recognition, parameter counts, FLOPs and online runtime.",
+      "confidence": "high"
+    },
+    {
+      "number": 91,
+      "title": "Adaptive Precision Training for Resource Constrained Devices.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/2012.12775",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "Adaptive precision method pp2–3",
+        "energy/memory experiments pp3–5",
+        "Conclusion p5"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Layerwise adaptive precision directly reduces on-device DNN training energy and memory; CIFAR and MobileNet experiments measure those savings.",
+      "confidence": "high"
+    },
+    {
+      "number": 92,
+      "title": "Big Cross-Modal Social Media Data Analytics With Deep Intelligence.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://dblp.org/rec/journals/ieeemm/WangFZMT20",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "出版社/DBLP记录可找到该短篇编辑引言，但未取得开放全文。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 93,
+      "title": "Deep Clustering With Sample-Assignment Invariance Prior.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://xlearning-lab.com/assets/2020-TNNLS-Deep-Clustering-with-Sample-Assignment-Invariance-Prior.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction/contributions pp1–2",
+        "representation and clustering modules pp3–4",
+        "experiments pp6–10",
+        "Conclusion p10"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Main contribution is sample-assignment invariance across distance metrics for joint representation learning and clustering. Runtime is secondary analysis, rather than a resource-efficiency objective.",
+      "confidence": "high"
+    },
+    {
+      "number": 94,
+      "title": "Deep Reinforcement Learning for RIS-Aided Non-Orthogonal Multiple Access Downlink Networks.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://hub.hku.hk/handle/10722/349523",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "下载的候选 arXiv 2007.08433 为另一篇 DeepMind 论文；拒绝使用不匹配正文，未找到目标论文开放全文。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 95,
+      "title": "Deep Reinforcement Learning with Stacked Hierarchical Attention for Text-based Games.",
+      "previous_category": "Foundation Models & Agents",
+      "category": "Foundation Models & Agents",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/bf65417dcecc7f2b0006e1f5793b7143-Paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "POMDP and knowledge-graph reasoning method pp3–5",
+        "Jericho evaluations pp6–8",
+        "Conclusion p9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "An autonomous text-game RL agent uses knowledge-graph memory, temporal/relational subgraphs and hierarchical attention to reason and select actions; game evaluations test the decision process.",
+      "confidence": "high"
+    },
+    {
+      "number": 96,
+      "title": "Deep Subspace Clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://xlearning-lab.com/assets/2020-TNNLS-Deep-Subspace-Clustering.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "DSC and optimization pp3–4",
+        "clustering experiments pp6–10",
+        "Conclusion pp10–11"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "DSC extends sparse subspace clustering with nonlinear neural mappings and jointly learned affinities. Main evidence concerns cluster quality on faces, objects and digits; smaller network size is incidental.",
+      "confidence": "high"
+    },
+    {
+      "number": 97,
+      "title": "Hooks in the Headline: Learning to Generate Headlines with Controlled Styles.",
+      "previous_category": "Foundation Models & Agents",
+      "category": "Others",
+      "source_url": "https://aclanthology.org/2020.acl-main.456.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "generation/multitask method pp3–4",
+        "headline evaluations pp5–7",
+        "Conclusion p9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "The contribution is a task-specific stylistic headline-generation framework. MASS is pretrained initialization and GPT-2 is used in scoring, rather than the paper developing a general foundation model or agent.",
+      "confidence": "high"
+    },
+    {
+      "number": 98,
+      "title": "Multi-graph fusion for multi-view spectral clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/1909.06940",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–3",
+        "self-expressiveness/graph-fusion method pp7–9",
+        "multi-view experiments pp12–17",
+        "Conclusion pp18–19"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Learns consensus affinity graphs and adaptive view weights for multi-view spectral clustering. Evaluations emphasize clustering quality; no central AI compute/data-efficiency or trust objective.",
+      "confidence": "high"
+    },
+    {
+      "number": 99,
+      "title": "Partially View-aligned Clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/1e591403ff232de0f0f139ac51d99295-Paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "differentiable alignment/representation method pp3–5",
+        "experiments pp7–8",
+        "Conclusion p9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Partially aligned views are matched through a differentiable Hungarian surrogate while learning shared representations. The core contribution is a multi-view clustering problem and alignment algorithm.",
+      "confidence": "medium"
+    },
+    {
+      "number": 100,
+      "title": "Partition level multiview subspace clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://xlearning-lab.com/assets/2020-Partition-Level-Multiview-Subspace-Clustering.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "partition-fusion method p3",
+        "clustering experiments pp4–8",
+        "Conclusion pp8–9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Fuses view-specific partitions into a consensus clustering and jointly updates graphs and partitions. Main objective is improving multi-view cluster quality.",
+      "confidence": "high"
+    },
+    {
+      "number": 101,
+      "title": "Query-efficient Meta Attack to Deep Neural Networks.",
+      "previous_category": "Trustworthy AI",
+      "category": "Trustworthy AI",
+      "source_url": "https://arxiv.org/html/1906.02398",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "1 Introduction",
+        "3 Method including meta-training and query attack",
+        "4 Experiments including target/untargeted attacks and ablations",
+        "5 Conclusion"
+      ],
+      "reason": "arXiv 同标题作者公开全文取得并核对；核心问题是黑盒对抗攻击。",
+      "evidence_summary": "A meta-learned gradient predictor improves black-box adversarial attacks, evaluated by attack success, perturbation magnitude and query budget. Security/robustness is the task domain, so Trustworthy AI takes priority over query efficiency.",
+      "confidence": "high"
+    },
+    {
+      "number": 102,
+      "title": "Speaker and Phoneme-Aware Speech Bandwidth Extension with Residual Dual-Path Network.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://www.isca-archive.org/interspeech_2020/hou20c_interspeech.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "feature fusion/residual dual-path method pp1–2",
+        "speech experiments pp3–4",
+        "Conclusion p4"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Combines speaker i-vectors and phoneme posteriorgrams with a compact residual dual-path bandwidth-extension network. Evaluation and conclusion report comparable/better speech quality using 16 times fewer parameters.",
+      "confidence": "high"
+    },
+    {
+      "number": 103,
+      "title": "The Power Of Triply Complementary Priors For Image Compressive Sensing.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/2005.07902",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "triply complementary priors/optimization pp2–3",
+        "CS recovery experiments pp3–4",
+        "Conclusion p4"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Combines low-rank, sparsity and deep denoiser priors to reconstruct compressively sensed images. Compression concerns input measurements, not the computational footprint of an AI model.",
+      "confidence": "high"
+    },
+    {
+      "number": 104,
+      "title": "Zero-Shot Image Dehazing.",
+      "previous_category": "Others",
+      "category": "Efficient AI",
+      "source_url": "https://xlearning-lab.com/assets/2020-TIP-Zero-Shot-Image-Dehazing.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction/limitations pp1–2",
+        "three-network single-image method pp3–4",
+        "dehazing experiments pp5–8",
+        "Conclusion p9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Explicitly avoids ground-truth training pairs and any additional image collection: three networks are fitted from one hazy image. This is data efficiency; the conclusion acknowledges slow inference, so it is not a compute-efficiency claim.",
+      "confidence": "medium"
+    },
+    {
+      "number": 105,
+      "title": "iMSCGnet: Iterative Multi-Scale Context-Guided Segmentation of Skin Lesion in Dermoscopic Images.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://ieeexplore.ieee.org/ielx7/6287639/8948470/09007375.pdf",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 106,
+      "title": "A2J: Anchor-to-Joint Regression Network for 3D Articulated Pose Estimation From a Single Depth Image.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://arxiv.org/pdf/1908.09999",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "A2J regression branches pp3–4",
+        "pose/throughput experiments pp5–7",
+        "Conclusion p8"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "2D anchor-to-joint prediction avoids costly voxelization, 3D convolutions and deconvolution. Experiments report 105 FPS alongside pose accuracy, supporting a direct inference-efficiency goal.",
+      "confidence": "high"
+    },
+    {
+      "number": 107,
+      "title": "Action recognition for depth video using multi-view dynamic images.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/1806.11269",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp2–7",
+        "multi-view dynamic image/CNN method pp12–15",
+        "experiments pp22–38",
+        "Conclusion pp39–40"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Depth-action recognition uses virtual-view dynamic images, shared convolutional layers and action proposals to improve viewpoint robustness and discriminative motion representations. The central task is action recognition.",
+      "confidence": "medium"
+    },
+    {
+      "number": 108,
+      "title": "Beyond Majority Voting: A Coarse-to-Fine Label Filtration for Heavily Noisy Labels.",
+      "previous_category": "Trustworthy AI",
+      "category": "Others",
+      "source_url": "https://scholars.hkbu.edu.hk/en/publications/beyond-majority-voting-a-coarse-to-fine-label-filtration-for-heav-2/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 109,
+      "title": "CPM-Nets: Cross Partial Multi-View Networks.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://proceedings.neurips.cc/paper_files/paper/2019/file/11b9842e0a271ff252c1903e7132cd68-Paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "partial-view representation and classification method pp3–5",
+        "experiments pp6–8",
+        "Conclusion p8"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Learns representations and classifiers for arbitrary missing-view patterns. Evaluations demonstrate handling incomplete multi-view data; not a general foundation model or a primary resource-efficiency method.",
+      "confidence": "medium"
+    },
+    {
+      "number": 110,
+      "title": "Inter-Class Angular Loss for Convolutional Neural Networks.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://cdn.aaai.org/ojs/4278/4278-13-7332-1-10-20190705.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "Methodology pp3–4",
+        "Vision/text classification experiments pp4–7",
+        "Conclusion p7"
+      ],
+      "reason": "通过官方 AAAI CDN 全文核对标题作者并阅读主要章节。",
+      "evidence_summary": "ICAL enlarges angles between class vectors to improve classification discrimination across image and text tasks. Method simplifies angular computation, but the main contribution and evaluations concern classification accuracy, so Others.",
+      "confidence": "high"
+    },
+    {
+      "number": 111,
+      "title": "Multi-view Spectral Clustering Network.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.ijcai.org/proceedings/2019/0356.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "multi-view objective and orthogonal-layer method pp3–5",
+        "experiments p5",
+        "Conclusion p6"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Deep spectral clustering incorporates within-view invariance, cross-view consistency and an orthogonal layer. Its main objective and comparisons are multi-view clustering quality.",
+      "confidence": "high"
+    },
+    {
+      "number": 112,
+      "title": "Multiple Marginal Fisher Analysis.",
+      "previous_category": "Efficient AI",
+      "category": "Efficient AI",
+      "source_url": "https://xlearning-lab.com/assets/2019-TIE-Multiple-Marginal-Fisher-Analysis.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "MMFA and complexity pp3–4",
+        "feature/classification experiments pp4–8",
+        "Conclusion pp8–9"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "MMFA estimates feature dimensionality from data and narrows the neighborhood-parameter search range; method explicitly says this saves computation compared with exhaustive MFA parameter/dimension selection.",
+      "confidence": "medium"
+    },
+    {
+      "number": 113,
+      "title": "Reciprocal Multi-Layer Subspace Learning for Multi-View Clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Reciprocal_Multi-Layer_Subspace_Learning_for_Multi-View_Clustering_ICCV_2019_paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "reciprocal subspace/BEN method pp3–4",
+        "multi-view experiments pp6–7",
+        "Conclusion p8"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Hierarchical self-representation and backward encoding recover complementary/consistent subspace structure for clustering. High-dimensional/noisy data are addressed as clustering quality issues.",
+      "confidence": "high"
+    },
+    {
+      "number": 114,
+      "title": "Singe Image Rain Removal with Unpaired Information: A Differentiable Programming Perspective.",
+      "previous_category": "Others",
+      "category": "Efficient AI",
+      "source_url": "https://xlearning-lab.com/assets/2019-AAAI-Singe-Image-Rain-Removal-with-Unpaired-Information-A-Differentiable-Programming-Perspective.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "Generator/discriminator method pp3–5",
+        "Rain800 experiments and training-paradigm analysis pp5–6",
+        "Conclusion p6"
+      ],
+      "reason": "作者实验室提供匹配题名作者的全文；主张减少配对标注并加快推理。",
+      "evidence_summary": "RR-GAN explicitly reduces paired-data labeling effort through unpaired supervision, removes inefficient bidirectional cycle training, and measures 0.03-second per-image inference. Data and inference efficiency are concrete motivations and evaluations.",
+      "confidence": "high"
+    },
+    {
+      "number": 115,
+      "title": "'Who Likes What and, Why?' Insights into Modeling Users' Personality Based on Image 'Likes'.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://sharathg.cis.upenn.edu/assets/pdf/76_hrfUAAAAJ_ULOm3_A8WrAC.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction p1",
+        "personality ordinal regression/feature selection pp4–6",
+        "PsychoFlickr experiments pp7–11",
+        "Conclusion p11"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Predicts Big Five personality from liked-image semantic features, with sparse ordinal regression and recommendation evaluations. Main contribution is personality modeling and personalization.",
+      "confidence": "high"
+    },
+    {
+      "number": 116,
+      "title": "A Learning-based Approach for Error Compensation of Industrial Manipulator with Hybrid Model.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://ieeexplore.ieee.org/document/8581217/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 117,
+      "title": "Guide them through: An automatic crowd control framework using multi-objective genetic programming.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.sciencedirect.com/science/article/pii/S1568494618300437",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 118,
+      "title": "Structured AutoEncoders for Subspace Clustering.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://xlearning-lab.com/assets/2018-TIP-Structured-AutoEncoders-for-Subspace-Clustering.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "structured autoencoder method pp3–5",
+        "clustering/time experiments pp6–10",
+        "Conclusion p10"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Structured autoencoders preserve reconstruction/locality and global subspace priors to improve nonlinear clustering. Time-cost analysis actually reports less efficient training than baselines.",
+      "confidence": "high"
+    },
+    {
+      "number": 119,
+      "title": "MIML-FCN+: Multi-Instance Multi-Label Learning via Fully Convolutional Networks with Privileged Information.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/1702.08681",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "privileged-bag two-stream FCN method pp3–6",
+        "multi-object experiments pp7–8",
+        "Conclusion p8"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Extends multi-instance multi-label learning using privileged bags such as captions or boxes and an SGD-compatible loss. Main evaluations measure multi-object recognition quality, rather than resource savings.",
+      "confidence": "high"
+    },
+    {
+      "number": 120,
+      "title": "Exploit Bounding Box Annotations for Multi-Label Object Recognition.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_Bounding_Box_CVPR_2016_paper.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "feature/label-view method pp2–5",
+        "VOC experiments pp6–8",
+        "Conclusion p8"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Uses strong bounding-box labels and weak image labels as complementary views for multi-label recognition. The contribution is discriminative local representation and recognition generalization.",
+      "confidence": "high"
+    },
+    {
+      "number": 121,
+      "title": "Improving Multi-label Learning with Missing Labels by Structured Semantic Correlations.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://arxiv.org/pdf/1608.01441",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "semantic descriptor/graph regularization pp5–7",
+        "missing-label experiments pp11–14",
+        "Conclusion p13"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Uses semantic instance correlations and graph Laplacian regularization to improve image multi-label learning with incomplete annotations; central objective is recognition with missing labels.",
+      "confidence": "medium"
+    },
+    {
+      "number": 122,
+      "title": "Understanding Deep Representations Learned in Modeling Users Likes.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://sharathg.cis.upenn.edu/assets/pdf/76_hrfUAAAAJ_kNdYIx-mwKoC.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–3",
+        "bimodal representation/mapping method pp4–5",
+        "user-like experiments pp7–11",
+        "Conclusion pp11–12"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "Learns and qualitatively analyzes visual/tag bimodal representations for Flickr user likes and recommendation. Feature explanations support application analysis rather than a central trustworthy-AI methodology.",
+      "confidence": "medium"
+    },
+    {
+      "number": 123,
+      "title": "Deep Representations to Model User 'Likes'.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://projet.liris.cnrs.fr/imagine/pub/proceedings/ACCV-2014/pages/PDF/186.pdf",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "reason": "原 ACCV 公开 PDF 返回404；作者主页条目只有 Scholar 链接，未取得正文。",
+      "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
+      "confidence": "low"
+    },
+    {
+      "number": 124,
+      "title": "Feature Disentangling Machine - A Novel Approach of Feature Selection and Disentangling in Facial Expression Analysis.",
+      "previous_category": "Others",
+      "category": "Others",
+      "source_url": "https://link.springer.com/content/pdf/10.1007/978-3-319-10593-2_11.pdf",
+      "fulltext_status": "reviewed",
+      "sections_reviewed": [
+        "Introduction pp1–2",
+        "FDM feature-selection/disentangling method pp4–8",
+        "CK+/JAFFE experiments pp10–13",
+        "Conclusion p14"
+      ],
+      "reason": "分类由同标题作者的全文主要问题、方法与评价目标确认。",
+      "evidence_summary": "FDM selects and separates common versus expression-specific features using sparse multi-task SVM-style learning. Evaluations concern facial expression recognition and cross-database generalization.",
+      "confidence": "high"
+    }
+  ]
+}
