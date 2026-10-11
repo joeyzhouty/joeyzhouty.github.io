@@ -25,7 +25,7 @@ jobs:
         run: |
           count=$(python -c 'import json; print(len(json.load(open("data/classification-review.json"))))')
           if [ "$count" -eq 0 ]; then
-            echo 'No DBLP publication needs manual review.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'No DBLP publication needs abstract classification.' >> "$GITHUB_STEP_SUMMARY"
           else
             echo "## DBLP publications held for review ($count)" >> "$GITHUB_STEP_SUMMARY"
             python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
@@ -34,7 +34,7 @@ jobs:
               print('- **{}** ({}) — {}'.format(item['title'], item['year'], item.get('review_reason', 'Category needs your decision.')))
           PY
             echo '' >> "$GITHUB_STEP_SUMMARY"
-            echo 'Open the workflow run’s **classification-review** artifact. For category questions, add the title and category to `data/publication_categories.json`. Then rerun the workflow.' >> "$GITHUB_STEP_SUMMARY"
+            echo 'The monthly Codex task reads abstracts or papers for these entries, preserves owner decisions, assigns one of the four categories, and uses Others when the topic remains uncertain or evidence is unavailable. The snapshot remains unpublished until that classification pass completes.' >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Save classification review file
         uses: actions/upload-artifact@v4
@@ -59,11 +59,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent
-      - name: Request a category decision when needed
+      - name: Report pending abstract classification
         run: |
           python - <<'PYTHON'
           import json
           pending = json.load(open("data/classification-review.json"))
           if pending:
-              raise SystemExit("Category decision required: see the workflow summary and classification-review artifact. Papers remain unpublished until approved.")
+              print(f"{len(pending)} papers await the monthly agent abstract-classification pass; no owner decision is required.")
           PYTHON
