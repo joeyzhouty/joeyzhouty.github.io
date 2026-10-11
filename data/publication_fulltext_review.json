@@ -26,25 +26,31 @@
       "number": 24,
       "title": "A principled framework for explainable multimodal disentanglement.",
       "previous_category": "Trustworthy AI",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://www.sciencedirect.com/science/article/pii/S0020025524006820",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "出版社页面只提供abstract/section预览，未取得可核对完整方法、实验、结论的全文或作者稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 25,
       "title": "Beyond Pattern Variance: Unsupervised 3-D Action Representation Learning With Point Cloud Sequence.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://researchconnect.buffalo.edu/en/publications/beyond-pattern-variance-unsupervised-3-d-action-representation-le/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "作者代码仓库FACL与机构记录可访问，但未发现可读取同标题完整论文。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 26,
@@ -68,13 +74,16 @@
       "number": 27,
       "title": "C2Net: content-dependent and -independent cross-attention network for anomaly detection in videos.",
       "previous_category": "Trustworthy AI",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://link.springer.com/article/10.1007/s10489-023-05252-6",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Springer页面与摘要可访问，但未取得C2Net完整论文正文。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 28,
@@ -132,25 +141,31 @@
       "number": 31,
       "title": "GREnet: Gradually REcurrent Network With Curriculum Learning for 2-D Medical Image Segmentation.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/37022080/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "PubMed/IEEE/ResearchGate可查到元数据，未取得GREnet公开作者稿或正式全文。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 32,
       "title": "GrapHAR: A Lightweight Human Activity Recognition Model by Exploring the Sub-Carrier Correlations.",
       "previous_category": "Efficient AI",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://ieeexplore.ieee.org/document/10217165/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "未找到GrapHAR同标题可读取全文；不能以lightweight标题替代正文核实。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 33,
@@ -173,25 +188,31 @@
       "number": 34,
       "title": "Learning Student Network Under Universal Label Noise.",
       "previous_category": "Trustworthy AI",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://doi.org/10.1109/TIP.2024.3430539",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "作者主页访问失败，IEEE/PubMed只取得abstract/元数据；未取得Universal Label Noise的完整稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 35,
       "title": "MENet: Multi-Modal Mapping Enhancement Network for 3D Object Detection in Autonomous Driving.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://lmomoy.github.io/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "下载候选35.pdf实际是Visual Latents Know More Than They Say（2026），与MENet标题不符，已拒绝将其用作正文证据；正确MENet全文未取到。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 36,
@@ -266,13 +287,16 @@
       "number": 40,
       "title": "You Will Never Walk Alone: One-Shot 3D Action Recognition With Point Cloud Sequence.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://researchconnect.buffalo.edu/en/publications/you-will-never-walk-alone-one-shot-3d-action-recognition-with-poi/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "作者YNWA代码仓库可访问，未发现完整正文PDF或可读取作者稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 41,
@@ -389,7 +413,10 @@
       "sections_reviewed": [],
       "reason": "ScienceDirect仅摘要/局部section信息，未找到同标题完整作者稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 48,
@@ -401,7 +428,10 @@
       "sections_reviewed": [],
       "reason": "ScienceDirect仅摘要/局部section信息，Trans2UNet代码仓库未提供可读取全文。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 49,
@@ -448,7 +478,10 @@
       "sections_reviewed": [],
       "reason": "SSRN Delivery URL返回landing page而非38页PDF；出版社未提供完整公开稿，不能只按摘要分类。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 52,
@@ -477,19 +510,25 @@
       "sections_reviewed": [],
       "reason": "出版社仅摘要/局部section信息，未取得同标题完整作者稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 54,
       "title": "APT: The master-copy-free training method for quantised neural network on edge devices.",
       "previous_category": "Efficient AI",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S074373152200082X",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "APT正式journal完整稿未取得；RCT虽有相近量化技术却是不同标题/作者列表，不将RCT全文代替APT。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 55,
@@ -512,25 +551,31 @@
       "number": 56,
       "title": "An Efficient Defending Mechanism Against Image Attacking on Medical Image Segmentation Models.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://link.springer.com/chapter/10.1007/978-3-031-16876-5_7",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Springer章节与ResearchGate摘要可查，未取得完整章节PDF或作者稿。",
       "evidence_summary": "未取得可核对的完整正文；按用户要求保守置于Others，不宣称已读全文。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 57,
       "title": "Anomaly Detection With Bidirectional Consistency in Videos.",
       "previous_category": "Trustworthy AI",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/33296312/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 58,
@@ -605,13 +650,16 @@
       "number": 62,
       "title": "Deep Unfolding for Compressed Sensing with Denoiser.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://doi.org/10.1109/ICME52920.2022.9859640",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 63,
@@ -623,7 +671,10 @@
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 64,
@@ -635,7 +686,10 @@
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 65,
@@ -710,25 +764,31 @@
       "number": 69,
       "title": "Hierarchical Graph Neural Networks for Few-Shot Learning.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://doi.org/10.1109/TCSVT.2021.3058098",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 70,
       "title": "Introduction to the Special Issue on edge intelligence: Neurocomputing meets edge computing.",
       "previous_category": "Efficient AI",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://www.sciencedirect.com/science/article/abs/pii/S092523122101746X",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 71,
@@ -803,13 +863,16 @@
       "number": 75,
       "title": "Real-time Embedded Demo System for Fall Detection under 15W Power.",
       "previous_category": "Efficient AI",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://www.a-star.edu.sg/cfar/research/research-pillars/sustainable-ai",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 76,
@@ -832,13 +895,16 @@
       "number": 77,
       "title": "Concurrent Processing Cluster Design to Empower Simultaneous Prediction for Hundreds of Vessels' Trajectories in Near Real-Time.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Efficient AI",
       "source_url": "https://doi.org/10.1109/TSMC.2019.2906381",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 78,
@@ -861,25 +927,31 @@
       "number": 79,
       "title": "Correction to \"Nonlinear Regression via Deep Negative Correlation Learning\".",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://doi.org/10.1109/TPAMI.2021.3071929",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Correction notice: matching full-text correction was not obtained; it is retained as Others, not classified from the original article.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 80,
       "title": "Deep Spectral Representation Learning From Multi-View Data.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Foundation Models & Agents",
       "source_url": "https://pubmed.ncbi.nlm.nih.gov/34081580/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 81,
@@ -891,19 +963,25 @@
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 82,
       "title": "Multi-Encoder Towards Effective Anomaly Detection in Videos.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://doi.org/10.1109/TMM.2020.3037538",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 83,
@@ -967,7 +1045,10 @@
       "sections_reviewed": [],
       "reason": "Only an abstract, bibliographic/preview page or access-blocked publisher endpoint could be retrieved; no matching full-text manuscript was read. Conservative Others pending full text. A differently titled conference compressed-sensing paper was not substituted for this journal restoration article.",
       "evidence_summary": "Insufficient full-text evidence to assign a topical category.",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 87,
@@ -1064,7 +1145,10 @@
       "sections_reviewed": [],
       "reason": "出版社/DBLP记录可找到该短篇编辑引言，但未取得开放全文。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 93,
@@ -1093,7 +1177,10 @@
       "sections_reviewed": [],
       "reason": "下载的候选 arXiv 2007.08433 为另一篇 DeepMind 论文；拒绝使用不匹配正文，未找到目标论文开放全文。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 95,
@@ -1275,7 +1362,10 @@
       "sections_reviewed": [],
       "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 106,
@@ -1315,13 +1405,16 @@
       "number": 108,
       "title": "Beyond Majority Voting: A Coarse-to-Fine Label Filtration for Heavily Noisy Labels.",
       "previous_category": "Trustworthy AI",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://scholars.hkbu.edu.hk/en/publications/beyond-majority-voting-a-coarse-to-fine-label-filtration-for-heav-2/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 109,
@@ -1452,7 +1545,10 @@
       "sections_reviewed": [],
       "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 117,
@@ -1464,7 +1560,10 @@
       "sections_reviewed": [],
       "reason": "公开正文未能取得；已尝试出版社、会议或作者/机构来源。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 118,
@@ -1555,13 +1654,16 @@
       "number": 123,
       "title": "Deep Representations to Model User 'Likes'.",
       "previous_category": "Others",
-      "category": "Others",
+      "category": "Trustworthy AI",
       "source_url": "https://projet.liris.cnrs.fr/imagine/pub/proceedings/ACCV-2014/pages/PDF/186.pdf",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
       "reason": "原 ACCV 公开 PDF 返回404；作者主页条目只有 Scholar 链接，未取得正文。",
       "evidence_summary": "未取得并阅读与条目标题作者匹配的完整论文，保守放入 Others；先前摘要结论不当作全文确认。",
-      "confidence": "low"
+      "confidence": "low",
+      "agent_fallback_category": "Others",
+      "classification_source": "owner_button_selection",
+      "owner_confirmed_on": "2026-10-11"
     },
     {
       "number": 124,
@@ -1580,5 +1682,6 @@
       "evidence_summary": "FDM selects and separates common versus expression-specific features using sparse multi-task SVM-style learning. Evaluations concern facial expression recognition and cross-database generalization.",
       "confidence": "high"
     }
-  ]
+  ],
+  "owner_confirmed_unavailable_count": 34
 }
