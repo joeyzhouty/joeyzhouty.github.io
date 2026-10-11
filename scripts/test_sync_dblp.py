@@ -70,6 +70,12 @@ class EligibilityTests(unittest.TestCase):
         self.assertEqual(len(pending), 0)
         self.assertEqual(audit['published'][0]['category'], 1)
 
+    def test_title_keywords_cannot_publish_new_papers_without_review(self):
+        for title in ['Efficient Transformer', 'Adversarial medical segmentation', 'Foundation model agents']:
+            _, pending, audit = sync.rebuild(PAGE, rows(title=title), {})
+            self.assertEqual(len(pending), 1)
+            self.assertEqual(audit['published_count'], 0)
+
     def test_others_override_and_existing_category_are_preserved(self):
         data = rows(title='Unclassified title')
         for category in ['Others', 3]:
@@ -95,7 +101,7 @@ class EligibilityTests(unittest.TestCase):
                                       ([sync.AUTHOR_NAME, 'Alice'], 'ICML', 2),
                                       (['Alice', 'Joey Zhou'], 'ICML', 1),
                                       (['Alice', sync.AUTHOR_NAME], 'WACV', 2)]:
-            _, _, audit = sync.rebuild(PAGE, rows(), {}, [{**item, 'authors': names, 'venue': venue}])
+            _, _, audit = sync.rebuild(PAGE, rows(), {'efficient supplement': 'Efficient AI'}, [{**item, 'authors': names, 'venue': venue}])
             self.assertEqual(audit['published_count'], expected)
         with self.assertRaises(ValueError): sync.verified_records([{**item, 'sources': []}], [])
         self.assertEqual(sync.verified_records([{**item, 'title': 'Efficient learning'}], sync.group_records(rows())), [])

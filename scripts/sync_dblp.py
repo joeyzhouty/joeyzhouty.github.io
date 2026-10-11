@@ -158,20 +158,10 @@ def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str |
     if isinstance(override, str) and override.casefold() in categories:
         return categories[override.casefold()], None
 
-    text = f"{title} {venue}".casefold()
-    scores = {
-        0: ("efficient", "efficiency", "compression", "condensation", "distillation", "pruning", "coreset", "data selection", "training-free", "low-rank", "energy-aware"),
-        1: ("trustworthy", "robust", "backdoor", "poison", "attack", "adversarial", "bias", "fairness", "explainab", "interpretab", "uncertainty", "privacy", "security", "trusted"),
-        2: ("agent", "large language model", "language model", "foundation model", "vision-language", "multimodal", "generative", "reasoning", "transformer"),
-    }
-    hits = {category: sum(term in text for term in terms) for category, terms in scores.items()}
-    highest = max(hits.values())
-    if highest == 0:
-        return None, "No category keywords matched."
-    winners = [category for category, score in hits.items() if score == highest]
-    if len(winners) != 1:
-        return None, "Keyword scores tied across categories."
-    return winners[0], None
+    # New papers require the monthly agent's source-backed topic decision.
+    # Keywords cannot distinguish adversarial training from security, or a
+    # task-specific Transformer from a foundation-model contribution.
+    return None, "Needs source-backed topic review; read the full paper when the abstract is insufficient or ambiguous."
 
 
 def display_author(name):
