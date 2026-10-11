@@ -61,7 +61,7 @@ class EligibilityTests(unittest.TestCase):
         self.assertNotIn('<article', updated)
         self.assertEqual(len(audit['removed']), 1)
 
-    def test_uncertain_new_category_waits_for_user(self):
+    def test_uncertain_new_category_waits_for_abstract_review(self):
         data = rows(title='Unclassified title')
         _, pending, audit = sync.rebuild(PAGE, data, {})
         self.assertEqual(len(pending), 1)
@@ -69,6 +69,17 @@ class EligibilityTests(unittest.TestCase):
         _, pending, audit = sync.rebuild(PAGE, data, {'unclassified title': 'Trustworthy AI'})
         self.assertEqual(len(pending), 0)
         self.assertEqual(audit['published'][0]['category'], 1)
+
+    def test_others_override_and_existing_category_are_preserved(self):
+        data = rows(title='Unclassified title')
+        for category in ['Others', 3]:
+            updated, pending, audit = sync.rebuild(PAGE, data, {'unclassified title': category})
+            self.assertFalse(pending)
+            self.assertEqual(audit['published'][0]['category'], 3)
+            again, pending, audit = sync.rebuild(updated, data, {})
+            self.assertEqual(updated, again)
+            self.assertFalse(pending)
+            self.assertEqual(audit['published'][0]['category'], 3)
 
     def test_rebuild_is_idempotent_and_preserves_surrounding_page(self):
         updated, _, _ = sync.rebuild(PAGE, rows(), {})

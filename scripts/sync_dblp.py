@@ -152,8 +152,8 @@ def published_venue(r):
 
 def classify(title: str, venue: str, overrides: dict) -> tuple[int | None, str | None]:
     override = overrides.get(key_title(title))
-    categories = {"efficient ai": 0, "trustworthy ai": 1, "foundation models & agents": 2}
-    if isinstance(override, int) and override in (0, 1, 2):
+    categories = {"efficient ai": 0, "trustworthy ai": 1, "foundation models & agents": 2, "others": 3}
+    if type(override) is int and override in (0, 1, 2, 3):
         return override, None
     if isinstance(override, str) and override.casefold() in categories:
         return categories[override.casefold()], None
@@ -199,7 +199,7 @@ def current_articles(page):
     articles = []
     for raw in re.findall(r'<article\b[^>]*class="paper"[^>]*>.*?</article>', page, re.S):
         title = re.search(r"<h3\b[^>]*>(.*?)</h3>", raw, re.S)
-        category = re.search(r'data-category="([012])"', raw)
+        category = re.search(r'data-category="([0123])"', raw)
         if title and category:
             articles.append({"title": plain_text(title[1]).replace("↗", "").strip(),
                              "category": int(category[1]), "html": raw})
@@ -248,7 +248,7 @@ def rebuild(page, rows, overrides, verified=()):
         r = {**r, "venue": venue, "category": category}
         if uncertainty:
             review = {**r, "needs_review": True, "review_type": "category", "review_reason": uncertainty,
-                      "choices": ["Efficient AI", "Trustworthy AI", "Foundation Models & Agents"]}
+                      "choices": ["Efficient AI", "Trustworthy AI", "Foundation Models & Agents", "Others"]}
             pending.append(review)
             decisions.append({**r, "decision": "held_for_review", "reason": uncertainty})
         else:
