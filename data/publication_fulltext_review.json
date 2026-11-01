@@ -1683,5 +1683,29 @@
       "confidence": "high"
     }
   ],
-  "owner_confirmed_unavailable_count": 34
+  "owner_confirmed_unavailable_count": 34,
+  "subsequent_monthly_reviews": [
+    {
+      "number": 125,
+      "title": "Modality- and Domain-Aware Adaptivity for Generalized Multimodal Face Anti-Spoofing.",
+      "year": "2026",
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "url": "https://dblp.org/rec/journals/tifs/DiaoLGLLWZYL26",
+      "category": "Trustworthy AI",
+      "source": "agent_official_abstract_review",
+      "classified_on": "2026-11-01",
+      "source_url": "https://xplorestaging.ieee.org/document/11695285",
+      "doi": "10.1109/TIFS.2026.3734785",
+      "version": "Published IEEE TIFS article, volume 21, pages 8963–8978",
+      "sections_reviewed": [
+        "Official abstract",
+        "Introduction opening paragraph"
+      ],
+      "pages_reviewed": [],
+      "fulltext_status": "not_required_clear_official_abstract",
+      "evidence_summary": "The main problem is biometric presentation-attack detection under modality-specific domain shifts. Dynamic receptive fields and domain-relation weighted fusion improve cross-domain anti-spoofing, missing-modality robustness and limited-source performance. Vision-language alignment supports this security task; it is not the main general-purpose foundation-model contribution.",
+      "identity_verification": "Complete DBLP signatures: exact Joey Tianyi Zhou at position 7 of 9, linked to pid/123/5110; author order also corroborated by first-author university page https://faculty.hfut.edu.cn/diaoyunfeng/en/index.htm",
+      "fulltext_note": "Full paper was not read. Official abstract clearly supports Trustworthy AI; no unresolved classification ambiguity."
+    }
+  ]
 }
