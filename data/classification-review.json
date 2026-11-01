@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "url": "https://dblp.org/rec/journals/tifs/DiaoLGLLWZYL26",
+    "venues": [
+      "IEEE Transactions on Information Forensics and Security"
+    ],
+    "books": [],
+    "title": "Modality- and Domain-Aware Adaptivity for Generalized Multimodal Face Anti-Spoofing.",
+    "year": "2026",
+    "authors": [
+      "Yunfeng Diao",
+      "Yuxuan Li",
+      "Jiabao Guo",
+      "Xun Lin",
+      "Ajian Liu 0001",
+      "Jun Wan 0001",
+      "Joey Tianyi Zhou",
+      "Zitong Yu",
+      "Zhen Lei 0001"
+    ],
+    "author_ids": [
+      "https://dblp.org/pid/247/9292",
+      "https://dblp.org/pid/17/7624",
+      "https://dblp.org/pid/202/3909",
+      "https://dblp.org/pid/57/88",
+      "https://dblp.org/pid/232/2295-1",
+      "https://dblp.org/pid/69/6563-1",
+      "https://dblp.org/pid/123/5110",
+      "https://dblp.org/pid/152/9801",
+      "https://dblp.org/pid/55/112-1"
+    ],
+    "author_role": "middle",
+    "venue": "IEEE Transactions on Information Forensics and Security",
+    "category": null,
+    "needs_review": true,
+    "review_type": "category",
+    "review_reason": "Needs source-backed topic review; read the full paper when the abstract is insufficient or ambiguous.",
+    "choices": [
+      "Efficient AI",
+      "Trustworthy AI",
+      "Foundation Models & Agents",
+      "Others"
+    ]
+  }
+]
