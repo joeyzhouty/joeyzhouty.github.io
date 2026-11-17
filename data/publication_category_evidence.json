@@ -4025,13 +4025,27 @@
       "year": "2026",
       "venue": "IEEE HPCC",
       "url": "https://zhangxin-xd.github.io/",
-      "category": "Others",
-      "source": "owner_confirmed_publication_agent_conservative_topic_fallback",
+      "category": "Foundation Models & Agents",
+      "source": "owner_explicit_category_confirmation",
       "classified_on": "2026-11-17",
       "source_url": "https://zhangxin-xd.github.io/",
       "fulltext_status": "unavailable",
       "sections_reviewed": [],
-      "evidence_summary": "Owner and first-author homepage confirm publication, authors, and award. No matching official abstract or full text found; classification kept in Others under the standing conservative policy. No claim of abstract or full-paper review. A similarly named Value-Aware Stochastic KV Cache Eviction paper has different authors and was not used."
+      "evidence_summary": "Owner explicitly classified this HPCC 2026 paper under Foundation Models & Agents in the conversation. Preserve this choice over automatic classification; full-text availability is unchanged.",
+      "previous_agent_classification": {
+        "number": 126,
+        "title": "Value-Aware KV-Cache Lifecycle Management for Multi-Turn Agentic LLM Serving.",
+        "year": "2026",
+        "venue": "IEEE HPCC",
+        "url": "https://zhangxin-xd.github.io/",
+        "category": "Others",
+        "source": "owner_confirmed_publication_agent_conservative_topic_fallback",
+        "classified_on": "2026-11-17",
+        "source_url": "https://zhangxin-xd.github.io/",
+        "fulltext_status": "unavailable",
+        "sections_reviewed": [],
+        "evidence_summary": "Owner and first-author homepage confirm publication, authors, and award. No matching official abstract or full text found; classification kept in Others under the standing conservative policy. No claim of abstract or full-paper review. A similarly named Value-Aware Stochastic KV Cache Eviction paper has different authors and was not used."
+      }
     }
   ],
   "fulltext_reviewed_count": 68,
