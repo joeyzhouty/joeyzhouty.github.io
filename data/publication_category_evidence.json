@@ -4018,6 +4018,20 @@
       "evidence_summary": "The main problem is biometric presentation-attack detection under modality-specific domain shifts. Dynamic receptive fields and domain-relation weighted fusion improve cross-domain anti-spoofing, missing-modality robustness and limited-source performance. Vision-language alignment supports this security task; it is not the main general-purpose foundation-model contribution.",
       "identity_verification": "Complete DBLP signatures: exact Joey Tianyi Zhou at position 7 of 9, linked to pid/123/5110; author order also corroborated by first-author university page https://faculty.hfut.edu.cn/diaoyunfeng/en/index.htm",
       "fulltext_note": "Full paper was not read. Official abstract clearly supports Trustworthy AI; no unresolved classification ambiguity."
+    },
+    {
+      "number": 126,
+      "title": "Value-Aware KV-Cache Lifecycle Management for Multi-Turn Agentic LLM Serving.",
+      "year": "2026",
+      "venue": "IEEE HPCC",
+      "url": "https://zhangxin-xd.github.io/",
+      "category": "Others",
+      "source": "owner_confirmed_publication_agent_conservative_topic_fallback",
+      "classified_on": "2026-11-17",
+      "source_url": "https://zhangxin-xd.github.io/",
+      "fulltext_status": "unavailable",
+      "sections_reviewed": [],
+      "evidence_summary": "Owner and first-author homepage confirm publication, authors, and award. No matching official abstract or full text found; classification kept in Others under the standing conservative policy. No claim of abstract or full-paper review. A similarly named Value-Aware Stochastic KV Cache Eviction paper has different authors and was not used."
     }
   ],
   "fulltext_reviewed_count": 68,

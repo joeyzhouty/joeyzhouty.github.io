@@ -37,5 +37,23 @@
       "https://github.com/MTMQuantAI/Agent-Trading-Arena/blob/main/decoupledmarket/README.md",
       "https://ai.whut.edu.cn/xsgz/xzfc/202607/t20260718_1412813.shtml"
     ]
+  },
+  {
+    "title": "Value-Aware KV-Cache Lifecycle Management for Multi-Turn Agentic LLM Serving.",
+    "year": "2026",
+    "url": "https://zhangxin-xd.github.io/",
+    "authors": [
+      "Xin Zhang",
+      "Jiawei Du",
+      "Joey Tianyi Zhou"
+    ],
+    "venue": "IEEE HPCC",
+    "award": "🏆 IEEE Congress Best Paper Award",
+    "verified_on": "2026-11-17",
+    "sources": [
+      "https://zhangxin-xd.github.io/",
+      "https://ieee-hyper-intelligence.org/2026/hpcc/"
+    ],
+    "verification_note": "Owner explicitly confirmed formal HPCC 2026 publication, author order, and best-paper award; first-author homepage corroborates the exact paper and authors."
   }
 ]
