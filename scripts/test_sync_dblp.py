@@ -145,6 +145,17 @@ class EligibilityTests(unittest.TestCase):
         self.assertEqual(audit['published_count'], 1)
         self.assertEqual(audit['published'][0]['venue'], 'Machine Learning')
 
+    def test_award_survives_dblp_indexing_of_verified_supplement(self):
+        supplement = dict(title='Efficient learning.', year='2026',
+                          url='https://example.org/paper', authors=['Alice', sync.AUTHOR_NAME],
+                          venue='HPCC', sources=['https://example.org/paper'],
+                          verified_on='2026-11-17', award='Best Paper Award <2026>')
+        page, pending, audit = sync.rebuild(PAGE, rows(), {}, [supplement])
+        self.assertEqual(audit['published_count'], 1)
+        self.assertEqual(pending, [])
+        self.assertIn('Best Paper Award &lt;2026&gt;', page)
+        self.assertIn('https://dblp.org/rec/conf/icml/Test26', page)
+
     def test_unicode_title_dedup(self):
         self.assertEqual(sync.key_title('Efﬁcient AI.'), sync.key_title('Efficient AI'))
 

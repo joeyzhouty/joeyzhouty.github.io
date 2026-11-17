@@ -179,9 +179,10 @@ def render(record):
         f"<strong>{esc(display_author(name))}</strong>" if name == AUTHOR_NAME else esc(display_author(name))
         for name in record["authors"])
     venue = f"in {record['venue']} {record['year']}".strip() if record["venue"] else record["year"]
+    award = f' <strong>{esc(record["award"])}</strong>' if record.get("award") else ""
     return (f'<article class="paper" data-category="{record["category"]}" data-source="{esc(record.get("source", "dblp"))}">'
             f'<div class="paper-year">{esc(record["year"])}</div><div><h3>{title}</h3>'
-            f'<p class="authors">{author_text}</p><p class="venue">{esc(venue)}</p></div></article>')
+            f'<p class="authors">{author_text}</p><p class="venue">{esc(venue)}{award}</p></div></article>')
 
 
 
@@ -222,6 +223,8 @@ def rebuild(page, rows, overrides, verified=()):
     records = group_records(rows)
     source_count = len(records)
     records += verified_records(verified, records)
+    awards = {key_title(item["title"]): item["award"] for item in verified if item.get("award")}
+    records = [{**record, **({"award": awards[key_title(record["title"])]} if key_title(record["title"]) in awards else {})} for record in records]
     decisions, candidates, pending = [], [], []
     for r in records:
         reason = author_reason(r)
